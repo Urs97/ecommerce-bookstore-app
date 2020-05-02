@@ -17,7 +17,7 @@ function HeaderNav() {
                 <a href="#">My Account</a>
                 <a href="#">Contact</a>
             </nav>
-            <div class="header-nav-icons">
+            <div className="header-nav-icons">
                 <FontAwesomeIcon icon={faSearch} />
                 <FontAwesomeIcon icon={faShoppingCart} />
             </div>

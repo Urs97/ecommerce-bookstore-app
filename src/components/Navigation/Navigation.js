@@ -1,10 +1,10 @@
 import React from 'react';
-import './HeaderNav.scss';
+import './Navigation.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-function HeaderNav() {
+function Navigation() {
     return (
         <section className="header-nav-section">
             <div>
@@ -25,4 +25,4 @@ function HeaderNav() {
     )
 };
 
-export default HeaderNav;
+export default Navigation;

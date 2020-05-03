@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.scss';
-import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import { Switch, Route } from 'react-router-dom';
+import AppLayout from './components/AppLayout/AppLayout';
 
 function App() {
   return (
-    <Header />
+    <>
+      <AppLayout>
+        <Switch>
+          <Route path="/" component={Home}/>
+        </Switch>
+      </AppLayout>
+    </>
   );
-}
+};
 
 export default App;

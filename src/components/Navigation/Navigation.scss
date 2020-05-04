@@ -23,7 +23,7 @@
         margin-top: 0.2em;
     }
 
-    nav a {
+    nav .link {
         text-decoration: none;
         color: #FFFFFF;
         font-family: 'Open Sans', sans-serif;
@@ -33,11 +33,11 @@
         outline: none;
     }
 
-    nav a:hover, nav a:focus {
+    nav .link:hover, nav .link:focus {
         border-bottom: 0.15em solid #FFFFFF;
     }
 
-    nav a:not(:last-child) {
+    nav .link:not(:last-child) {
         margin-right: 1.5em;
     }
 

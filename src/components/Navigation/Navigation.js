@@ -3,6 +3,7 @@ import './Navigation.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
@@ -12,10 +13,10 @@ function Navigation() {
                 <p>Webstore for book lovers</p>
             </div>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Bookstore</a>
-                <a href="#">My Account</a>
-                <a href="#">Contact</a>
+                <Link to="/" className="link">Home</Link>
+                <Link to="/shop" className="link">Bookstore</Link>
+                <Link to="/acc" className="link">My Account</Link>
+                <Link to="/about" className="link">Contact</Link>
             </nav>
             <div className="header-nav-icons">
                 <FontAwesomeIcon icon={faSearch} />

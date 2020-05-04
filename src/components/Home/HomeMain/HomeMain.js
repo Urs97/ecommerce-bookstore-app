@@ -1,9 +1,14 @@
 import React from 'react';
 import './HomeMain.scss';
+import BulletPoints from './BulletPoints/BulletPoints';
 
 function HomeMain() {
     return (
-        <div>This is main content</div>
+        <main>
+            <section className="bulletpoints">
+                <BulletPoints />
+            </section>
+        </main>
     )
 };
 

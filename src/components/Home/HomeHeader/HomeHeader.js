@@ -5,7 +5,7 @@ import HeaderCoverPhoto from './HomeHeaderCoverPhoto/HeaderCoverPhoto';
 
 function Header() {
     return (
-        <header className="header">
+        <header className="home-header">
             <HeaderContent />
             <HeaderCoverPhoto />
         </header>                

@@ -9,7 +9,7 @@ function Navigation() {
     return (
         <section className="header-nav-section">
             <div>
-                <h1>Bookz</h1>
+                <h1 className="title">Bookz</h1>
                 <p>Webstore for book lovers</p>
             </div>
             <nav>

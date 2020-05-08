@@ -1,0 +1,27 @@
+@import '../../../styles/shared.scss';
+
+.featured-books-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F7F9;
+    padding: $vertical-content-padding $horizontal-content-padding;
+    color: $text-color;
+
+    & h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: $vertical-content-padding;
+        font-size: 2.8em;
+    }
+
+    & .button {
+        margin-top: $vertical-content-padding;
+    }
+
+    .books {
+        display: grid;
+    }
+}

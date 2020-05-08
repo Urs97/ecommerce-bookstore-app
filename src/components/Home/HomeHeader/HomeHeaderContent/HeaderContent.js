@@ -6,8 +6,8 @@ function HeaderContent() {
     return (
         <section className="header-content">
             <p>Reading provides you with wisdom</p>
-            <h1>Keep Reading</h1>
-            <Link to='/shop' className="link">See More</Link>
+            <h1 className="title">Keep Reading</h1>
+            <Link to='/shop' className="link-button">See More</Link>
         </section>
     )
 };

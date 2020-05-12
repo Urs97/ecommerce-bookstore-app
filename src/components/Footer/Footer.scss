@@ -1,0 +1,28 @@
+.footer {
+    color: #FFFFFF;
+    background-color: #2F332F;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    & a {
+        text-decoration: none;
+        color: #FFFFFF;
+        padding-bottom: 0.2em;
+        outline: none;
+    }
+
+    & a:hover, a:focus {
+        color: #000000;
+    }
+
+    & a:not(:first-child) {
+        margin-left: 1.5em;
+    }
+
+    p {
+        margin-top: 1.5em;
+    }
+}

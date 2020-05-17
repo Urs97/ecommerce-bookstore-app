@@ -1,20 +1,19 @@
 import React from 'react';
-import './Slide.scss';
+import styled from 'styled-components';
+
+const StyledSlide = styled.img`
+    height: 100%;
+    width: ${width => width}px;
+`
 
 function Slide({images, width}) {
     
-    const slideStyle = {
-        height: `100%`,
-        width: `${width}px`
-    };
-
     return (
-            <img src={images[0]}
-                 srcSet={`${images[0]} 640w,
-                          ${images[1]} 1024w,
-                          ${images[2]} 2400w,`} 
-                 alt="beautiful library interior"
-                 style={slideStyle}/>
+        <StyledSlide src={images[0]}
+            srcSet={`${images[0]} 640w,
+                     ${images[1]} 1024w,
+                     ${images[2]} 2400w,`} 
+            alt="beautiful library interior"/>
     )
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Home.scss';
-import HomeHeader from './HomeHeader/HomeHeader';
+import Carousel from '../Carousel/Carousel';
 import HomeMain from './HomeMain/HomeMain';
 
 function Home() {
     return (
         <>
-            <HomeHeader />
+            <Carousel />
             <HomeMain />
         </>
     )

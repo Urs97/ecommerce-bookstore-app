@@ -1,30 +1,51 @@
 import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import './Carousel.scss';
 import photo_1_sm from '../../assets/images/lib-photo-1-sm.jpg';
 import photo_1_md from '../../assets/images/lib-photo-1-md.jpg';
 import photo_1_lg from '../../assets/images/lib-photo-1-lg.jpg';
+import photo_2_sm from '../../assets/images/lib-photo-2-sm.jpg';
+import photo_2_md from '../../assets/images/lib-photo-2-md.jpg';
+import photo_2_lg from '../../assets/images/lib-photo-2-lg.jpg';
+import photo_3_sm from '../../assets/images/lib-photo-3-sm.jpg';
+import photo_3_md from '../../assets/images/lib-photo-3-md.jpg';
+import photo_3_lg from '../../assets/images/lib-photo-3-lg.jpg';
+// import left_arrow from '../../assets/images/left-arrow-key.svg';
+// import right_arrow from '../../assets/images/right-arrow-key.svg';
 
 class Carousel extends React.Component {
     render() {
         return (
             <CarouselProvider
-                naturalSlideWidth={100}
-                naturalSlideHeight={125}
-                totalSlides={3}>
-                <Slider>
-                    <Slide index={0}>I am the first Slide.
+                className="carousel-provider"
+                naturalSlideWidth={16}
+                naturalSlideHeight={9}
+                totalSlides={3}
+                isPlaying={true}>
+                <Slider className="slider">
+                    <Slide index={0}>
                         <Image src={photo_1_sm}
-                               srcSet={`${photo_1_sm} 640w,
-                                        ${photo_1_md} 1024w,
-                                        ${photo_1_lg} 2400w,`} 
+                            srcSet={`${photo_1_sm} 640w,
+                                    ${photo_1_md} 1024w,
+                                    ${photo_1_lg} 2400w,`} 
                             alt="beautiful library interior"/>
                     </Slide>
-                    <Slide index={1}>I am the second Slide.</Slide>
-                    <Slide index={2}>I am the third Slide.</Slide>
+                    <Slide index={1}>
+                        <Image src={photo_2_sm}
+                            srcSet={`${photo_2_sm} 640w,
+                                    ${photo_2_md} 1024w,
+                                    ${photo_2_lg} 2400w,`} 
+                            alt="beautiful library interior"/>
+                    </Slide>
+                    <Slide index={2}>
+                        <Image src={photo_3_sm}
+                            srcSet={`${photo_3_sm} 640w,
+                                    ${photo_3_md} 1024w,
+                                    ${photo_3_lg} 2400w,`} 
+                            alt="beautiful library interior"/>
+                    </Slide>
                 </Slider>
-                <ButtonBack>Back</ButtonBack>
-                <ButtonNext>Next</ButtonNext>
             </CarouselProvider>
         )
     };

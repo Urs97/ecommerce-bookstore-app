@@ -31,7 +31,7 @@
     }
 
     nav .link:hover, nav .link:focus {
-        border-bottom: 0.15em solid #FFFFFF;
+        border-bottom: 0.15em solid $blue;
     }
 
     nav .link:not(:last-child) {

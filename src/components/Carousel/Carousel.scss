@@ -1,6 +1,8 @@
+@import '../../styles/shared.scss';
+
 .carousel-provider {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     position: relative;
 
     .slider {
@@ -8,5 +10,53 @@
         height: 100%;
     }
 
+    .slide {
+        position: relative;
+    }
+
+    .slide::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .dot-grp {
+        position: absolute;
+        z-index: 2;
+        bottom: 1.5em;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10em;
+        display: flex;
+        justify-content: center;
+        
+        & button {
+            padding: 0.5em;
+            border-radius: 50%;
+            border-color: #000000;
+            border-width: 0;
+            outline: none;
+        }
+
+        & button:focus {
+            background-color: #A9A9A9;
+        }
+
+        & .carousel__dot--selected {
+            background-color: $blue;
+        }
+
+        & button:not(:last-child) {
+            margin-right: 0.2em;
+        }
+
+    }
 }
 

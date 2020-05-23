@@ -2,11 +2,11 @@ import React from 'react';
 import './SlideContent.scss';
 import { Link } from 'react-router-dom';
 
-function SlideContent() {
+function SlideContent({text, title}) {
     return (
         <section className="slide-content">
-            <p>Reading provides you with wisdom</p>
-            <h1 className="title">Keep Reading</h1>
+            <p>{text}</p>
+    <h1 className="title">{title}</h1>
             <Link to='/shop' className="link-button">See More</Link>
         </section>
     )

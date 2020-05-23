@@ -20,6 +20,23 @@
         margin-top: 0.2em;
     }
 
+    nav {
+        margin-top: 1em;
+    }
+
+    nav::after {
+        content: "";
+        display: block;
+        margin-top: 1em;
+        border-bottom: 0.3em solid #FFFFFF;
+        box-shadow: -2px 3px 0px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    nav span:not(:last-child) {
+        margin-left: 7em;
+        margin-right: 1.5em;
+    }
+
     nav .link {
         text-decoration: none;
         color: #FFFFFF;

@@ -17,11 +17,13 @@ function Navigation() {
                 <Link to="/shop" className="link">Bookstore</Link>
                 <Link to="/acc" className="link">My Account</Link>
                 <Link to="/about" className="link">Contact</Link>
+                <span role="img" aria-label="search icon">
+                    <FontAwesomeIcon icon={faSearch} />
+                </span>
+                <span role="img" aria-label="shopping cart icon">
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                </span>
             </nav>
-            <div className="header-nav-icons">
-                <FontAwesomeIcon icon={faSearch} />
-                <FontAwesomeIcon icon={faShoppingCart} />
-            </div>
         </section>
     )
 };

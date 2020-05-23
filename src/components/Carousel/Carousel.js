@@ -1,7 +1,10 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, Image, DotGroup } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Image, DotGroup, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './Carousel.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import SlideContent from './SlideContent/SlideContent';
 import photo_1_sm from '../../assets/images/lib-photo-1-sm.jpg';
 import photo_1_md from '../../assets/images/lib-photo-1-md.jpg';
@@ -12,11 +15,16 @@ import photo_2_lg from '../../assets/images/lib-photo-2-lg.jpg';
 import photo_3_sm from '../../assets/images/lib-photo-3-sm.jpg';
 import photo_3_md from '../../assets/images/lib-photo-3-md.jpg';
 import photo_3_lg from '../../assets/images/lib-photo-3-lg.jpg';
-// import left_arrow from '../../assets/images/left-arrow-key.svg';
-// import right_arrow from '../../assets/images/right-arrow-key.svg';
 
 class Carousel extends React.Component {
     render() {
+        const text_1 = "Reading provides you with wisdom";
+        const text_2 = "Learn from the experience of others";
+        const text_3 = "Read and relax after a long day";
+        const title_1 = "Keep Reading";
+        const title_2 = "Knowledge Is Power";
+        const title_3 = "Reading Is Fun";
+
         return (
             <CarouselProvider
                 className="carousel-provider"
@@ -28,7 +36,10 @@ class Carousel extends React.Component {
                 hasMasterSpinner={true}>
                 <Slider className="slider">
                     <Slide index={0} className="slide">
-                        <SlideContent />
+                        <SlideContent 
+                            text={text_1}
+                            title={title_1}
+                        />
                         <Image src={photo_1_sm}
                             srcSet={`${photo_1_sm} 640w,
                                     ${photo_1_md} 1024w,
@@ -36,7 +47,10 @@ class Carousel extends React.Component {
                             alt="beautiful library interior"/>
                     </Slide>
                     <Slide index={1} className="slide">
-                        <SlideContent />
+                        <SlideContent 
+                            text={text_2}
+                            title={title_2}
+                        />
                         <Image src={photo_2_sm}
                             srcSet={`${photo_2_sm} 640w,
                                     ${photo_2_md} 1024w,
@@ -44,7 +58,10 @@ class Carousel extends React.Component {
                             alt="beautiful library interior"/>
                     </Slide>
                     <Slide index={2} className="slide">
-                        <SlideContent />
+                        <SlideContent 
+                            text={text_3}
+                            title={title_3}
+                        />
                         <Image src={photo_3_sm}
                             srcSet={`${photo_3_sm} 640w,
                                     ${photo_3_md} 1024w,
@@ -52,6 +69,12 @@ class Carousel extends React.Component {
                             alt="beautiful library interior"/>
                     </Slide>
                 </Slider>
+                <ButtonBack className="carousel-btn">
+                    <FontAwesomeIcon icon={faAngleLeft} />
+                </ButtonBack>
+                <ButtonNext className="carousel-btn crs-btn-next">
+                    <FontAwesomeIcon icon={faAngleRight} />
+                </ButtonNext>
                 <DotGroup className="dot-grp"/>
             </CarouselProvider>
         )

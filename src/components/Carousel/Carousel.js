@@ -70,10 +70,14 @@ class Carousel extends React.Component {
                     </Slide>
                 </Slider>
                 <ButtonBack className="carousel-btn">
-                    <FontAwesomeIcon icon={faAngleLeft} />
+                    <span role="img" aria-label="left arrow icon">
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                    </span>
                 </ButtonBack>
                 <ButtonNext className="carousel-btn crs-btn-next">
-                    <FontAwesomeIcon icon={faAngleRight} />
+                    <span role="img" aria-label="right arrow icon">
+                        <FontAwesomeIcon icon={faAngleRight} />
+                    </span>
                 </ButtonNext>
                 <DotGroup className="dot-grp"/>
             </CarouselProvider>
@@ -82,9 +86,3 @@ class Carousel extends React.Component {
 };
 
 export default Carousel;
-
-// <img src={library_sm}
-// srcSet={`${library_sm} 640w,
-//          ${library_md} 1024w,
-//          ${library_lg} 2400w,`} 
-// alt="beautiful library interior"/>

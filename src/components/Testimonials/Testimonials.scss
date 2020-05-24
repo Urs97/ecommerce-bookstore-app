@@ -1,0 +1,73 @@
+@import '../../styles/shared.scss';
+
+.testimonial-provider {
+    width: 100%;
+    // Height and padding in .testimonial have a wierd package synergy, flexbox doesnt work
+    height: 17em;
+    position: relative;
+
+    .testimonial {
+        width: 100%;
+        height: 100%;
+        padding: 3em $horizontal-content-padding;
+        background-color: #1EAACE;
+        color: #FFFFFF;
+
+        .testimonial-slide .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-slide img {
+            width: 4em;
+            height: 4em;
+            border: 0.2em solid #FFFFFF;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+
+        .testimonial-slide p {
+            font-size: 1.25em;
+            margin-bottom: 1em;
+            text-align: center;
+            padding: 0 10em;
+        }
+    }
+
+    .testimonials-btn {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: $horizontal-content-padding;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+        border: none;
+        text-decoration: none;
+        padding: 1em 1em;
+
+        span svg {
+            color: #FFFFFF;
+            font-size: 3em;
+        }
+    }
+
+    .testimonials-btn:hover, .testimonials-btn:focus {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .testimonials-btn.tstm-btn-next {
+        right: $horizontal-content-padding;
+        left: auto;
+    }
+
+}
+
+.testimonial-provider:hover .testimonials-btn {
+    display: inline-block;
+}

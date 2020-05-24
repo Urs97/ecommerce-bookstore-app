@@ -12,7 +12,7 @@ function Footer() {
                 <Link to="/about">TOS</Link>
                 <Link to="/about">Contact Us</Link>
             </section>
-            <p>ThemeREX © 2020 All rights reserved</p>
+            <p>Bookz © 2020 All rights reserved</p>
         </section>
     )
 }

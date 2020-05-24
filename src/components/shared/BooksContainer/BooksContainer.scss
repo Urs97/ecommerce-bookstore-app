@@ -1,6 +1,6 @@
 @import '../../../styles/shared.scss';
 
-.featured-books-section {
+.books-container-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,11 +17,14 @@
         font-size: 2.8em;
     }
 
-    & .button {
+    & a {
         margin-top: $vertical-content-padding;
     }
 
     .books {
+        width: 100%;
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+        gap: 4em;
     }
 }

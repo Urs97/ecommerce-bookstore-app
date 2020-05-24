@@ -1,6 +1,8 @@
+@import '../../styles/shared.scss';
+
 .footer {
     color: #FFFFFF;
-    background-color: #2F332F;
+    background-color: $grey;
     padding: 5em 0;
     display: flex;
     flex-direction: column;

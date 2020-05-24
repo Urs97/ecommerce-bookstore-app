@@ -4,7 +4,8 @@ import BulletPoint from './BulletPoint';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 import { faAmbulance } from '@fortawesome/free-solid-svg-icons';
-import FeaturedBooks from '../../shared/FeaturedBooks/FeaturedBooks';
+import FeaturedBooks from '../../shared/BooksContainer/BooksContainer';
+import BooksContainer from '../../shared/BooksContainer/BooksContainer';
 
 function HomeMain() {
     const icon_1 = faAddressCard;
@@ -22,7 +23,7 @@ function HomeMain() {
                 <BulletPoint text={text_2} icon={icon_2}/>
                 <BulletPoint text={text_3} icon={icon_3}/>
             </section>
-            <FeaturedBooks />
+            <BooksContainer />
         </main>
     )
 };

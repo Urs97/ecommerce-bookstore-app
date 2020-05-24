@@ -1,11 +1,11 @@
 import React from 'react'
-import './FeaturedBooks.scss';
+import './BooksContainer.scss';
 import { Link } from 'react-router-dom';
 import Book from '../Book/Book';
 
-function FeaturedBooks() {
+function BooksContainer() {
     return (
-        <section className="featured-books-section">
+        <section className="books-container-section">
             <h1>Books Bestsellers</h1>
             <section className="books">
                 <Book />
@@ -13,10 +13,13 @@ function FeaturedBooks() {
                 <Book />
                 <Book />
                 <Book />
+                <Book />
+                <Book />
+                <Book />
             </section>
-            <Link to='/shop' className="button">View More</Link>
+            <Link to='/store' className="button">View More</Link>
         </section>
     )
 }
 
-export default FeaturedBooks;
+export default BooksContainer;

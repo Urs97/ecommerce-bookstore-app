@@ -1,0 +1,36 @@
+@import '../../../styles/shared.scss';
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 1.25em 2em;
+    border-radius: 0.5em;
+
+    .book-img {
+        width: 12em;
+        height: 17em;
+        background-color: $blue;
+        border-radius: 0.5em;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1.25em;
+        margin: 0.5em 0;
+    }
+
+    span {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+    }
+
+    & button {
+        border: none;
+        margin-top: 1em;
+        padding: 0.7em 1.5em;
+        font-size: 0.9em;
+    }
+}

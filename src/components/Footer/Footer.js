@@ -7,7 +7,7 @@ function Footer() {
         <section className="footer">
             <section className="footer-nav">
                 <Link to="/">Home</Link>
-                <Link to="/shop">Shop</Link>
+                <Link to="/store">Store</Link>
                 <Link to="/about">About Us</Link>
                 <Link to="/about">TOS</Link>
                 <Link to="/about">Contact Us</Link>

@@ -14,7 +14,7 @@ function Navigation() {
             </div>
             <nav>
                 <Link to="/" className="link">Home</Link>
-                <Link to="/shop" className="link">Bookstore</Link>
+                <Link to="/store" className="link">Bookstore</Link>
                 <Link to="/acc" className="link">My Account</Link>
                 <Link to="/about" className="link">Contact</Link>
                 <span role="img" aria-label="search icon">

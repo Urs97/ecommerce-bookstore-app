@@ -1,4 +1,4 @@
-@import '../../../styles/shared.scss';
+@import '../../styles/shared.scss';
 
 .bulletpoint {
     display: flex;
@@ -28,5 +28,33 @@
         margin-top: 1em;
         text-align: center;
         color: $text-color;
+        flex-grow: 1;
+    }
+}
+
+.bulletpoint-expanded {
+
+    padding: 0 2em;
+
+    & span {
+        color: $green;
+        border-color: $green;
+        background-color: #FFFFFF;
+
+        &:hover {
+            background-color: $green;
+            color: #FFFFFF;
+            border-color: $green;
+        }
+    }
+
+    & h4 {
+        margin-top: 1em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    & p {
+        font-size: 1.15em;
     }
 }

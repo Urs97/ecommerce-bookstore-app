@@ -1,6 +1,6 @@
 import React from 'react';
 import './Store.scss';
-import BooksContainer from '../shared/BooksContainer/BooksContainer';
+import BooksContainer from '../BooksContainer/BooksContainer';
 
 function Store() {
     return (

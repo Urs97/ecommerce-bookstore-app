@@ -1,4 +1,4 @@
-@import '../../../styles/shared.scss';
+@import '../../styles/shared.scss';
 
 .books-container-section {
     display: flex;
@@ -15,10 +15,6 @@
         margin: 0;
         margin-bottom: $vertical-content-padding;
         font-size: 2.8em;
-    }
-
-    & a {
-        margin-top: $vertical-content-padding;
     }
 
     .books {

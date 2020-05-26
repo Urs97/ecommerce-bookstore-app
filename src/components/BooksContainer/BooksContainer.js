@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import './BooksContainer.scss';
-import { Link } from 'react-router-dom';
 import Book from '../Book/Book';
 
 function BooksContainer() {
@@ -17,7 +16,6 @@ function BooksContainer() {
                 <Book />
                 <Book />
             </section>
-            <Link to='/store' className="button">View More</Link>
         </section>
     )
 }

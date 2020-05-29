@@ -1,0 +1,20 @@
+@import '../../styles/shared.scss';
+
+.store-sidebar {
+    background-color: #FFFFFF;
+    margin-left: 3em;
+    padding: 1.875em;
+
+    & ul {
+        list-style-position: inside;
+        color: $green;
+        line-height: 1.75;
+        padding: $vertical-sidebar-padding 0;
+        padding-top: 0.75em;
+        border-bottom: 2px solid $background-grey;
+
+        li:hover, li:focus {
+            color: $yellow;
+        }
+    }
+}

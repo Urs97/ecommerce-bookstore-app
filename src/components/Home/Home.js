@@ -12,6 +12,7 @@ function Home() {
             <Carousel />
             <main>
                 <BulletPointContainer mode="regular"/>
+                <h1 className="title home-title">Bookz Bestsellers</h1>
                 <BooksContainer />
                 <StoreInvitation />
                 <BulletPointContainer mode="expanded"/>

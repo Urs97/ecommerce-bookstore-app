@@ -1,0 +1,9 @@
+@import '../../styles/shared.scss';
+
+.home-title {
+    text-align: center;
+    font-size: 2.8em;
+    color: $text-color;
+    background-color: $background-grey;
+    padding-top: $vertical-content-padding;
+}

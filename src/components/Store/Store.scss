@@ -19,3 +19,22 @@
         color: #FFFFFF;
     }
 }
+
+.store-main-container {
+    display: flex;
+    padding: $vertical-content-padding $horizontal-content-padding;
+    background-color: $background-grey;
+
+    & .books-container-section {
+        padding: 0;
+        width: 70%;
+
+        .books {
+            gap: 3em;
+        }
+    }
+
+    & .store-sidebar {
+        width: 30%;
+    }
+}

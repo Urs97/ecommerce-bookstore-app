@@ -1,0 +1,17 @@
+@import '../../../../styles/shared.scss';
+
+.sidebar-book {
+    display: flex;
+
+    .sidebar-book-img {
+        width: 5em;
+        height: 7em;
+        background-color: $blue;
+        border-radius: $border-radius;
+    }
+
+    .sidebar-book-details { 
+        padding: 0.5em 0.75em;
+        line-height: 1.5;
+    }
+}

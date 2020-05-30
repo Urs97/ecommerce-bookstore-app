@@ -3,18 +3,25 @@
 .store-sidebar {
     background-color: #FFFFFF;
     margin-left: 3em;
-    padding: 1.875em;
+    padding: 0 1.875em;
+    border-radius: $border-radius;
 
-    & ul {
-        list-style-position: inside;
-        color: $green;
-        line-height: 1.75;
-        padding: $vertical-sidebar-padding 0;
-        padding-top: 0.75em;
-        border-bottom: 2px solid $background-grey;
+    & .book-genres {
 
-        li:hover, li:focus {
-            color: $yellow;
+        & ul {
+            list-style-position: inside;
+            color: $green;
+            line-height: 1.75;
+            padding-top: 0.75em;
+    
+            li:hover, li:focus {
+                color: $yellow;
+            }
         }
     }
+}
+
+.store-sidebar > * {
+    border-bottom: $sidebar-divider;
+    padding: $vertical-sidebar-padding 0;
 }

@@ -1,0 +1,5 @@
+@import '../../../styles/shared.scss';
+
+.sidebar-book-container > * {
+    margin-bottom: $vertical-sidebar-padding;
+}

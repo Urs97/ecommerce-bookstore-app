@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
+import Nouislider from "nouislider-react";
+import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
 function FilterByPrice() {
-    const [value, setValue] = useState(0);
-    const handleOnChange = (e) => setValue(e.target.value); 
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(0);
+
+    const onChange = () => (render, handle, value, un, percent) => {
+        setMinPrice(value[0]);
+        setMaxPrice(value[1]);
+    }
 
     return (
         <section className="filter-by-price">
             <h4 className="sidebar-title">Filter By Price</h4>
-            <input type="range" min={0} max={100} step={5} value={value} onChange={handleOnChange} />
-            <div>
+            <Nouislider 
+                range={{ min: 0, max: 100 }} 
+                start={[20, 80]}
+                step={10} 
+                connect 
+                onUpdate={onChange()}/>
+            <div className="filter-by-price-div">
                 <button className="button">Filter</button>
-                <span>{value}</span>
+                <span>{minPrice}-{maxPrice}</span>
             </div>
         </section>
     )

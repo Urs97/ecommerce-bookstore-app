@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
+    "nouislider-react": "^3.3.7",
     "pure-react-carousel": "^1.27.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

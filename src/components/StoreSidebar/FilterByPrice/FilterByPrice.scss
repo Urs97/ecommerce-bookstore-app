@@ -9,7 +9,7 @@
         width: 100%;
     }
 
-    & div {
+    & .filter-by-price-div {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -24,4 +24,43 @@
 
 .filter-by-price > *:not(:last-child) {
     margin-bottom: $vertical-sidebar-padding;
+}
+
+// NoUiSlider styling
+
+.noUi-target {
+    background-color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-radius: 1em;
+    box-shadow: inset 0 1px 1px #CCCCCC, 0 3px 6px -5px #CCCCCC;
+}
+
+.noUi-horizontal {
+    height: 0.75em;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.noUi-handle {
+    background-color: $dark-blue;
+    border-radius: 1em;
+    border: 1px solid $dark-blue;
+    box-shadow: none;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    background: none;
+}
+
+.noUi-touch-area {
+    background-color: $dark-blue;
+    border-radius: 1em;
+    border-color: $dark-blue;
+}
+
+.noUi-connect {
+    background-color: $dark-blue;
 }

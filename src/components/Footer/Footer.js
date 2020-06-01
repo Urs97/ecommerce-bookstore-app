@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <section className="footer">
+        <footer className="footer">
             <section className="footer-nav">
                 <Link to="/">Home</Link>
                 <Link to="/store">Store</Link>
@@ -13,7 +13,7 @@ function Footer() {
                 <Link to="/about">Contact Us</Link>
             </section>
             <p>Bookz © 2020 All rights reserved</p>
-        </section>
+        </footer>
     )
 }
 

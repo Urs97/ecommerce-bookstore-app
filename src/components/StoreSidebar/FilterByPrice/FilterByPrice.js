@@ -17,13 +17,13 @@ function FilterByPrice() {
             <h4 className="sidebar-title">Filter By Price</h4>
             <Nouislider 
                 range={{ min: 0, max: 100 }} 
-                start={[20, 80]}
+                start={[0, 100]}
                 step={10} 
                 connect 
                 onUpdate={onChange()}/>
             <div className="filter-by-price-div">
                 <button className="button">Filter</button>
-                <span>{minPrice}-{maxPrice}</span>
+                <span>${minPrice} - ${maxPrice}</span>
             </div>
         </section>
     )

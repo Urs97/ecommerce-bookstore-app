@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
-        <section className="header-nav-section">
+        <header className="header-nav-section">
             <div>
                 <h1 className="title">Bookz</h1>
                 <p>Webstore for book lovers</p>
@@ -24,7 +24,7 @@ function Navigation() {
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </span>
             </nav>
-        </section>
+        </header>
     )
 };
 

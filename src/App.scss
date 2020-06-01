@@ -30,7 +30,7 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     
-    &:hover, &:focus {
+    &:hover {
         background-color: $yellow;
     }
 }

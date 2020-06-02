@@ -33,6 +33,34 @@ body {
     &:hover {
         background-color: $yellow;
     }
+
+    &:focus {
+        outline: 0.2em solid black;
+    }
+
+    &:not(.focus-visible) {
+        outline: none;
+      }
+}
+
+.btn-to-link {
+    color: $green;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+
+    &:hover {
+        color: $yellow;
+    }
+
+    &:focus {
+        outline: 0.2em solid black;
+    }
+
+    &:not(.focus-visible) {
+        outline: none;
+      }
 }
 
 .title {

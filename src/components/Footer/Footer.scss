@@ -20,6 +20,14 @@
         color: #000000;
     }
 
+    & a:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    & a:not(.focus-visible) {
+        outline: none;
+    }
+
     & a:not(:first-child) {
         margin-left: 1.5em;
     }

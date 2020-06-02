@@ -61,6 +61,14 @@
         background-color: rgba(0, 0, 0, 0.4);
     }
 
+    .testimonials-btn:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    .testimonials-btn:not(.focus-visible) {
+        outline: none;
+    }
+
     .testimonials-btn.tstm-btn-next {
         right: $horizontal-content-padding;
         left: auto;

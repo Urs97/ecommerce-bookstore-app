@@ -13,7 +13,7 @@ function Navigation() {
                 <p>Webstore for book lovers</p>
             </div>
             <nav>
-                <Link to="/" className="link">Home</Link>
+            <Link to="/" className="link js-focus-visible">Home</Link>
                 <Link to="/store" className="link">Bookstore</Link>
                 <Link to="/acc" className="link">My Account</Link>
                 <Link to="/about" className="link">Contact</Link>

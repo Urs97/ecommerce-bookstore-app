@@ -49,6 +49,14 @@
         background-color: rgba(0, 0, 0, 0.95);
     }
 
+    .carousel-btn:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    .carousel-btn:not(.focus-visible) {
+        outline: none;
+    }
+
     .carousel-btn.crs-btn-next {
         right: 0;
         left: auto;

@@ -51,6 +51,14 @@
         border-bottom: 0.15em solid $blue;
     }
 
+    nav .link:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    nav .link:not(.focus-visible) {
+        outline: none;
+      }
+
     nav .link:not(:last-child) {
         margin-right: 1.5em;
     }

@@ -33,4 +33,12 @@
         background-color: rgba(255, 255, 255, 0.8);
         color: #000000;
     }
+
+    & .link-button:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    & .link-button:not(.focus-visible) {
+        outline: none;
+    }
 };

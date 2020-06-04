@@ -12,7 +12,7 @@ function Store() {
         window.scrollTo(0, 0);
       }, [])
 
-    const fetchingTest = async () => {
+    const fetchingBookSubjectNames = async () => {
     const urls = [];
     for(let i = 56877; i <= 56920; i++) {
         const url = `https://openlibrary.org/api/books?bibkeys=OLID:OL${i}M&format=json&jscmd=data`;
@@ -22,11 +22,24 @@ function Store() {
     const data = await Promise.all((urls)
         .map(url => fetch(url)
         .then(response => response.json())));
-
-        console.log(data);
+        
+    const bookSubjectNames = data.map(n => Object.values(n)[0].subjects)
+                                .map(book => (typeof book !== "undefined" ? book
+                                .forEach(subject => console.log(subject.name)) 
+                                : null)); 
     }
 
-    fetchingTest();
+    const fetchingBooksBySubject = async () => {
+        const url = `http://openlibrary.org/subjects/science_fiction.json?limit=50&offset=20`;
+        
+        const data = await fetch(url)
+                        .then(response => response.json());
+
+        const booksBySubject = console.log(data);
+    }
+
+    // fetchingBookSubjectNames();
+    fetchingBooksBySubject();
 
     return (
         <main>

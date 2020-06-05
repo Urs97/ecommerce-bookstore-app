@@ -1,51 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Store.scss';
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
 
 function Store() {
-    
-    const currentTitle = "Detective Novels";
+
+    const [currentGenreTitle, setCurrentGenreTitle] = useState("No Title");
+    const [currentGenreData, setCurrentGenreData] = useState("No Data");
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
+        fetchBooksBySubject();
       }, [])
 
-    const fetchingBookSubjectNames = async () => {
-    const urls = [];
-    for(let i = 56877; i <= 56920; i++) {
-        const url = `https://openlibrary.org/api/books?bibkeys=OLID:OL${i}M&format=json&jscmd=data`;
-        urls.push(url);
-    }
-
-    const data = await Promise.all((urls)
-        .map(url => fetch(url)
-        .then(response => response.json())));
-        
-    const bookSubjectNames = data.map(n => Object.values(n)[0].subjects)
-                                .map(book => (typeof book !== "undefined" ? book
-                                .forEach(subject => console.log(subject.name)) 
-                                : null)); 
-    }
-
-    const fetchingBooksBySubject = async () => {
-        const url = `http://openlibrary.org/subjects/science_fiction.json?limit=50&offset=20`;
+    const fetchBooksBySubject = async () => {
+        const url = `http://openlibrary.org/subjects/science_fiction.json?limit=27&offset=0`;
         
         const data = await fetch(url)
                         .then(response => response.json());
-
-        const booksBySubject = console.log(data);
+        
+        setCurrentGenreTitle(data.name);
+        setCurrentGenreData(data.works);
+        console.log(data.works)
     }
-
-    // fetchingBookSubjectNames();
-    fetchingBooksBySubject();
 
     return (
         <main>
-            <PageHeader title={currentTitle} color="blue"/>
+            <PageHeader title={currentGenreTitle} color="blue" />
             <section className="store-main-container">
-                <BooksContainer />
+                <BooksContainer books={currentGenreData} />
                 <StoreSidebar />
             </section>
         </main>
@@ -88,3 +72,20 @@ export default Store;
 //     next_id: data[3].id,
 //     prev_type: data[2].types.map(type => type.type.name).join(" "),
 //     next_type: data[3].types.map(type => type.type.name).join(" "),
+
+// const fetchingBookSubjectNames = async () => {
+//     const urls = [];
+//     for(let i = 56877; i <= 56920; i++) {
+//         const url = `https://openlibrary.org/api/books?bibkeys=OLID:OL${i}M&format=json&jscmd=data`;
+//         urls.push(url);
+//     }
+
+//     const data = await Promise.all((urls)
+//         .map(url => fetch(url)
+//         .then(response => response.json())));
+        
+//     const bookSubjectNames = data.map(n => Object.values(n)[0].subjects)
+//                                 .map(book => (typeof book !== "undefined" ? book
+//                                 .forEach(subject => console.log(subject.name)) 
+//                                 : null)); 
+//     }

@@ -16,14 +16,25 @@
         border-radius: $border-radius;
     }
 
-    h4 {
-        text-transform: uppercase;
-        font-size: 1.25em;
-        margin: 0.5em 0;
+    .title-container {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin: 0.75em 0 0.5em 0;
+
+        h4 {
+            font-size: 1em;
+            text-transform: capitalize;
+            text-align: center;
+        }
     }
 
-    span {
-        font-size: 1.5em;
+    p {
+        font-size: 0.85em;
+    }
+
+    .price-container {
+        font-size: 1.15em;
         margin-top: 0.5em;
     }
 

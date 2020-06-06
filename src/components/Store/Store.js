@@ -6,12 +6,13 @@ import PageHeader from '../PageHeader/PageHeader';
 
 function Store() {
 
-    const [currentGenreTitle, setCurrentGenreTitle] = useState("No Title");
+    const [currentGenreTitle, setCurrentGenreTitle] = useState("Loading resources...");
     const [currentGenreData, setCurrentGenreData] = useState("No Data");
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        fetchBooksBySubject();
+        fetchBooksBySubject()
       }, [])
 
     const fetchBooksBySubject = async () => {
@@ -22,18 +23,36 @@ function Store() {
         
         setCurrentGenreTitle(data.name);
         setCurrentGenreData(data.works);
+        setIsLoading(false);
         console.log(data.works)
     }
 
-    return (
+    let content = (
         <main>
             <PageHeader title={currentGenreTitle} color="blue" />
-            <section className="store-main-container">
-                <BooksContainer books={currentGenreData} />
-                <StoreSidebar />
-            </section>
-        </main>
-    )
+            <section>Content is loading...</section>
+        </main>);
+
+    if(!isLoading && typeof currentGenreData === "object") {
+        content = (
+            <main>
+                <PageHeader title={currentGenreTitle} color="blue" />
+                <section className="store-main-container">
+                    <BooksContainer books={currentGenreData} />
+                    <StoreSidebar />
+                </section>
+            </main>
+        )
+    // This part doesnt work come back to it later
+    } else if (!isLoading && typeof currentGenreData !== "object") {
+        content = (
+            <main>
+                <PageHeader title={"Failed to load resources"} color="blue" />
+                <section>Failed to load.</section>
+            </main>
+        )
+    }
+    return content;
 };
 
 export default Store;

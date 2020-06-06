@@ -4,8 +4,7 @@ import Book from '../Book/Book';
 
 function BooksContainer({ books }) {
 
-    return (typeof books !== "undefined" ? 
-
+    return (
         <section className="books-container-section">
             <section className="books">
                 <Book book={books[0]}/>
@@ -19,8 +18,7 @@ function BooksContainer({ books }) {
                 <Book book={books[8]}/>
             </section>
         </section>
-
-    : <div>"No books yet"</div>)
-}
+    );
+};
 
 export default BooksContainer;

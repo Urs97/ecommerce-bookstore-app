@@ -1,21 +1,16 @@
 import React from 'react';
 import './BooksContainer.scss';
 import Book from '../Book/Book';
+import { uuid }  from 'uuidv4';
 
-function BooksContainer({ books }) {
+function BooksContainer({ bookData }) {
+
+    const books = bookData.map(book => <Book key={uuid()} book={book}/>);
 
     return (
         <section className="books-container-section">
             <section className="books">
-                <Book book={books[0]}/>
-                <Book book={books[1]}/>
-                <Book book={books[2]}/>
-                <Book book={books[3]}/>
-                <Book book={books[4]}/>
-                <Book book={books[5]}/>
-                <Book book={books[6]}/>
-                <Book book={books[7]}/>
-                <Book book={books[8]}/>
+                {books}
             </section>
         </section>
     );

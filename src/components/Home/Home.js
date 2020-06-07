@@ -11,20 +11,29 @@ function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const [currentData, setCurrentData] = useState("No Data");
 
+    
+    
     useEffect(() => {
         window.scrollTo(0, 0);
         fetchBooksBySubject();
     }, [])
 
     const fetchBooksBySubject = async () => {
-        const url = `http://openlibrary.org/subjects/fiction.json?limit=9&offset=4`;
+        const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
         
         const data = await fetch(url)
                         .then(response => response.json());
         
-        setIsLoading(false);
+        // Custom random price generator;
+        data.works.forEach(book => {
+            let randomTwoDigitNum = [];
+            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
+            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
+            book["price"] = randomTwoDigitNum;
+        });
+    
         setCurrentData(data.works);
-        console.log(data.works)
+        setIsLoading(false);
     }
 
     return (   
@@ -34,7 +43,7 @@ function Home() {
             {(!isLoading && typeof currentData !== "string") ?
                 <> 
                     <h1 className="title home-title">Bookz Bestsellers</h1>
-                    <BooksContainer books={currentData}/>
+                    <BooksContainer bookData={currentData}/>
                 </> 
             : null}
             <StoreInvitation />

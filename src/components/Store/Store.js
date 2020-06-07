@@ -21,10 +21,17 @@ function Store() {
         const data = await fetch(url)
                         .then(response => response.json());
         
+        // Custom random price generator;
+        data.works.forEach(book => {
+            let randomTwoDigitNum = [];
+            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
+            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
+            book["price"] = randomTwoDigitNum;
+        });
+
         setCurrentGenreTitle(data.name);
         setCurrentGenreData(data.works);
         setIsLoading(false);
-        console.log(data.works)
     }
 
     let content = (
@@ -38,7 +45,7 @@ function Store() {
             <main>
                 <PageHeader title={currentGenreTitle} color="blue" />
                 <section className="store-main-container">
-                    <BooksContainer books={currentGenreData} />
+                    <BooksContainer bookData={currentGenreData} />
                     <StoreSidebar />
                 </section>
             </main>

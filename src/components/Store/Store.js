@@ -1,57 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Store.scss';
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
+import { useHttp } from '../hooks/http';
 
 function Store() {
 
-    const [currentGenreTitle, setCurrentGenreTitle] = useState("Loading resources...");
-    const [currentGenreData, setCurrentGenreData] = useState("No Data");
-    const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         window.scrollTo(0, 0)
-        fetchBooksBySubject()
       }, [])
 
-    const fetchBooksBySubject = async () => {
-        const url = `http://openlibrary.org/subjects/science_fiction.json?limit=27&offset=0`;
-        
-        const data = await fetch(url)
-                        .then(response => response.json());
-        
-        // Custom random price generator;
-        data.works.forEach(book => {
+    const url = `http://openlibrary.org/subjects/science_fiction.json?limit=27&offset=0`;
+  
+    const [isLoading, fetchedData] = useHttp(url, []);
+    
+    if(fetchedData) {
+        // Custom random price generator
+        fetchedData.works.forEach(book => {
             let randomTwoDigitNum = [];
             randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
             randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
             book["price"] = randomTwoDigitNum;
         });
-
-        setCurrentGenreTitle(data.name);
-        setCurrentGenreData(data.works);
-        setIsLoading(false);
-    }
+    };
 
     let content = (
         <main>
-            <PageHeader title={currentGenreTitle} color="blue" />
-            <section>Content is loading...</section>
+            <PageHeader title="Loading Resources..." color="blue" />
+            <section className="loader" />
         </main>);
 
-    if(!isLoading && typeof currentGenreData === "object") {
+    if(!isLoading && fetchedData) {
         content = (
             <main>
-                <PageHeader title={currentGenreTitle} color="blue" />
+                <PageHeader title={fetchedData.name} color="blue" />
                 <section className="store-main-container">
-                    <BooksContainer bookData={currentGenreData} />
+                    <BooksContainer bookData={fetchedData.works} />
                     <StoreSidebar />
                 </section>
             </main>
         )
     // This part doesnt work come back to it later
-    } else if (!isLoading && typeof currentGenreData !== "object") {
+    } else if (!isLoading && !fetchedData) {
         content = (
             <main>
                 <PageHeader title={"Failed to load resources"} color="blue" />

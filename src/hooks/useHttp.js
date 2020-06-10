@@ -34,6 +34,7 @@ export const useHttp = (url, storageItemKey, dependencies) => {
           setIsLoading(false);
         });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 
   return [isLoading, data];

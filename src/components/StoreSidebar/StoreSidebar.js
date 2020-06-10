@@ -3,7 +3,7 @@ import './StoreSidebar.scss';
 import FilterByPrice from './FilterByPrice/FilterByPrice';
 import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
-function StoreSidebar() {
+function StoreSidebar({ handleFilterByPrice }) {
     return (
         <section className="store-sidebar">
             <section className="book-genres">
@@ -17,8 +17,8 @@ function StoreSidebar() {
                     <li><button className="btn-to-link">Politics</button></li>
                 </ul>
             </section>
-            <FilterByPrice />
-            <SidebarBookContainer title="Top Rated Books"/>
+            <FilterByPrice handleFilterByPrice={handleFilterByPrice}/>
+            <SidebarBookContainer title="Top Rated Books" handleFilterByPrice={handleFilterByPrice}/>
             <SidebarBookContainer title="Recent Books"/>
         </section>
     )

@@ -5,36 +5,25 @@ import BulletPointContainer from '../BulletPointContainer/BulletPointContainer';
 import Testimonials from '../Testimonials/Testimonials';
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreInvitation from '../StoreInvitation/StoreInvitation';
-import { useHttp } from '../hooks/http';
+import { useHttp } from '../../hooks/useHttp';
 
 function Home() {
-    
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
-
-    const [isLoading, fetchedData] = useHttp(url, []);
     
-    if(fetchedData) {
-        // Custom random price generator
-        fetchedData.works.forEach(book => {
-            let randomTwoDigitNum = [];
-            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
-            randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
-            book["price"] = randomTwoDigitNum;
-        });
-    };
+    const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
+    const [isLoading, data] = useHttp(url, 'homeApiData', []);
 
     return (   
         <main>
             <Carousel />
             <BulletPointContainer mode="regular"/>
-            {(!isLoading && fetchedData) ?
+            {(!isLoading && data) ?
                 <> 
                     <h1 className="title home-title">Bookz Bestsellers</h1>
-                    <BooksContainer bookData={fetchedData.works}/>
+                    <BooksContainer bookData={data.works}/>
                 </> 
             : null}
             <StoreInvitation />

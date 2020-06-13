@@ -15,11 +15,12 @@ function Store() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, [currentPage])
 
     // Filter By Price
     const handleFilterByPrice = (minPrice, maxPrice) => {
         setFilteredData(data.works.filter(book => book.price[0] >= minPrice && book.price[0] <= maxPrice));
+        setCurrentPage(1);
     };
 
     // Change Page
@@ -32,7 +33,7 @@ function Store() {
         </main>);
 
     if(!isLoading && data) {
-
+        
         // Pagination functionality
         const indexOfLastBook = currentPage * booksPerPage;
         const indexOfFirstBook = indexOfLastBook - booksPerPage;
@@ -43,9 +44,11 @@ function Store() {
             <main>
                 <PageHeader title={data.name} color="blue" />
                 <section className="store-main-container">
-                    <BooksContainer bookData={currentBooks} />
+                    <section>
+                        <BooksContainer bookData={currentBooks} />
+                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} paginate={paginate}/>
+                    </section>
                     <StoreSidebar handleFilterByPrice={handleFilterByPrice}/>
-                    <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} paginate={paginate}/>
                 </section>
             </main>
         )

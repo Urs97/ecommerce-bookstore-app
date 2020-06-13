@@ -7,13 +7,20 @@ function BooksContainer({ bookData }) {
 
     const books = bookData.map(book => <Book key={uuid()} book={book}/>);
 
-    return (
-        <section className="books-container-section">
-            <section className="books">
-                {books}
+    // Improve this part
+    let content = <div>There are no books.</div>
+
+    if(books.length !== 0) {
+        content = (
+            <section className="books-container-section">
+                <section className="books">
+                    {books}
+                </section>
             </section>
-        </section>
-    );
+        );
+    };
+
+    return content;
 };
 
 export default BooksContainer;

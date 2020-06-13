@@ -18,7 +18,7 @@ function StoreSidebar({ handleFilterByPrice }) {
                 </ul>
             </section>
             <FilterByPrice handleFilterByPrice={handleFilterByPrice}/>
-            <SidebarBookContainer title="Top Rated Books" handleFilterByPrice={handleFilterByPrice}/>
+            <SidebarBookContainer title="Top Rated Books"/>
             <SidebarBookContainer title="Recent Books"/>
         </section>
     )

@@ -1,22 +1,18 @@
 @import '../../styles/shared.scss';
 
 .store-main-container {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+
     padding: $vertical-content-padding $horizontal-content-padding;
     background-color: $background-grey;
 
     & .books-container-section {
         padding: 0;
-        width: 70%;
 
         .books {
             gap: 3em;
         }
-    }
-
-    & .store-sidebar {
-        width: 30%;
     }
 }
 

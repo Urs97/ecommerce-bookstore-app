@@ -17,6 +17,9 @@
 }
 
 .store-sidebar > * {
-    border-bottom: $sidebar-divider;
     padding: $vertical-sidebar-padding 0;
+}
+
+.store-sidebar > *:not(:last-child) {
+    border-bottom: $sidebar-divider;
 }

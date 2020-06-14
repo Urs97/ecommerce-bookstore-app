@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Store.scss';
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
@@ -12,16 +12,21 @@ function Store() {
     const [filteredData, setFilteredData] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const booksPerPage = 9;
+    const booksContainerRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [currentPage])
+    }, [])
 
     // Filter By Price
     const handleFilterByPrice = (minPrice, maxPrice) => {
         setFilteredData(data.works.filter(book => book.price[0] >= minPrice && book.price[0] <= maxPrice));
         setCurrentPage(1);
     };
+
+    // Scroll to ref element
+    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+    const executeScroll = () => scrollToRef(booksContainerRef);
 
     // Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -43,10 +48,11 @@ function Store() {
         content = (
             <main>
                 <PageHeader title={data.name} color="blue" />
-                <section className="store-main-container">
-                    <section>
+                <section className="store-main-container" ref={booksContainerRef}>
+                    <section className="books-container-pagination-wrapper">
                         <BooksContainer bookData={currentBooks} />
-                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} paginate={paginate}/>
+                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} 
+                            paginate={paginate} executeScroll={executeScroll}/>
                     </section>
                     <StoreSidebar handleFilterByPrice={handleFilterByPrice}/>
                 </section>

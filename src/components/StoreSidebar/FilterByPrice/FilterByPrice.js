@@ -1,21 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
-function FilterByPrice({ handleFilterByPrice }) {
+function FilterByPrice({ handleFilterByPrice }, ref) {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
+    const filterRef = useRef(null);
 
     const onChange = () => (render, handle, value, un, percent) => {
         setMinPrice(value[0]);
         setMaxPrice(value[1]);
     }
+    
+    React.useImperativeHandle(ref, () => ({
+        resetFilter() {
+            setMinPrice(0);
+            setMaxPrice(100);
+            filterRef.noUiSlider.reset();
+    }}));
 
     return (
         <section className="filter-by-price">
             <h4 className="sidebar-title">Filter By Price</h4>
             <Nouislider 
+                filterRef={filterRef}
                 range={{ min: 0, max: 100 }} 
                 start={[0, 100]}
                 step={10} 
@@ -29,4 +38,6 @@ function FilterByPrice({ handleFilterByPrice }) {
     )
 };
 
-export default FilterByPrice;
+const forwardedFilterByPrice = React.forwardRef(FilterByPrice);
+
+export default forwardedFilterByPrice;

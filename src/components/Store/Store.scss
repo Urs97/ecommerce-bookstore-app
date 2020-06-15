@@ -7,11 +7,13 @@
     padding: $vertical-content-padding $horizontal-content-padding;
     background-color: $background-grey;
 
-    & .books-container-section {
-        padding: 0;
-
-        .books {
-            gap: 3em;
+    .books-container-pagination-wrapper {
+        & .books-container-section {
+            padding: 0;
+    
+            .books {
+                gap: 3em;
+            }
         }
     }
 }

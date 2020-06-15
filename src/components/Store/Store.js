@@ -7,16 +7,28 @@ import { useHttp } from '../../hooks/useHttp';
 import Pagination from '../Pagination/Pagination';
 
 function Store() {
-    const url = `http://openlibrary.org/subjects/science_fiction.json?limit=27&offset=0`;
-    const [isLoading, data] = useHttp(url, 'storeApiData', []);
+    const [categoryName, setCategoryName] = useState('science_fiction');
+    const url = `http://openlibrary.org/subjects/${categoryName}.json?limit=27&offset=0`;
+    const [isLoading, data] = useHttp(url, `store_${categoryName}_data`, [categoryName]);
     const [filteredData, setFilteredData] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const booksPerPage = 9;
     const booksContainerRef = useRef(null);
+    const filterByPriceRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    useEffect(() => {
+        setFilteredData(null);
+    }, [categoryName])
+
+    // Change Book Genre
+    const handleSetCategoryName = (name) => {
+        setCategoryName(name);
+        filterByPriceRef.current.resetFilter();
+    };
 
     // Filter By Price
     const handleFilterByPrice = (minPrice, maxPrice) => {
@@ -36,6 +48,8 @@ function Store() {
             <PageHeader title="Loading Resources..." color="blue" />
             <section className="loader" />
         </main>);
+    
+    console.log(filterByPriceRef);
 
     if(!isLoading && data) {
         
@@ -54,7 +68,8 @@ function Store() {
                         <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} 
                             paginate={paginate} executeScroll={executeScroll}/>
                     </section>
-                    <StoreSidebar handleFilterByPrice={handleFilterByPrice}/>
+                    <StoreSidebar ref={filterByPriceRef} handleFilterByPrice={handleFilterByPrice}
+                        handleSetCategoryName={handleSetCategoryName}/>
                 </section>
             </main>
         )

@@ -16,7 +16,7 @@
         border-radius: $border-radius;
     }
 
-    .title-container {
+    .book-title-container {
         flex-grow: 1;
         display: flex;
         align-items: center;
@@ -34,7 +34,7 @@
         text-align: center;
     }
 
-    .price-container {
+    .book-price-container {
         font-size: 1.15em;
         margin-top: 0.5em;
     }

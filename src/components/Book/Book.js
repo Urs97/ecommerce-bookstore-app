@@ -10,9 +10,9 @@ function Book({ book }) {
     return (
         <div className="book">
             <img src={img_url} alt={img_alt} className="book-img"/>
-            <span className="title-container"><h4 className="title">{book.title}</h4></span>
+            <span className="book-title-container"><h4 className="title">{book.title}</h4></span>
             <p>{book.authors[0].name}</p>
-            <span className="price-container">${book.price[0]}.{book.price[1]}</span>
+            <span className="book-price-container">${book.price[0]}.{book.price[1]}</span>
             <button className="button">Add to cart</button>
         </div>
     );

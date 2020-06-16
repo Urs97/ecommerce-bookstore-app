@@ -13,7 +13,7 @@ function Store() {
     const [filteredData, setFilteredData] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const booksPerPage = 9;
-    const booksContainerRef = useRef(null);
+    const storeMainRef = useRef(null);
     const filterByPriceRef = useRef(null);
 
     useEffect(() => {
@@ -22,13 +22,11 @@ function Store() {
 
     useEffect(() => {
         setFilteredData(null);
+        (filterByPriceRef.current && filterByPriceRef.current.resetFilter());
     }, [categoryName])
 
     // Change Book Genre
-    const handleSetCategoryName = (name) => {
-        setCategoryName(name);
-        filterByPriceRef.current.resetFilter();
-    };
+    const handleSetCategoryName = (name) => setCategoryName(name);
 
     // Filter By Price
     const handleFilterByPrice = (minPrice, maxPrice) => {
@@ -38,18 +36,18 @@ function Store() {
 
     // Scroll to ref element
     const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
-    const executeScroll = () => scrollToRef(booksContainerRef);
+    const executeScroll = () => scrollToRef(storeMainRef);
 
     // Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    console.log(filterByPriceRef)
 
     let content = (
         <main>
             <PageHeader title="Loading Resources..." color="blue" />
             <section className="loader" />
         </main>);
-    
-    console.log(filterByPriceRef);
 
     if(!isLoading && data) {
         
@@ -62,13 +60,15 @@ function Store() {
         content = (
             <main>
                 <PageHeader title={data.name} color="blue" />
-                <section className="store-main-container" ref={booksContainerRef}>
+                <section className="store-main-container" ref={storeMainRef}>
                     <section className="books-container-pagination-wrapper">
                         <BooksContainer bookData={currentBooks} />
                         <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} 
-                            paginate={paginate} executeScroll={executeScroll}/>
+                            paginate={paginate} 
+                            executeScroll={executeScroll}/>
                     </section>
-                    <StoreSidebar ref={filterByPriceRef} handleFilterByPrice={handleFilterByPrice}
+                    <StoreSidebar bookData={currentBooks} ref={filterByPriceRef} 
+                        handleFilterByPrice={handleFilterByPrice}
                         handleSetCategoryName={handleSetCategoryName}/>
                 </section>
             </main>

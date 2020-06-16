@@ -17,14 +17,16 @@ function FilterByPrice({ handleFilterByPrice }, ref) {
         resetFilter() {
             setMinPrice(0);
             setMaxPrice(100);
-            filterRef.noUiSlider.reset();
+            if (filterRef.current && filterRef.current.noUiSlider) {
+                filterRef.current.noUiSlider.reset();
+            }
     }}));
 
     return (
         <section className="filter-by-price">
             <h4 className="sidebar-title">Filter By Price</h4>
             <Nouislider 
-                filterRef={filterRef}
+                instanceRef={instance => filterRef.current = instance }
                 range={{ min: 0, max: 100 }} 
                 start={[0, 100]}
                 step={10} 

@@ -4,6 +4,13 @@ import FilterByPrice from './FilterByPrice/FilterByPrice';
 import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
 function StoreSidebar({ handleFilterByPrice, handleSetCategoryName, bookData }, ref) {
+
+    // Shuffle array and then select first 3 books
+    const shuffledBookData = bookData.sort(() => 0.5 - Math.random());
+    let selectedBookData = shuffledBookData.slice(0, 3);
+    // Cache data and change it only on category change! TODO
+    // Make brand logo on homepage link to home
+
     return (
         <section className="store-sidebar">
             <section className="book-genres">
@@ -24,8 +31,8 @@ function StoreSidebar({ handleFilterByPrice, handleSetCategoryName, bookData }, 
                 </ul>
             </section>
             <FilterByPrice ref={ref} handleFilterByPrice={handleFilterByPrice}/>
-            <SidebarBookContainer bookData={bookData} title="Top Rated Books"/>
-            <SidebarBookContainer bookData={bookData} title="Recent Books"/>
+            <SidebarBookContainer bookData={selectedBookData} title="Top Rated Books"/>
+            <SidebarBookContainer bookData={selectedBookData} title="Recent Books"/>
         </section>
     )
 };

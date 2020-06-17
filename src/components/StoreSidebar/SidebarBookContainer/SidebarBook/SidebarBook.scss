@@ -2,6 +2,7 @@
 
 .sidebar-book {
     display: flex;
+    color: $text-color;
 
     .sidebar-book-img {
         width: 5em;
@@ -11,7 +12,25 @@
     }
 
     .sidebar-book-details { 
-        padding: 0.5em 0.75em;
-        line-height: 1.5;
+        padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .sidebar-book-title-container {
+            font-size: 0.95em;
+        }
+
+        p {
+            font-size: 0.8em;
+        }
+
+        .sidebar-book-price-container {
+            font-size: 0.95em;
+        }
+    }
+
+    .sidebar-book-details > *:not(:last-child) {
+        margin-bottom: 0.5em;
     }
 }

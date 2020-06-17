@@ -41,8 +41,6 @@ function Store() {
     // Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    console.log(filterByPriceRef)
-
     let content = (
         <main>
             <PageHeader title="Loading Resources..." color="blue" />
@@ -67,7 +65,7 @@ function Store() {
                             paginate={paginate} 
                             executeScroll={executeScroll}/>
                     </section>
-                    <StoreSidebar bookData={currentBooks} ref={filterByPriceRef} 
+                    <StoreSidebar bookData={data.works} ref={filterByPriceRef} 
                         handleFilterByPrice={handleFilterByPrice}
                         handleSetCategoryName={handleSetCategoryName}/>
                 </section>

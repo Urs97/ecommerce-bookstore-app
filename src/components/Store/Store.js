@@ -71,6 +71,7 @@ function Store() {
                 </section>
             </main>
         )
+        
     // This part doesnt work come back to it later
     } else if (!isLoading && !data) {
         content = (

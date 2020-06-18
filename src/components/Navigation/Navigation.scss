@@ -11,14 +11,28 @@
     justify-content: space-between;
     font-size: 1.2rem;
 
-    h1 {
-        font-size: 3rem;
+    .header-logo {
+        text-decoration: none;
+        color: #FFFFFF;
+        outline: none;
+
+        h1 {
+            font-size: 3rem;
+        }
+    
+        p {
+            font-size: 1.2rem;
+            margin-top: 0.2em;
+        }
     }
 
-    p {
-        font-size: 1.2rem;
-        margin-top: 0.2em;
+    .header-logo:focus {
+        outline: 0.2em solid #FFFFFF;
     }
+
+    .header-logo:not(.focus-visible) {
+        outline: none;
+      }
 
     nav {
         margin-top: 1em;

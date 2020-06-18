@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 function Navigation() {
     return (
         <header className="header-nav-section">
-            <div>
+            <a href="/" className="header-logo">
                 <h1 className="title">Bookz</h1>
                 <p>Webstore for book lovers</p>
-            </div>
+            </a>
             <nav>
             <Link to="/" className="link js-focus-visible">Home</Link>
                 <Link to="/store" className="link">Bookstore</Link>

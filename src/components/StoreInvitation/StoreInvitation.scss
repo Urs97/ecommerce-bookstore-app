@@ -20,6 +20,10 @@
         height: 25em;
         z-index: -2;
     }
+
+    & .button:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
 }
 
 .store-invitation::after {

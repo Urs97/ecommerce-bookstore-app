@@ -7,6 +7,8 @@ function SidebarBook({ book }) {
     const img_url = `http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
     const img_alt = `${book.title} book cover`;
 
+    // To add link functionality to book
+
     return (
         <section className="sidebar-book">
             <img src={img_url} alt={img_alt} className="sidebar-book-img"/>

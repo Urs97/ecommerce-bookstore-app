@@ -5,7 +5,7 @@ import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
 function StoreSidebar({ handleFilterByPrice, handleSetCategoryName, bookData }, ref) {
 
-    const topRatedBooks = bookData.slice(0, 3);
+    const topRatedBooks = bookData.slice(5, 8);
     const recentBooks = bookData.slice(12, 15);
 
     return (
@@ -19,8 +19,8 @@ function StoreSidebar({ handleFilterByPrice, handleSetCategoryName, bookData }, 
                         className="btn-to-link">History</button></li>
                     <li><button onClick={() => handleSetCategoryName('short_stories')} 
                         className="btn-to-link">Short Stories</button></li>
-                    <li><button onClick={() => handleSetCategoryName('finance')} 
-                        className="btn-to-link">Finance</button></li>
+                    <li><button onClick={() => handleSetCategoryName('fantasy')} 
+                        className="btn-to-link">Fantasy</button></li>
                     <li><button onClick={() => handleSetCategoryName('biography')} 
                         className="btn-to-link">Biography</button></li>
                     <li><button onClick={() => handleSetCategoryName('programming')} 

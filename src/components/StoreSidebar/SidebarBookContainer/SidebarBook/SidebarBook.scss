@@ -3,6 +3,7 @@
 .sidebar-book {
     display: flex;
     color: $text-color;
+    cursor: pointer;
 
     .sidebar-book-img {
         width: 5em;

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Pagination.scss';
 
-const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll }) => {
+const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll, currentPage }) => {
+
     const pageNumbers = [];
 
     for(let i = 1; i <= Math.ceil(totalBooks / booksPerPage); i++) {
@@ -11,8 +12,9 @@ const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll }) => {
     return (
         <section className="pagination">     
             {pageNumbers.map(number => ( 
-                <button key={number} className="button" 
-                    onClick={() => {paginate(number); executeScroll()}}>{number}</button>
+                <button key={number} disabled={currentPage === number ? true : false}
+                className={`${currentPage === number ? `button active-page` : `button`}`}
+                onClick={() => {paginate(number); executeScroll()}}>{number}</button>
             ))}
         </section>
     );

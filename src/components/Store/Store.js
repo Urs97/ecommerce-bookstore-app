@@ -35,7 +35,7 @@ function Store() {
     };
 
     // Scroll to ref element
-    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop, 'smooth');
     const executeScroll = () => scrollToRef(storeMainRef);
 
     // Change Page
@@ -61,7 +61,8 @@ function Store() {
                 <section className="store-main-container" ref={storeMainRef}>
                     <section className="books-container-pagination-wrapper">
                         <BooksContainer bookData={currentBooks} />
-                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length} 
+                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length}
+                            currentPage={currentPage}
                             paginate={paginate} 
                             executeScroll={executeScroll}/>
                     </section>

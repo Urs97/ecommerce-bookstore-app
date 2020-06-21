@@ -1,1 +1,33 @@
 @import '../../styles/shared.scss';
+
+.about-us-main {
+    padding: $vertical-content-padding $horizontal-content-padding;
+    padding-bottom: 0;
+
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        padding-bottom: 0.75em;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-bottom: 1em;
+    }
+
+    p {
+        font-size: 1.25em;
+        padding-bottom: 2em;
+    }
+
+    .leadership {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.about-us-main > * {
+    text-align: center;
+    color: $text-color;
+}

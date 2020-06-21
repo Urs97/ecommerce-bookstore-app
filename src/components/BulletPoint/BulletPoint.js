@@ -2,23 +2,23 @@ import React from 'react';
 import './BulletPoint.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function BulletPoint(props) {
+function BulletPoint({mode, icon, title, text, color}) {
     
-    if(props.mode === "expanded") {
+    if(mode === "expanded") {
         return (
             <div className="bulletpoint bulletpoint-expanded">
-                <span><FontAwesomeIcon icon={props.icon} /></span>
-                <h4 className="title">{props.title}</h4>
-                <p>{props.text}</p>
+                <span className={color}><FontAwesomeIcon icon={icon} /></span>
+                <h4 className="title">{title}</h4>
+                <p>{text}</p>
             </div>
             )
     }
-
-    else {
+    
+    else if(mode === "regular") {
         return (
             <div className="bulletpoint">
-                <span><FontAwesomeIcon icon={props.icon} /></span>
-                <p>{props.text}</p>
+                <span className={color}><FontAwesomeIcon icon={icon} /></span>
+                <p>{text}</p>
             </div>
             )
     }

@@ -2,32 +2,42 @@
 
 .about-us-main {
     padding: $vertical-content-padding $horizontal-content-padding;
-    padding-bottom: 0;
 
     h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         margin: 0;
-        padding-bottom: 0.75em;
+        margin-bottom: 1em;
     }
 
     h2 {
-        font-size: 2em;
-        padding-bottom: 1em;
+        font-size: 2.5em;
+        margin-top: 0.75em;
+        margin-bottom: 1.25em;
     }
 
     p {
         font-size: 1.25em;
         padding-bottom: 2em;
     }
+}
 
-    .leadership {
+.about-us-leadership {
+    padding: $vertical-content-padding $horizontal-content-padding;
+    background-color: #F4F7F9;
+
+    .leadership-title {
+        font-size: 2.5em;
+        padding-bottom: 1.25em;
+    }
+
+    .leadership-main {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 }
 
-.about-us-main > * {
+.about-us-main, .about-us-leadership > * {
     text-align: center;
     color: $text-color;
 }

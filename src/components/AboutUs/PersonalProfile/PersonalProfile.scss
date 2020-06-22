@@ -1,0 +1,30 @@
+@import '../../../styles/shared.scss';
+
+.personal-profile {
+    padding: 0 5em;
+
+    & img {
+        width: 7em;
+        height: 7em;
+        border: 0.2em solid #FFFFFF;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1em;
+    }
+
+    & h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+    }
+
+    & h4 {
+        font-size: 1.25em;
+        font-weight: normal;
+        margin-bottom: 1em;
+    }
+
+    & p {
+        font-size: 1.25em;
+        padding-bottom: 1em;
+    }
+}

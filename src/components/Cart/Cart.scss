@@ -1,0 +1,11 @@
+@import '../../styles/shared.scss';
+
+main {
+    background-color: #F4F7F9;
+
+    .cart-container {
+        margin: $vertical-content-padding $horizontal-content-padding;
+        background-color: #FFFFFF;
+        border-radius: $border-radius;
+    }
+}

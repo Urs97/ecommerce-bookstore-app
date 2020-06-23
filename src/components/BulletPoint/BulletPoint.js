@@ -2,7 +2,7 @@ import React from 'react';
 import './BulletPoint.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function BulletPoint({mode, icon, title, text, color}) {
+const BulletPoint = ({mode, icon, title, text, color}) => {
     
     if(mode === "expanded") {
         return (

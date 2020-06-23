@@ -3,7 +3,7 @@ import Nouislider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
-function FilterByPrice({ handleFilterByPrice }, ref) {
+const FilterByPrice = ({ handleFilterByPrice }, ref) => {
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
     const filterRef = useRef(null);

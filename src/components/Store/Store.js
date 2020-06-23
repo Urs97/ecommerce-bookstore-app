@@ -6,7 +6,7 @@ import PageHeader from '../PageHeader/PageHeader';
 import { useHttp } from '../../hooks/useHttp';
 import Pagination from '../Pagination/Pagination';
 
-function Store() {
+const Store = () => {
     const [categoryName, setCategoryName] = useState('science_fiction');
     const url = `http://openlibrary.org/subjects/${categoryName}.json?limit=27&offset=0`;
     const [isLoading, data] = useHttp(url, `store_${categoryName}_data`, [categoryName]);

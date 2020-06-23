@@ -3,7 +3,7 @@ import './StoreSidebar.scss';
 import FilterByPrice from './FilterByPrice/FilterByPrice';
 import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
-function StoreSidebar({ handleFilterByPrice, handleSetCategoryName, bookData }, ref) {
+const StoreSidebar = ({ handleFilterByPrice, handleSetCategoryName, bookData }, ref) => {
 
     const topRatedBooks = bookData.slice(5, 8);
     const recentBooks = bookData.slice(12, 15);

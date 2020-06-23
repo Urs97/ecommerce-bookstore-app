@@ -13,7 +13,7 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
-function Home() {
+const Home = () => {
     const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
     const [isLoading, data] = useHttp(url, 'homeApiData', []);
 

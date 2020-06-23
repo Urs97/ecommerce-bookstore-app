@@ -5,7 +5,7 @@ import photo_md from '../../assets/images/store-invitation-photo-md.jpg';
 import photo_lg from '../../assets/images/store-invitation-photo-lg.jpg';
 import { Link } from 'react-router-dom';
 
-function StoreInvitation() {
+const StoreInvitation = () => {
     return (
         <section className="store-invitation">
             <img src={photo_sm}

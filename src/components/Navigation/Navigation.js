@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-function Navigation() {
+const Navigation = () => {
     return (
         <header className="header-nav-section">
             <a href="/" className="header-logo">
@@ -15,7 +15,7 @@ function Navigation() {
             <nav>
             <Link to="/" className="link js-focus-visible">Home</Link>
                 <Link to="/store" className="link">Bookstore</Link>
-                <Link to="/acc" className="link">My Account</Link>
+                <Link to="/cart" className="link">Cart</Link>
                 <Link to="/about" className="link">About Us</Link>
                 <span role="img" aria-label="search icon">
                     <FontAwesomeIcon icon={faSearch} />

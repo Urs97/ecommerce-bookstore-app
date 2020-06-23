@@ -2,7 +2,7 @@ import React from 'react';
 import './BulletPointContainer.scss';
 import BulletPoint from '../BulletPoint/BulletPoint';
 
-function BulletPointContainer({ mode, icons, titles, texts, color }) {
+const BulletPointContainer = ({ mode, icons, titles, texts, color }) => {
 
     if(mode === "regular") {
         return (

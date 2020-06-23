@@ -3,7 +3,7 @@ import './AppLayout.scss';
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 
-function AppLayout(props) {
+const AppLayout = (props) => {
     return (
         <React.Fragment>
             <Navigation />

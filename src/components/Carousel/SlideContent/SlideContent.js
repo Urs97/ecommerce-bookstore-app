@@ -2,7 +2,7 @@ import React from 'react';
 import './SlideContent.scss';
 import { Link } from 'react-router-dom';
 
-function SlideContent({text, title}) {
+const SlideContent = ({text, title}) => {
     return (
         <section className="slide-content">
             <p>{text}</p>

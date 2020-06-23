@@ -1,7 +1,7 @@
 import React from 'react';
 import './PageHeader.scss';
 
-function PageHeader({ title, color }) {
+const PageHeader = ({ title, color }) => {
     return (
         <>
             <section className="page-header-nav-container"></section>

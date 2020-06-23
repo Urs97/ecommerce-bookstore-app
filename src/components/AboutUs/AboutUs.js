@@ -9,7 +9,7 @@ import PersonalProfile from './PersonalProfile/PersonalProfile';
 import portrait_1 from '../../assets/images/testimonial-portrait-1.jpg';
 import portrait_2 from '../../assets/images/testimonial-portrait-3.jpg';
 
-function AboutUs() {
+const AboutUs = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);

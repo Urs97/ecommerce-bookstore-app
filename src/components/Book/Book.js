@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Book.scss';
 
-function Book({ book }) {
+const Book = ({ book }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     // L is large, M is medium and S is small image format

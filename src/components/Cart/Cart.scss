@@ -1,11 +1,20 @@
 @import '../../styles/shared.scss';
 
-main {
+.cart-container {
+    padding: $vertical-content-padding $horizontal-content-padding;
     background-color: #F4F7F9;
 
-    .cart-container {
-        margin: $vertical-content-padding $horizontal-content-padding;
+    .product-container {
         background-color: #FFFFFF;
-        border-radius: $border-radius;
+        border-radius: $border-radius $border-radius 0 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-container > *:not(:last-child) {
+        border-bottom: 0.1px solid $green;
+    }
+
+    .product-container:last-child {
+        border-bottom: 0.2em solid $green;
     }
 }

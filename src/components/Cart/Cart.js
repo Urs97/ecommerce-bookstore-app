@@ -14,6 +14,9 @@ const Cart = () => {
             <PageHeader title="Your Cart" color="green"/>
             <section className="cart-container">
                 <section className="product-container">
+                    <CartItem header={"header"}/>
+                    <CartItem />
+                    <CartItem />
                     <CartItem />
                     <CartItem />
                 </section>

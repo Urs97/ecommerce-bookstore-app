@@ -15,6 +15,8 @@ const CartItem = ({ header }) => {
         </section>
     )
 
+    // Add button focus ring functionality
+
     return (
         <section className="cart-item">
             <button className="remove-item">X</button>
@@ -24,7 +26,10 @@ const CartItem = ({ header }) => {
                 <p>George Orwell</p>
             </span>
             <span className="item-price">$21.00</span>
-            <span className="item-quantity">Quantity</span>
+            <form className="item-quantity">
+                {/* <label for="quantity">Quantity</label> */}
+                <input type="number" id="quantity" name="quantity" min="1" max="5" />
+            </form>
             <span className="item-subtotal">$21.00</span>
         </section>
     );

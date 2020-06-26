@@ -2,7 +2,35 @@
 
 .cart-container {
     padding: $vertical-content-padding $horizontal-content-padding;
-    background-color: #F4F7F9;
+    padding-bottom: 3em;
+    background-color: #F4F7F9;    
+
+    .cart-nav {
+        padding-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .cart-nav-btns {
+
+            .continue-btn {
+                background-color: $dark-blue;
+            }
+    
+            .continue-btn:hover {
+                background-color: $yellow;
+            }
+    
+            .checkout-btn {
+                margin-left: 1em;
+                background-color: red;
+            }
+    
+            .checkout-btn:hover {
+                background-color: $yellow;
+            }
+        }
+    }
 
     .product-container {
         background-color: #FFFFFF;

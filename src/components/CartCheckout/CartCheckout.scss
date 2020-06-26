@@ -1,0 +1,95 @@
+@import '../../styles/shared.scss';
+
+.cart-checkout {
+    padding: 0 $horizontal-content-padding;
+    padding-bottom: $vertical-content-padding;
+    background-color: #F4F7F9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .cart-checkout-grid {
+        padding: 2em 2em;
+        background-color: #FFFFFF;
+        border-radius: $border-radius;
+        display: grid;
+        grid-template-areas: 
+            "title title"
+            "subtitle subtitle"
+            "divider divider"
+            "quantity quantity-number"
+            "subtotal subtotal-price"
+            "shipping shipping-price"
+            "total total-price"
+            "divider-2 divider-2"
+            "checkout checkout";
+        row-gap: 2em;
+
+        h2 {
+            grid-area: title;
+            font-size: 2em;
+        }
+
+        h3 {
+            grid-area: subtitle;
+            font-size: 1.75em;
+        }
+
+        .divider {
+            grid-area: divider;
+            border-bottom: 3px solid #D3D3D3;
+        }
+
+        .quantity {
+            grid-area: quantity;
+        }
+
+        .quantity-number {
+            grid-area: quantity-number;
+            justify-self: flex-end;
+        }
+
+        .subtotal {
+            grid-area: subtotal;
+        }
+
+        .subtotal-price {
+            grid-area: subtotal-price;
+            justify-self: flex-end;
+        }
+
+        .shipping {
+            grid-area: shipping;
+        }
+
+        .shipping-price {
+            grid-area: shipping-price;
+            justify-self: flex-end;
+        }
+
+        .total {
+            grid-area: total;
+            font-weight: 600;
+        }
+
+        .total-price {
+            font-weight: 600;
+            grid-area: total-price;
+            justify-self: flex-end;
+        }
+
+        .divider-2 {
+            grid-area: divider-2;
+            border-bottom: 3px solid #D3D3D3;
+        }
+
+        & button {
+            grid-area: checkout;
+            background-color: red;
+        }
+
+        & button:hover {
+            background-color: $yellow;
+        }
+    }
+}

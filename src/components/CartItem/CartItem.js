@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './CartItem.scss';
 import test_photo from '../../assets/images/testimonial-portrait-3.jpg';
 
 const CartItem = ({ header }) => {
+    const quantityInputRef = useRef(null);
+
+    const handleUpArrow = event => {
+        event.preventDefault();
+        quantityInputRef.stepUp(1);
+    }
+
+    const handleDownArrow = event => {
+        event.preventDefault();
+        quantityInputRef.stepDown(1);
+    }
 
     if(header) return (
         <section className="cart-item cart-item-header">
@@ -27,8 +38,13 @@ const CartItem = ({ header }) => {
             </span>
             <span className="item-price">$21.00</span>
             <form className="item-quantity">
-                {/* <label for="quantity">Quantity</label> */}
-                <input type="number" id="quantity" name="quantity" min="1" max="5" />
+                <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
+                <input ref={quantityInputRef} type="number" id="quantity" name="quantity" 
+                    step="1" min="1" max="99" defaultValue="1" />
+                <section className="item-quantity-btns">
+                    <button onClick={ handleUpArrow } className="plus">▲</button>
+                    <button onClick={ handleDownArrow } className="minus">▼</button>
+                </section>
             </form>
             <span className="item-subtotal">$21.00</span>
         </section>

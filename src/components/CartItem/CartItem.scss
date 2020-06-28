@@ -26,6 +26,60 @@
         flex-direction: column;
     }
 
+    .item-quantity {
+        display: inline-flex;
+
+        input {
+            padding: 0.5em 0.5em;
+            background-color: rgba(29, 187, 144, 0.3);
+            width: 2.75em;
+            height: 3em;
+            outline: none;
+            border: none;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: end;
+        }
+
+        .item-quantity-btns {
+            display: flex;
+            flex-direction: column;
+
+            button {
+                padding: 0.2em 0.1em;
+                color: black;
+                outline:none;
+                -webkit-appearance: none;
+                background-color: rgba(29, 187, 144, 0.3);
+                border: none;
+                align-items: center;
+                justify-content: center;
+                width: 1.5em;
+                height: 1.5em;
+                cursor: pointer;
+                margin: 0;
+                position: relative;
+              }
+              
+            & .plus {
+                padding-right: 1em;
+                border-top-right-radius: $border-radius;
+            }
+
+            & .minus {
+                padding-right: 1em;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+    }
+
+// .number-input,
+// .number-input * {
+//   box-sizing: border-box;
+// }
+
     .item-subtotal {
         font-weight: 600;
     }

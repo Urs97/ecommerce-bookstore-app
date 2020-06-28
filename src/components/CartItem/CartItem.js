@@ -1,18 +1,26 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import './CartItem.scss';
 import test_photo from '../../assets/images/testimonial-portrait-3.jpg';
 
 const CartItem = ({ header }) => {
-    const quantityInputRef = useRef(null);
+    const [quantityValue, setQuantityValue] = useState(1);
 
     const handleUpArrow = event => {
-        event.preventDefault();
-        quantityInputRef.stepUp(1);
+        event.preventDefault();     
+        (quantityValue < 99 && setQuantityValue(quantityValue + 1))
     }
 
     const handleDownArrow = event => {
         event.preventDefault();
-        quantityInputRef.stepDown(1);
+        (quantityValue > 1 && setQuantityValue(quantityValue - 1));
+    }
+
+    const handleOnChangeInput = event => {
+        const newValue = Number(event.target.value);
+        if(newValue <= 99 && newValue >= 1) {
+            setQuantityValue(newValue);
+        } else return;
+        
     }
 
     if(header) return (
@@ -39,11 +47,11 @@ const CartItem = ({ header }) => {
             <span className="item-price">$21.00</span>
             <form className="item-quantity">
                 <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
-                <input ref={quantityInputRef} type="number" id="quantity" name="quantity" 
-                    step="1" min="1" max="99" defaultValue="1" />
+                <input type="number" id="quantity" name="quantity" 
+                    step="1" min="1" max="99" value={quantityValue} onChange={handleOnChangeInput}/>
                 <section className="item-quantity-btns">
-                    <button onClick={ handleUpArrow } className="plus">▲</button>
-                    <button onClick={ handleDownArrow } className="minus">▼</button>
+                    <button onClick={ handleUpArrow } className="up-arrow">▲</button>
+                    <button onClick={ handleDownArrow } className="down-arrow">▼</button>
                 </section>
             </form>
             <span className="item-subtotal">$21.00</span>

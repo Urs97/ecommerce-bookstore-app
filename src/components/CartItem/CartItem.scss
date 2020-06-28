@@ -63,12 +63,12 @@
                 position: relative;
               }
               
-            & .plus {
+            & .up-arrow {
                 padding-right: 1em;
                 border-top-right-radius: $border-radius;
             }
 
-            & .minus {
+            & .down-arrow {
                 padding-right: 1em;
                 border-bottom-right-radius: $border-radius;
             }

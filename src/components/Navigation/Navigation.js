@@ -1,11 +1,12 @@
 import React from 'react';
 import './Navigation.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
+    const cartItemsNum = 5;
+
     return (
         <header className="header-nav-section">
             <a href="/" className="header-logo">
@@ -17,12 +18,10 @@ const Navigation = () => {
                 <Link to="/store" className="link">Bookstore</Link>
                 <Link to="/cart" className="link">Cart</Link>
                 <Link to="/about" className="link">About Us</Link>
-                <span role="img" aria-label="search icon">
-                    <FontAwesomeIcon icon={faSearch} />
-                </span>
                 <span role="img" aria-label="shopping cart icon">
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </span>
+                <span className="cart-items-num">({cartItemsNum})</span>
             </nav>
         </header>
     )

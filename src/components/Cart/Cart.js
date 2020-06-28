@@ -19,7 +19,7 @@ const Cart = () => {
             <PageHeader title="Your Cart" color="green"/>
             <section className="cart-container">
                 <section className="cart-nav">
-                    <h1>Shopping Cart</h1>
+                    <h1>Shopping Cart- total- nr of items</h1>
                     <section className="cart-nav-btns">
                         <a href="/store" className="button continue-btn">Continue Shopping</a>
                         <button className="button checkout-btn"

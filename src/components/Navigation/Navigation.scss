@@ -47,8 +47,8 @@
     }
 
     nav span:not(:last-child) {
-        margin-left: 7em;
-        margin-right: 1.5em;
+        margin-left: 8em;
+        margin-right: 0.5em;
     }
 
     nav .link {
@@ -79,6 +79,10 @@
 
     .header-nav-icons :not(:first-child) {
         margin-left: 1.5em;
+    }
+
+    .cart-items-num {
+        // empty for now
     }
 }
 

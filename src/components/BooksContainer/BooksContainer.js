@@ -1,11 +1,10 @@
 import React from 'react';
 import './BooksContainer.scss';
 import Book from '../Book/Book';
-import { uuid }  from 'uuidv4';
 
 const BooksContainer = ({ bookData }) => {
 
-    const books = bookData.map(book => <Book key={uuid()} book={book}/>);
+    const books = bookData.map(book => <Book key={book.key} book={book}/>);
 
     // Improve this part
     let content = <div>There are no books.</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import GlobalState from './context/GlobalState';
 import { Switch, Route } from 'react-router-dom';
 import AppLayout from './components/AppLayout/AppLayout';
 import Home from './components/Home/Home';
@@ -9,7 +10,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 
 const App = () => {
   return (
-    <>
+    <GlobalState>
       <AppLayout>
         <Switch>
           <Route path="/store" component={Store} exact/>
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/" component={Home} exact/>
         </Switch>
       </AppLayout>
-    </>
+    </GlobalState>
   );
 };
 

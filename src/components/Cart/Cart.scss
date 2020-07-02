@@ -37,6 +37,30 @@
         background-color: #FFFFFF;
         border-radius: $border-radius $border-radius 0 0;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+        .cart-item-header {
+            display: grid;
+            grid-template-columns: 0.5fr minmax(max-content, 1fr) 3fr repeat(3, minmax(max-content, 1fr));
+            grid-template-rows: 5em;
+            border: none;
+            border-radius: $border-radius $border-radius 0 0;
+            background-color: $green;
+        }
+
+        .cart-item-header > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $green;
+        }
+        
+        .cart-item-header :first-child {
+            border-top-left-radius: $border-radius;
+        }
+        
+        .cart-item-header :last-child {
+            border-top-right-radius: $border-radius;
+        }
     }
 
     .product-container > *:not(:last-child) {

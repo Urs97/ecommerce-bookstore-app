@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Navigation.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import ShopContext from '../../context/ShopContext';
 
 const Navigation = () => {
-    const cartItemsNum = 5;
+    const context = useContext(ShopContext);
+
+    const cartQuantity = context.cart.reduce((count, currentItem) => {
+        return count + currentItem.quantity;
+      }, 0)
 
     return (
         <header className="header-nav-section">
@@ -21,7 +27,7 @@ const Navigation = () => {
                 <span role="img" aria-label="shopping cart icon">
                     <FontAwesomeIcon icon={faShoppingCart} />
                 </span>
-                <span className="cart-items-num">({cartItemsNum})</span>
+                <span className="cart-items-num">({cartQuantity})</span>
             </nav>
         </header>
     )

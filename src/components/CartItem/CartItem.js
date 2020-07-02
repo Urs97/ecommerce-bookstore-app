@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import './CartItem.scss';
-import test_photo from '../../assets/images/testimonial-portrait-3.jpg';
 
-const CartItem = ({ header }) => {
-    const [quantityValue, setQuantityValue] = useState(1);
+const CartItem = ({ book }) => {
+    const [quantityValue, setQuantityValue] = useState(book.quantity);
+
+    // L is large, M is medium and S is small image format
+    const img_url = `http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
+    const img_alt = `${book.title} book cover`;
+    const price = Number(`${book.price[0]}.${book.price[1]}`);
+    const subtotal_price = (price * book.quantity).toFixed(2);
 
     const handleUpArrow = event => {
         event.preventDefault();     
@@ -23,28 +28,17 @@ const CartItem = ({ header }) => {
         
     }
 
-    if(header) return (
-        <section className="cart-item cart-item-header">
-            <span></span>
-            <h3 className="title">Image</h3>
-            <h3 className="title">Product</h3>
-            <h3 className="title">Price</h3>
-            <h3 className="title">Quantity</h3>
-            <h3 className="title">Subtotal</h3>
-        </section>
-    )
-
     // Add button focus ring functionality
 
     return (
         <section className="cart-item">
             <button className="remove-item">X</button>
-            <span className="item-img"><img src={test_photo} alt="product"/></span>
+            <span className="item-img"><img src={img_url} alt={img_alt}/></span>
             <span className="item-title">
-                <h4>Nineteen Eighty-Four</h4>
-                <p>George Orwell</p>
+                <h4>{book.title}</h4>
+                <p>{book.authors[0].name}</p>
             </span>
-            <span className="item-price">$21.00</span>
+            <span className="item-price">${price}</span>
             <form className="item-quantity">
                 <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
                 <input type="number" id="quantity" name="quantity" 
@@ -54,7 +48,7 @@ const CartItem = ({ header }) => {
                     <button onClick={ handleDownArrow } className="down-arrow">▼</button>
                 </section>
             </form>
-            <span className="item-subtotal">$21.00</span>
+            <span className="item-subtotal">${subtotal_price}</span>
         </section>
     );
 };

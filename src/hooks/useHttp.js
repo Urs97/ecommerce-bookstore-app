@@ -22,7 +22,7 @@ export const useHttp = (url, storageItemKey, dependencies) => {
             fetchedData.works.forEach(book => {
               let randomTwoDigitNum = [];
               randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
-              randomTwoDigitNum.push(Math.floor(Math.random() * 90 + 10));
+              randomTwoDigitNum.push(99);
               book["price"] = randomTwoDigitNum;
             }));
           setData(fetchedData);

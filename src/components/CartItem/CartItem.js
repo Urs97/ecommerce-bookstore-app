@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './CartItem.scss';
+import ShopContext from '../../context/ShopContext';
 
 const CartItem = ({ book }) => {
-    const [quantityValue, setQuantityValue] = useState(book.quantity);
+    const context = useContext(ShopContext);
 
     // L is large, M is medium and S is small image format
     const img_url = `http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
@@ -10,42 +11,36 @@ const CartItem = ({ book }) => {
     const price = Number(`${book.price[0]}.${book.price[1]}`);
     const subtotal_price = (price * book.quantity).toFixed(2);
 
-    const handleUpArrow = event => {
-        event.preventDefault();     
-        (quantityValue < 99 && setQuantityValue(quantityValue + 1))
-    }
-
-    const handleDownArrow = event => {
-        event.preventDefault();
-        (quantityValue > 1 && setQuantityValue(quantityValue - 1));
-    }
-
     const handleOnChangeInput = event => {
-        const newValue = Number(event.target.value);
-        if(newValue <= 99 && newValue >= 1) {
-            setQuantityValue(newValue);
-        } else return;
-        
+        const newQuantity = Number(event.target.value);
+        if(newQuantity <= 99 && newQuantity >= 1) {
+            context.setCustomItemQuantity({book, newQuantity});
+        }
+    }
+
+    // Prevents default form button submit
+    const handleOnSubmit = event => {
+        event.preventDefault();
     }
 
     // Add button focus ring functionality
 
     return (
         <section className="cart-item">
-            <button className="remove-item">X</button>
+            <button className="remove-item" onClick={() => context.removeProductFromCart(book)}>X</button>
             <span className="item-img"><img src={img_url} alt={img_alt}/></span>
             <span className="item-title">
                 <h4>{book.title}</h4>
                 <p>{book.authors[0].name}</p>
             </span>
             <span className="item-price">${price}</span>
-            <form className="item-quantity">
+            <form className="item-quantity" onSubmit={handleOnSubmit}>
                 <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
                 <input type="number" id="quantity" name="quantity" 
-                    step="1" min="1" max="99" value={quantityValue} onChange={handleOnChangeInput}/>
+                    step="1" min="1" max="99" value={book.quantity} onChange={handleOnChangeInput}/>
                 <section className="item-quantity-btns">
-                    <button onClick={ handleUpArrow } className="up-arrow">▲</button>
-                    <button onClick={ handleDownArrow } className="down-arrow">▼</button>
+                    <button onClick={() => context.addQuantityToItem(book)} className="up-arrow">▲</button>
+                    <button onClick={() => context.subtractQuantityFromItem(book)} className="down-arrow">▼</button>
                 </section>
             </form>
             <span className="item-subtotal">${subtotal_price}</span>

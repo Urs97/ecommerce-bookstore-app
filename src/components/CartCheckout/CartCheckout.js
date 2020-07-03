@@ -2,7 +2,7 @@ import React from 'react';
 import './CartCheckout.scss';
 
 const CartCheckout = ({ quantity, subtotal }) => {
-    const order_total = Number(subtotal) + Number(9.99);
+    const order_total = (Number(subtotal) + Number(9.99)).toFixed(2);
 
     return (
         <section className="cart-checkout">

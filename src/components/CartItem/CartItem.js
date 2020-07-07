@@ -11,16 +11,16 @@ const CartItem = ({ book }) => {
     const price = Number(`${book.price[0]}.${book.price[1]}`);
     const subtotal_price = (price * book.quantity).toFixed(2);
 
-    const handleOnChangeInput = event => {
-        const newQuantity = Number(event.target.value);
-        if(newQuantity <= 99 && newQuantity >= 1) {
-            context.setCustomItemQuantity({book, newQuantity});
-        }
-    }
-
     // Prevents default form button submit
     const handleOnSubmit = event => {
         event.preventDefault();
+    }
+
+    const handleOnChangeInput = event => {
+        const newQuantity = Number(event.target.value);
+        if(newQuantity <= 99 && newQuantity >= 1) {
+            context.setCustomItemQuantity(book, newQuantity);
+        } else return;
     }
 
     // Add button focus ring functionality

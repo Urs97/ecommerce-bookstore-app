@@ -2,8 +2,9 @@ import React from 'react';
 
 export default React.createContext({
   cart: [],
-  addProductToCart: product => {},
-  removeProductFromCart: product => {},
-  addQuantityToItem: product => {},
-  subtractQuantityFromItem: product => {}
+  addProductToCart: payload => {},
+  removeProductFromCart: payload => {},
+  addQuantityToItem: payload => {},
+  subtractQuantityFromItem: payload => {},
+  setCustomItemQuantity: payload => {}
 });

@@ -14,32 +14,30 @@ const GlobalState = props => {
 
   const addProductToCart = product => {
     setTimeout(() => {
-      dispatch({ type: ADD_PRODUCT, product: product });
+      dispatch({ type: ADD_PRODUCT, payload: product });
     }, 700);
   };
 
   const removeProductFromCart = product => {
     setTimeout(() => {
-      dispatch({ type: REMOVE_PRODUCT, product: product });
+      dispatch({ type: REMOVE_PRODUCT, payload: product });
     }, 700);
   };
 
   const addQuantityToItem = product => {
     setTimeout(() => {
-      dispatch({ type: ADD_QUANTITY, product: product });
+      dispatch({ type: ADD_QUANTITY, payload: product });
     }, 700);
   };
 
   const subtractQuantityFromItem = product => {
     setTimeout(() => {
-      dispatch({ type: SUBTRACT_QUANTITY, product: product });
+      dispatch({ type: SUBTRACT_QUANTITY, payload: product });
     }, 700);
   };
 
-  const setCustomItemQuantity = product => {
-    setTimeout(() => {
-      dispatch({ type: CUSTOM_QUANTITY, product: product });
-    }, 700);
+  const setCustomItemQuantity = (product, value) => {
+    dispatch({ type: CUSTOM_QUANTITY, payload: {product: product, value: value} });
   };
 
   return (

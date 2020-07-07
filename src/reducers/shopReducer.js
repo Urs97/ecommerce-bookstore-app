@@ -1,8 +1,10 @@
-export const ADD_PRODUCT = 'ADD_PRODUCT';
-export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
-export const ADD_QUANTITY = 'ADD_QUANTITY';
-export const SUBTRACT_QUANTITY = 'SUBTRACT_QUANTITY';
-export const CUSTOM_QUANTITY = 'CUSTOM_QUANTITY';
+export const ACTIONS = {
+  ADD_PRODUCT : 'ADD_PRODUCT',
+  REMOVE_PRODUCT : 'REMOVE_PRODUCT',
+  ADD_QUANTITY : 'ADD_QUANTITY',
+  SUBTRACT_QUANTITY : 'SUBTRACT_QUANTITY',
+  CUSTOM_QUANTITY : 'CUSTOM'
+}
 
 const addProductToCart = (product, state) => {
   const updatedCart = [...state];
@@ -61,15 +63,15 @@ const setCustomItemQuantity = ({product, value}, state) => {
 
 export const shopReducer = (state, action) => {
   switch (action.type) {
-    case ADD_PRODUCT:
+    case ACTIONS.ADD_PRODUCT:
       return addProductToCart(action.payload, state);
-    case REMOVE_PRODUCT:
+    case ACTIONS.REMOVE_PRODUCT:
       return removeProductFromCart(action.payload, state);
-    case ADD_QUANTITY:
+    case ACTIONS.ADD_QUANTITY:
       return addQuantityToItem(action.payload, state);
-    case SUBTRACT_QUANTITY:
+    case ACTIONS.SUBTRACT_QUANTITY:
       return subtractQuantityFromItem(action.payload, state);
-    case CUSTOM_QUANTITY:
+    case ACTIONS.CUSTOM_QUANTITY:
       return setCustomItemQuantity(action.payload, state);
     default:
       return state;

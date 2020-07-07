@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import './CartItem.scss';
-import ShopContext from '../../context/ShopContext';
+import CartContext from '../../context/CartContext';
 
 const CartItem = ({ book }) => {
-    const context = useContext(ShopContext);
+    const context = useContext(CartContext);
 
     // L is large, M is medium and S is small image format
     const img_url = `http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
@@ -22,8 +22,6 @@ const CartItem = ({ book }) => {
             context.setCustomItemQuantity(book, newQuantity);
         } else return;
     }
-
-    // Add button focus ring functionality
 
     return (
         <section className="cart-item">

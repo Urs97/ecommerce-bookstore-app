@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import './Book.scss';
 
-import ShopContext from '../../context/ShopContext';
+import CartContext from '../../context/CartContext';
 
 const Book = ({ book }) => {
-    const context = useContext(ShopContext);
+    const context = useContext(CartContext);
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -28,7 +28,10 @@ const Book = ({ book }) => {
             <span className="book-title-container"><h4 className="title">{book.title}</h4></span>
             <p>{book.authors[0].name}</p>
             <span className="book-price-container title">${price}</span>
-            <button className="button" onClick={() => context.addProductToCart(book)}>Add to cart</button>
+            {context.cart.findIndex(product => product.key === book.key) >= 0 && 
+                <a href="/cart" className="button">View Cart ✔</a> }
+            {context.cart.findIndex(product => product.key === book.key) === -1 &&
+                <button className="button" onClick={() => context.addProductToCart(book)}>Add to cart</button> }
         </div>
     );
 };

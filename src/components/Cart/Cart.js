@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import './Cart.scss';
 
-import ShopContext from '../../context/ShopContext';
+import CartContext from '../../context/CartContext';
 import PageHeader from '../PageHeader/PageHeader';
 import CartItem from '../CartItem/CartItem';
 import CartCheckout from '../CartCheckout/CartCheckout';
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
-    const context = useContext(ShopContext);
+    const context = useContext(CartContext);
 
     const cartQuantity = context.cart.reduce((count, currentItem) => {
         return count + currentItem.quantity;

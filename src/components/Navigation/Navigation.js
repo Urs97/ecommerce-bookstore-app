@@ -4,10 +4,10 @@ import './Navigation.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import ShopContext from '../../context/ShopContext';
+import CartContext from '../../context/CartContext';
 
 const Navigation = () => {
-    const context = useContext(ShopContext);
+    const context = useContext(CartContext);
 
     const cartQuantity = context.cart.reduce((count, currentItem) => {
         return count + currentItem.quantity;

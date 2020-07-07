@@ -64,9 +64,17 @@
         margin-top: 0.5em;
     }
 
-    & button {
+    & .button {
         margin-top: 1em;
         padding: 0.7em 1.5em;
         font-size: 0.9em;
+    }
+
+    & a.button {
+        background-color: $dark-blue;
+    } 
+
+    & a.button:hover {
+        background-color: $yellow;
     }
 }

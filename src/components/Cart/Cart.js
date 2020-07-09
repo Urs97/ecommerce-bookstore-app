@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import './Cart.scss';
 
 import CartContext from '../../context/CartContext';
@@ -22,10 +22,6 @@ const Cart = () => {
     const cartSubtotal = cartSubtotalFull.toFixed(2);
 
     const CartCheckoutRef = useRef(null);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [])
 
     const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop, 'smooth');
     const executeScroll = () => scrollToRef(CartCheckoutRef);

@@ -13,10 +13,10 @@ const App = () => {
     <CartState>
       <AppLayout>
         <Switch>
-          <Route path="/store" component={Store} exact/>
-          <Route path="/cart" component={Cart} exact/>
-          <Route path="/about" component={AboutUs} exact/>
-          <Route path="/" component={Home} exact/>
+          <Route path="/store" component={() => <Store/>} exact/>
+          <Route path="/cart" component={() => <Cart/>} exact/>
+          <Route path="/about" component={() => <AboutUs/>} exact/>
+          <Route path="/" component={() => <Home/>} exact/>
         </Switch>
       </AppLayout>
     </CartState>

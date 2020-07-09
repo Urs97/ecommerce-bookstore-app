@@ -6,6 +6,7 @@
     grid-template-rows: 10em;
 
     .remove-item {
+        padding: 0.35em;
         cursor: pointer;
         outline: none;
         border: none;
@@ -13,10 +14,16 @@
         font-weight: 600;
         color: red;
         margin-left: 1em;
+        background-color: #FFFFFF;
+        transition: transform .5s;
+    }
+    
+    .remove-item:hover {
+        transform: scale(1.4);
     }
 
     .remove-item:focus {
-        outline: 0.2em solid black;
+        outline: 0.15em solid black;
     }
 
     .remove-item:not(.focus-visible) {

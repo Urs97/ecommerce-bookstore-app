@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Home.scss';
 import Carousel from '../Carousel/Carousel';
 import BulletPointContainer from '../BulletPointContainer/BulletPointContainer';
@@ -16,10 +16,6 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 const Home = () => {
     const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
     const [isLoading, data] = useHttp(url, 'homeApiData', []);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     const icon_1 = faAddressCard;
     const icon_2 = faAlignJustify;

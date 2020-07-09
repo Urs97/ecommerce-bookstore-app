@@ -25,7 +25,9 @@ const CartItem = ({ book }) => {
 
     return (
         <section className="cart-item">
-            <button className="remove-item" onClick={() => context.removeProductFromCart(book)}>X</button>
+            <span className="remove-item-container">
+                <button className="remove-item" onClick={() => context.removeProductFromCart(book)}>X</button>
+            </span>
             <span className="item-img"><img src={img_url} alt={img_alt}/></span>
             <span className="item-title">
                 <h4>{book.title}</h4>

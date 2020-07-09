@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './AboutUs.scss';
 import PageHeader from '../PageHeader/PageHeader';
 import BulletPointContainer from '../BulletPointContainer/BulletPointContainer';
@@ -10,10 +10,6 @@ import portrait_1 from '../../assets/images/testimonial-portrait-1.jpg';
 import portrait_2 from '../../assets/images/testimonial-portrait-3.jpg';
 
 const AboutUs = () => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, [])
 
     const icon_1 = faMailBulk;
     const icon_2 = faPhone; 

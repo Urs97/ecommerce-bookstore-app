@@ -12,9 +12,12 @@ const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll, current
     return (
         <section className="pagination">     
             {pageNumbers.map(number => ( 
-                <button key={number} disabled={currentPage === number ? true : false}
-                className={`${currentPage === number ? `button active-page` : `button`}`}
-                onClick={() => {paginate(number); executeScroll()}}>{number}</button>
+                <button 
+                    key={number} 
+                    disabled={currentPage === number ? true : false}
+                    className={`${currentPage === number ? `button active-page` : `button`}`}
+                    onClick={() => {paginate(number); executeScroll()}}>{number}
+                </button>
             ))}
         </section>
     );

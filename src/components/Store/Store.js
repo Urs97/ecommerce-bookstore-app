@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Store.scss';
+
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
@@ -15,10 +16,6 @@ const Store = () => {
     const booksPerPage = 9;
     const storeMainRef = useRef(null);
     const filterByPriceRef = useRef(null);
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
 
     useEffect(() => {
         setFilteredData(null);
@@ -61,12 +58,16 @@ const Store = () => {
                 <section className="store-main-container" ref={storeMainRef}>
                     <section className="books-container-pagination-wrapper">
                         <BooksContainer bookData={currentBooks} />
-                        <Pagination booksPerPage={booksPerPage} totalBooks={currentData.length}
+                        <Pagination 
+                            booksPerPage={booksPerPage} 
+                            totalBooks={currentData.length}
                             currentPage={currentPage}
                             paginate={paginate} 
                             executeScroll={executeScroll}/>
                     </section>
-                    <StoreSidebar bookData={data.works} ref={filterByPriceRef} 
+                    <StoreSidebar 
+                        bookData={data.works} 
+                        ref={filterByPriceRef} 
                         handleFilterByPrice={handleFilterByPrice}
                         handleSetCategoryName={handleSetCategoryName}/>
                 </section>

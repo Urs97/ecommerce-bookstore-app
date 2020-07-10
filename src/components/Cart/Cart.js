@@ -65,9 +65,10 @@ const Cart = () => {
                 </section>
             </section>
             {context.cart.length > 0 && 
-                <section ref={CartCheckoutRef}>
-                    <CartCheckout quantity={cartQuantity} subtotal={cartSubtotal}/>
-                </section>
+                    <CartCheckout
+                        innerRef={CartCheckoutRef} 
+                        quantity={cartQuantity} 
+                        subtotal={cartSubtotal}/>
             }
         </main>
     )

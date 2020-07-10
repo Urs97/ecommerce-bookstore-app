@@ -24,6 +24,10 @@
     & .button:focus {
         outline: 0.2em solid #FFFFFF;
     }
+
+    & .button:not(.focus-visible) {
+        outline: none;
+      }
 }
 
 .store-invitation::after {

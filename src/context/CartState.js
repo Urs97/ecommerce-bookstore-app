@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer } from 'react';
 
 import CartContext from '../context/CartContext';
-import { ACTIONS, shopReducer } from '../reducers/shopReducer';
+import { ACTIONS, cartReducer } from '../reducers/cartReducer';
 
 const initialState = JSON.parse(sessionStorage.getItem("cart")) || [];
 
 const CartState = props => {
-  const [cartState, dispatch] = useReducer(shopReducer, initialState);
+  const [cartState, dispatch] = useReducer(cartReducer, initialState);
 
   useEffect(() => {
     initialState !== cartState && sessionStorage.setItem("cart", JSON.stringify(cartState));

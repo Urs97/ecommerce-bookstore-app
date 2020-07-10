@@ -61,7 +61,7 @@ const setCustomItemQuantity = ({product, value}, state) => {
   return updatedCart;
 };
 
-export const shopReducer = (state, action) => {
+export const cartReducer = (state, action) => {
   switch (action.type) {
     case ACTIONS.ADD_PRODUCT:
       return addProductToCart(action.payload, state);

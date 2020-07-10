@@ -4,6 +4,7 @@ import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
 const FilterByPrice = ({ handleFilterByPrice }, ref) => {
+    
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
     const filterRef = useRef(null);
@@ -33,7 +34,8 @@ const FilterByPrice = ({ handleFilterByPrice }, ref) => {
                 connect 
                 onUpdate={onChange()}/>
             <div className="filter-by-price-div">
-                <button className="button" onClick={() => handleFilterByPrice(minPrice, maxPrice)}>Filter</button>
+                <button className="button" 
+                        onClick={() => handleFilterByPrice(minPrice, maxPrice)}>Filter</button>
                 <span>${minPrice} - ${maxPrice}</span>
             </div>
         </section>

@@ -3,11 +3,11 @@ export const ACTIONS = {
   REMOVE_PRODUCT : 'REMOVE_PRODUCT',
   ADD_QUANTITY : 'ADD_QUANTITY',
   SUBTRACT_QUANTITY : 'SUBTRACT_QUANTITY',
-  CUSTOM_QUANTITY : 'CUSTOM'
+  CUSTOM_QUANTITY : 'CUSTOM_QUANTITY'
 }
 
-const addProductToCart = (product, state) => {
-  const updatedCart = [...state];
+const addProductToCart = (product, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
 
   if (updatedItemIndex < 0) {
@@ -20,8 +20,8 @@ const addProductToCart = (product, state) => {
   return updatedCart;
 };
 
-const removeProductFromCart = (product, state) => {
-  const updatedCart = [...state];
+const removeProductFromCart = (product, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
   const updatedItem = {...updatedCart[updatedItemIndex]};
   updatedItem.quantity--;
@@ -34,8 +34,8 @@ const removeProductFromCart = (product, state) => {
   return updatedCart;
 };
 
-const addQuantityToItem = (product, state) => {
-  const updatedCart = [...state];
+const addQuantityToItem = (product, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
   const updatedItem = {...updatedCart[updatedItemIndex]};
   updatedItem.quantity < 99 && updatedItem.quantity++;
@@ -43,8 +43,8 @@ const addQuantityToItem = (product, state) => {
   return updatedCart;
 };
 
-const subtractQuantityFromItem = (product, state) => {
-  const updatedCart = [...state];
+const subtractQuantityFromItem = (product, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
   const updatedItem = {...updatedCart[updatedItemIndex]};
   updatedItem.quantity > 1 && updatedItem.quantity--;
@@ -52,8 +52,8 @@ const subtractQuantityFromItem = (product, state) => {
   return updatedCart;
 };
 
-const setCustomItemQuantity = ({product, value}, state) => {
-  const updatedCart = [...state];
+const setCustomItemQuantity = ({product, value}, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
   const updatedItem = {...updatedCart[updatedItemIndex]};
   updatedItem.quantity = value;

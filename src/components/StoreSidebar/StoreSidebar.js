@@ -3,7 +3,7 @@ import './StoreSidebar.scss';
 import FilterByPrice from './FilterByPrice/FilterByPrice';
 import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
-const StoreSidebar = ({ handleFilterByPrice, handleSetCategoryName, bookData }, ref) => {
+const StoreSidebar = ({ handleFilterByPrice, handleSetCategoryName, bookData }) => {
 
     const topRatedBooks = bookData.slice(5, 8);
     const recentBooks = bookData.slice(12, 15);
@@ -27,13 +27,11 @@ const StoreSidebar = ({ handleFilterByPrice, handleSetCategoryName, bookData }, 
                         className="btn-to-link">Programming</button></li>
                 </ul>
             </section>
-            <FilterByPrice ref={ref} handleFilterByPrice={handleFilterByPrice}/>
+            <FilterByPrice handleFilterByPrice={handleFilterByPrice}/>
             <SidebarBookContainer bookData={topRatedBooks} title="Top Rated Books"/>
             <SidebarBookContainer bookData={recentBooks} title="Recent Books"/>
         </section>
     )
 };
 
-const forwardedStoreSidebar= React.forwardRef(StoreSidebar);
-
-export default forwardedStoreSidebar;
+export default StoreSidebar;

@@ -31,6 +31,17 @@
     margin-bottom: 10em;
 }
 
+.failed-to-load-store {
+    text-align: center;
+    margin-top: 10em;
+    margin-bottom: 10em;
+
+    h3 {
+        font-size: 1.75em;
+        margin-bottom: 0.5em;
+    }
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg) }
     100% { transform: rotate(360deg) }

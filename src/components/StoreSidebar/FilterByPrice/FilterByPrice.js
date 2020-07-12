@@ -5,13 +5,14 @@ import './FilterByPrice.scss';
 import Nouislider from "nouislider-react";
 import StoreContext from '../../../context/StoreContext';
 
-const FilterByPrice = ({ handleFilterByPrice }) => {
+const FilterByPrice = () => {
 
     const context = useContext(StoreContext);
     
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
     const filterRef = useRef(null);
+    const data = context.data;
 
     useEffect(() => {
         if (minPrice !== 0 && maxPrice !== 100) {
@@ -20,7 +21,7 @@ const FilterByPrice = ({ handleFilterByPrice }) => {
             }
         }
     // eslint-disable-next-line
-    }, [context.filterSliderState])
+    }, [context.state.filterSliderState])
 
     const onChange = () => (render, handle, value, un, percent) => {
         setMinPrice(value[0]);
@@ -39,7 +40,7 @@ const FilterByPrice = ({ handleFilterByPrice }) => {
                 onUpdate={onChange()}/>
             <div className="filter-by-price-div">
                 <button className="button" 
-                        onClick={() => handleFilterByPrice(minPrice, maxPrice)}>Filter</button>
+                        onClick={() => context.submitFilterValue(minPrice, maxPrice, data)}>Filter</button>
                 <span>${minPrice} - ${maxPrice}</span>
             </div>
         </section>

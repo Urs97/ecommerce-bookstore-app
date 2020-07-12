@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Pagination.scss';
 
-const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll, currentPage }) => {
+import StoreContext from '../../context/StoreContext';
 
+const Pagination = () => {
+    const context = useContext(StoreContext);
+
+    const currentPage = context.state.currentPage;
+    const booksPerPage = context.state.booksPerPage;
+    const totalBooks = context.currentData.length;
     const pageNumbers = [];
 
     for(let i = 1; i <= Math.ceil(totalBooks / booksPerPage); i++) {
@@ -16,7 +22,7 @@ const Pagination = ({ booksPerPage, totalBooks, paginate, executeScroll, current
                     key={number} 
                     disabled={currentPage === number ? true : false}
                     className={`${currentPage === number ? `button active-page` : `button`}`}
-                    onClick={() => {paginate(number); executeScroll()}}>{number}
+                    onClick={() => {context.changeCurrentPage(number)}}>{number}
                 </button>
             ))}
         </section>

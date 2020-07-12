@@ -1,46 +1,20 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import './Store.scss';
 
+import StoreContext from '../../context/StoreContext';
 import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
-import { useHttp } from '../../hooks/useHttp';
 import Pagination from '../Pagination/Pagination';
-import StoreContext from '../../context/StoreContext';
 
 const Store = () => {
-
     const context = useContext(StoreContext);
-
-    const [categoryName, setCategoryName] = useState('science_fiction');
-    const url = `http://openlibrary.org/subjects/${categoryName}.json?limit=27&offset=0`;
-    const [isLoading, data] = useHttp(url, `store_${categoryName}_data`, [categoryName]);
-    const [filteredData, setFilteredData] = useState(null);
-    const [currentPage, setCurrentPage] = useState(1);
-    const booksPerPage = 9;
     const storeMainRef = useRef(null);
 
     useEffect(() => {
-        setFilteredData(null);
-        context.filterSliderReset();
-    // eslint-disable-next-line
-    }, [categoryName])
-
-    // Change Book Genre
-    const handleSetCategoryName = (name) => setCategoryName(name);
-
-    // Filter By Price
-    const handleFilterByPrice = (minPrice, maxPrice) => {
-        setFilteredData(data.works.filter(book => book.price[0] >= minPrice && book.price[0] <= maxPrice));
-        setCurrentPage(1);
-    };
-
-    // Scroll to ref element
-    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop, 'smooth');
-    const executeScroll = () => scrollToRef(storeMainRef);
-
-    // Change Page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+        (context.state.storeScrollState > 0 && 
+            window.scrollTo(0, storeMainRef.current.offsetTop));
+    }, [context.state.storeScrollState])
 
     let content = (
         <main>
@@ -48,41 +22,28 @@ const Store = () => {
             <section className="loader" />
         </main>);
 
-    if(!isLoading && data) {
-        
-        // Pagination functionality
-        const indexOfLastBook = currentPage * booksPerPage;
-        const indexOfFirstBook = indexOfLastBook - booksPerPage;
-        const currentData = filteredData ? filteredData : data.works;
-        const currentBooks = currentData.slice(indexOfFirstBook, indexOfLastBook);
-
+    if(!context.isLoading && context.data) {
         content = (
             <main>
-                <PageHeader title={data.name} color="blue" />
+                <PageHeader title={context.data.name} color="blue" />
                 <section className="store-main-container" ref={storeMainRef}>
                     <section className="books-container-pagination-wrapper">
-                        <BooksContainer bookData={currentBooks} />
-                        <Pagination 
-                            booksPerPage={booksPerPage} 
-                            totalBooks={currentData.length}
-                            currentPage={currentPage}
-                            paginate={paginate} 
-                            executeScroll={executeScroll}/>
+                        <BooksContainer bookData={context.currentBooks} />
+                        <Pagination />
                     </section>
-                    <StoreSidebar 
-                        bookData={data.works}  
-                        handleFilterByPrice={handleFilterByPrice}
-                        handleSetCategoryName={handleSetCategoryName}/>
+                    <StoreSidebar />
                 </section>
             </main>
         )
         
-    // This part doesnt work come back to it later
-    } else if (!isLoading && !data) {
+    } else if (!context.isLoading && context.data === null) {
         content = (
             <main>
-                <PageHeader title={"Failed to load resources"} color="blue" />
-                <section>Failed to load.</section>
+                <PageHeader title={"Failed to load"} color="blue" />
+                <section className="failed-to-load-store">
+                    <h3 className="title">Failed to load resources.</h3>
+                    <p>Please check your internet connection and reload the page.</p>
+                </section>
             </main>
         )
     }

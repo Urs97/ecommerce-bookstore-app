@@ -10,6 +10,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
     const context = useContext(CartContext);
+    const CartCheckoutRef = useRef(null);
 
     const cartQuantity = context.cart.reduce((count, currentItem) => {
         return count + currentItem.quantity;
@@ -18,13 +19,9 @@ const Cart = () => {
     const cartSubtotalFull = context.cart.reduce((count, item) => {
         return count + (Number(`${item.price[0]}.${item.price[1]}`) * item.quantity);   
       }, 0)
-
     const cartSubtotal = cartSubtotalFull.toFixed(2);
 
-    const CartCheckoutRef = useRef(null);
-
-    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop, 'smooth');
-    const executeScroll = () => scrollToRef(CartCheckoutRef);
+    const scrollToRef = () => window.scrollTo(0, CartCheckoutRef.current.offsetTop, 'smooth');
 
     return (
         <main>
@@ -40,7 +37,7 @@ const Cart = () => {
                         <a href="/store" className="button continue-btn">Continue Shopping</a>
                         {context.cart.length > 0 && 
                             <button className="button checkout-btn"
-                                onClick={() => executeScroll()}>To Checkout</button>
+                                onClick={() => scrollToRef()}>To Checkout</button>
                         }
                     </section>
                 </section>

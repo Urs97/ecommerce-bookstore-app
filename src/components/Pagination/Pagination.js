@@ -11,6 +11,8 @@ const Pagination = () => {
     const totalBooks = context.currentData.length;
     const pageNumbers = [];
 
+    console.log(context.currentData.length)
+
     for(let i = 1; i <= Math.ceil(totalBooks / booksPerPage); i++) {
         pageNumbers.push(i);
     };       

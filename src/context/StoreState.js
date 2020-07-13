@@ -7,7 +7,7 @@ import { ACTIONS, storeReducer } from '../reducers/storeReducer';
 const StoreState = props => {
 
     const initialState = {
-        category: 'science-fiction',
+        category: 'science_fiction',
         currentPage: 1,
         filterSliderState: 0,
         storeScrollState: 0,

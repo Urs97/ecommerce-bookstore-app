@@ -43,14 +43,15 @@ const Home = () => {
     const textsExpanded = [text_4, text_5, text_6];
 
     return (   
-        <main>
+        <main className="home-main">
             <Carousel />
             <BulletPointContainer mode={"regular"} icons={iconsRegular} texts={textsRegular} color={"blue"}/>
             {(!isLoading && data) ?
                 <> 
                     <h1 className="title home-title">Bookz Bestsellers</h1>
                     <BooksContainer bookData={data.works}/>
-                </> : null}
+                </> 
+            : null}
             <StoreInvitation />
             <BulletPointContainer mode={"expanded"} icons={iconsExpanded} titles={titlesExpanded} 
                                 texts={textsExpanded} color={"green"}/>

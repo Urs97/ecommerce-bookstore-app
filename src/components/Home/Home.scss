@@ -17,8 +17,27 @@
         .books-container-section {
             .books {
                 display: grid;
-                grid-template-columns: repeat( 4, minmax(12em, 1fr));
+                grid-template-columns: repeat(4, minmax(12em, 1fr));
             }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .home-main {
+        .books-container-section {
+            .books {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(12em, 1fr));
+            }
+        }
+    }
+}
+
+@media (max-width: 865px) {
+    .home-main {
+        .books-container-section {
+            padding: $vertical-content-padding 2.5rem;
         }
     }
 }

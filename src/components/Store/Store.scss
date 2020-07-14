@@ -48,3 +48,21 @@
     0% { transform: rotate(0deg) }
     100% { transform: rotate(360deg) }
 }
+
+@media (max-width: 1100px) {
+    .store-main-container {
+        padding: $vertical-content-padding $horizontal-content-padding-1100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .store-main-container {
+        padding: $vertical-content-padding $horizontal-content-padding-950px;
+    }
+}
+
+@media (max-width: 865px) {
+    .store-main-container {
+        padding: $vertical-content-padding $horizontal-content-padding-865px;
+    }
+}

@@ -20,7 +20,7 @@ const Navigation = () => {
                 <p>Webstore for book lovers</p>
             </a>
             <nav>
-            <Link to="/" className="link js-focus-visible">Home</Link>
+                <Link to="/" className="link js-focus-visible">Home</Link>
                 <Link to="/store" className="link">Bookstore</Link>
                 <Link to="/cart" className="link">Cart</Link>
                 <Link to="/about" className="link">About Us</Link>

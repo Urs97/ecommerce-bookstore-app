@@ -79,3 +79,31 @@
 .testimonial-provider:hover .testimonials-btn {
     display: inline-block;
 }
+
+@media (max-width: 1100px) {
+    .testimonial-provider {
+        .testimonial {
+            padding: 3em $horizontal-content-padding-1100px;
+        }
+        .testimonials-btn {
+            left: $horizontal-content-padding-1100px;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: $horizontal-content-padding-1100px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .testimonial-provider {
+        .testimonial {
+            padding: 3em $horizontal-content-padding-950px;
+        }
+        .testimonials-btn {
+            left: $horizontal-content-padding-950px;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: $horizontal-content-padding-950px;
+        }
+    }
+}

@@ -93,3 +93,17 @@
         }
     }
 }
+
+@media (max-width: 1100px) {
+    .cart-checkout {
+        padding: 0 $horizontal-content-padding-1100px;
+        padding-bottom: $vertical-content-padding;
+    }
+}
+
+@media (max-width: 950px) {
+    .cart-checkout {
+        padding: 0 $horizontal-content-padding-950px;
+        padding-bottom: $vertical-content-padding;
+    }
+}

@@ -80,9 +80,25 @@
     .header-nav-icons :not(:first-child) {
         margin-left: 1.5em;
     }
-
-    // .cart-items-num {
-    //     // empty for now
-    // }
 }
 
+@media (max-width: 1100px) {
+    .header-nav-section {
+        padding: 2.5em $horizontal-content-padding-1100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header-nav-section {
+        padding: 2.5em $horizontal-content-padding-950px;
+    }
+}
+
+@media (max-width: 850px) {
+    .header-nav-section {
+        nav span:not(:last-child) {
+            margin-left: 4em;
+            margin-right: 0.5em;
+        }
+    }
+}

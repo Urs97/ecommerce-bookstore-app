@@ -1,5 +1,8 @@
 $vertical-content-padding: 4.5rem; 
 $horizontal-content-padding: 12rem;
+$horizontal-content-padding-1100px: 8rem;
+$horizontal-content-padding-950px: 5rem;
+$horizontal-content-padding-865px: 2rem;
 $vertical-sidebar-padding: 1.5rem;
 $text-color: #676767;
 $grey: #2F332F;
@@ -10,3 +13,5 @@ $dark-blue: #1EAACE;
 $background-grey: #F4F7F9;
 $border-radius: 0.5em;
 $divider: 2px solid $background-grey;
+
+// Next cutoff is 800 for mobile

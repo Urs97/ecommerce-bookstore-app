@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalProfile renders empty PersonalProfile 1`] = `
+<section
+  className="personal-profile"
+>
+  <img
+    alt="portrait"
+  />
+  <h3
+    className="title"
+  />
+  <h4
+    className="title"
+  />
+  <p />
+</section>
+`;

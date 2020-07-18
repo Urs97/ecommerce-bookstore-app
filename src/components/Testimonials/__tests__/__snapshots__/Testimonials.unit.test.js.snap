@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials renders empty Testimonials 1`] = `
+<n
+  className="testimonial-provider"
+  currentSlide={0}
+  disableAnimation={false}
+  disableKeyboard={false}
+  dragEnabled={true}
+  dragStep={1}
+  hasMasterSpinner={true}
+  infinite={true}
+  interval={5000}
+  isIntrinsicHeight={false}
+  isPageScrollLocked={false}
+  isPlaying={true}
+  lockOnWindowScroll={false}
+  naturalSlideHeight={9}
+  naturalSlideWidth={16}
+  orientation="horizontal"
+  playDirection="forward"
+  step={1}
+  tag="div"
+  totalSlides={3}
+  touchEnabled={true}
+  visibleSlides={1}
+>
+  <n
+    className="testimonial"
+  >
+    <n
+      className="testimonial-slide"
+    >
+      <div
+        className="wrapper"
+      >
+        <n
+          alt="Portrait photo by Štefan Štefančík on Unsplash"
+          src="testimonial-portrait-1.jpg"
+        />
+        <p>
+          I like Bookz more and more each day because it makes my life a lot easier. I'd really be lost without Bookz.
+        </p>
+        <span>
+          Daniel Smith
+        </span>
+      </div>
+    </n>
+    <n
+      className="testimonial-slide"
+    >
+      <div
+        className="wrapper"
+      >
+        <n
+          alt="Portrait photo by Robert Godwin on Unsplash"
+          src="testimonial-portrait-2.jpg"
+        />
+        <p>
+          I found what I needed and books arrived in a timely manner. The prices are super low, keep up the good work!
+        </p>
+        <span>
+          Holly Dangerfield
+        </span>
+      </div>
+    </n>
+    <n
+      className="testimonial-slide"
+    >
+      <div
+        className="wrapper"
+      >
+        <n
+          alt="Portrait photo by Mahesh Krishnamurthy on Unsplash"
+          src="testimonial-portrait-3.jpg"
+        />
+        <p>
+          It really saves me time and effort. Accesible book reading is exactly what I feel has been lacking so far and I have nothing but praise for the way Bookz goes about it!
+        </p>
+        <span>
+          Steve Abrams
+        </span>
+      </div>
+    </n>
+  </n>
+  <n
+    className="testimonials-btn"
+  >
+    <span
+      aria-label="left arrow icon"
+      role="img"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Object {
+            "icon": Array [
+              256,
+              512,
+              Array [],
+              "f104",
+              "M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z",
+            ],
+            "iconName": "angle-left",
+            "prefix": "fas",
+          }
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </span>
+  </n>
+  <n
+    className="testimonials-btn tstm-btn-next"
+  >
+    <span
+      aria-label="right arrow icon"
+      role="img"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Object {
+            "icon": Array [
+              256,
+              512,
+              Array [],
+              "f105",
+              "M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z",
+            ],
+            "iconName": "angle-right",
+            "prefix": "fas",
+          }
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </span>
+  </n>
+</n>
+`;

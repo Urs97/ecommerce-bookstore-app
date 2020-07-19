@@ -10,6 +10,30 @@
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
+    overflow: auto;
+
+    .menu-btn {
+        display: none;
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        color: inherit;
+        margin-top: 1em;
+    }
+
+    .menu-btn:hover {
+        opacity: 0.9;
+    }
+
+    .menu-btn:focus {
+        outline: 0.2em solid #FFFFFF;
+    }
+
+    .menu-btn:not(.focus-visible) {
+        outline: none;
+      }
 
     .header-logo {
         text-decoration: none;
@@ -32,53 +56,59 @@
 
     .header-logo:not(.focus-visible) {
         outline: none;
-      }
+    }
+    
+    .after-border-section {
 
-    nav {
-        margin-top: 1em;
+        .menu-section {
+            display: flex;
+            margin-top: 1em;
+
+            .main-menu {
+
+                .link {
+                    text-decoration: none;
+                    color: #FFFFFF;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding-bottom: 0.2em;
+                    outline: none;
+                }
+
+                .link:hover {
+                    border-bottom: 0.15em solid #FFFFFF;
+                }
+
+                .link:focus {
+                    outline: 0.2em solid #FFFFFF;
+                }
+
+                .link:not(.focus-visible) {
+                    outline: none;
+                }
+
+                .link:not(:last-child) {
+                    margin-right: 1.5em;
+                }
+            }
+
+            .right-menu {
+
+                span:first-child {
+                    margin-left: 8em;
+                    margin-right: 0.5em;
+                }
+            }
+        }
     }
 
-    nav::after {
+    .after-border-section::after {
         content: "";
         display: block;
         margin-top: 1em;
         border-bottom: 0.3em solid #FFFFFF;
         box-shadow: -2px 3px 0px 0px rgba(0, 0, 0, 0.4);
-    }
-
-    nav span:not(:last-child) {
-        margin-left: 8em;
-        margin-right: 0.5em;
-    }
-
-    nav .link {
-        text-decoration: none;
-        color: #FFFFFF;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding-bottom: 0.2em;
-        outline: none;
-    }
-
-    nav .link:hover {
-        border-bottom: 0.15em solid #FFFFFF;
-    }
-
-    nav .link:focus {
-        outline: 0.2em solid #FFFFFF;
-    }
-
-    nav .link:not(.focus-visible) {
-        outline: none;
-      }
-
-    nav .link:not(:last-child) {
-        margin-right: 1.5em;
-    }
-
-    .header-nav-icons :not(:first-child) {
-        margin-left: 1.5em;
     }
 }
 
@@ -95,10 +125,83 @@
 }
 
 @media (max-width: 850px) {
-    .header-nav-section {
-        nav span:not(:last-child) {
+    .menu-section {
+        .right-menu span:first-child {
             margin-left: 4em;
             margin-right: 0.5em;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header-nav-section {
+        align-items: flex-start;
+        height: 100%;
+
+        .menu-btn {
+            display: block;
+            font-size: 1.5em;
+        }
+        
+        .header-logo {
+            margin-left: 1.5em;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .after-border-section {
+            .menu-section {
+                margin-top: 0;
+
+                .main-menu {
+                    display: flex;
+                    z-index: 3;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    background: #f2f2f2;
+                    width: 50%;
+                    height: 100%;
+                    border-right: #ccc 1px solid;
+                    opacity: 0.9;
+                    padding: 2em;
+                    transform: translateX(-40em);
+                    transition: transform 0.5s ease-in-out;
+
+                    .link {
+                        color: black;
+                        padding: 10px;
+                        border-bottom: #ccc solid 1px;
+                        font-size: 14px;
+                        margin-right: 1.5em;
+                    }
+
+                    .link:last-child {
+                        border-bottom: 0;
+                    }
+                }
+
+                .main-menu.active {
+                    transform: translateX(0em);
+                }
+
+                .right-menu {
+                    margin-top: 1em;
+                    font-size: 1.5em;
+                    
+                    span:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .after-border-section::after {
+            display: none;
         }
     }
 }

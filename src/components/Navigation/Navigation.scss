@@ -1,6 +1,39 @@
 @import '../../styles/shared.scss';
 
-.header-nav-section {
+.mobile-main-menu {
+    display: none;
+    z-index: 3;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+    width: 50%;
+    height: 100%;
+    border-right: #ccc 1px solid;
+    opacity: 0.9;
+    padding: 2em;
+    transform: translateX(-40em);
+    transition: transform 0.5s ease-in-out;
+
+    .link {
+        color: black;
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+        margin-right: 1.5em;
+    }
+
+    .link:last-child {
+        border-bottom: 0;
+    }
+}
+
+.mobile-main-menu.active {
+    transform: translateX(0em);
+}
+
+.header-section {
     position: absolute;
     z-index: 2;
     color: #FFFFFF;
@@ -20,7 +53,10 @@
         border: none;
         text-decoration: none;
         color: inherit;
-        margin-top: 1em;
+    }
+
+    .menu-btn > * {
+        pointer-events: none;
     }
 
     .menu-btn:hover {
@@ -58,89 +94,88 @@
         outline: none;
     }
     
-    .after-border-section {
+    .main-menu {
 
-        .menu-section {
-            display: flex;
-            margin-top: 1em;
+        .link {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-bottom: 0.2em;
+            outline: none;
+        }
 
-            .main-menu {
+        .link:hover {
+            border-bottom: 0.15em solid #FFFFFF;
+        }
 
-                .link {
-                    text-decoration: none;
-                    color: #FFFFFF;
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    padding-bottom: 0.2em;
-                    outline: none;
-                }
+        .link:focus {
+            outline: 0.2em solid #FFFFFF;
+        }
 
-                .link:hover {
-                    border-bottom: 0.15em solid #FFFFFF;
-                }
+        .link:not(.focus-visible) {
+            outline: none;
+        }
 
-                .link:focus {
-                    outline: 0.2em solid #FFFFFF;
-                }
+        .link:not(:last-child) {
+            margin-right: 1.5em;
+        }
 
-                .link:not(.focus-visible) {
-                    outline: none;
-                }
-
-                .link:not(:last-child) {
-                    margin-right: 1.5em;
-                }
-            }
-
-            .right-menu {
-
-                span:first-child {
-                    margin-left: 8em;
-                    margin-right: 0.5em;
-                }
-            }
+        span :first-child {
+            margin-left: 8em;
+            margin-right: 0.5em;
         }
     }
 
-    .after-border-section::after {
+    .main-menu::after {
         content: "";
         display: block;
         margin-top: 1em;
         border-bottom: 0.3em solid #FFFFFF;
         box-shadow: -2px 3px 0px 0px rgba(0, 0, 0, 0.4);
     }
+
+    .mobile-right-menu {
+        display: none;
+    }
 }
 
 @media (max-width: 1100px) {
-    .header-nav-section {
+    .header-section {
         padding: 2.5em $horizontal-content-padding-1100px;
     }
 }
 
-@media (max-width: 950px) {
-    .header-nav-section {
-        padding: 2.5em $horizontal-content-padding-950px;
+@media (max-width: 900px) {
+    .about-us-leadership {
+        padding: $vertical-content-padding 0;
     }
 }
 
 @media (max-width: 850px) {
-    .menu-section {
-        .right-menu span:first-child {
-            margin-left: 4em;
-            margin-right: 0.5em;
+    .header-section {
+        .main-menu {
+            span :first-child {
+                margin-left: 4em;
+                margin-right: 0.5em;
+            }
         }
     }
 }
 
 @media (max-width: 800px) {
-    .header-nav-section {
-        align-items: flex-start;
-        height: 100%;
+    .mobile-main-menu {
+        display: flex;
+    }
+
+    .header-section {
+        padding: $vertical-content-padding 3em;
 
         .menu-btn {
             display: block;
             font-size: 1.5em;
+            margin-top: 1em;
         }
         
         .header-logo {
@@ -151,57 +186,35 @@
             }
         }
 
-        .after-border-section {
-            .menu-section {
-                margin-top: 0;
-
-                .main-menu {
-                    display: flex;
-                    z-index: 3;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    background: #f2f2f2;
-                    width: 50%;
-                    height: 100%;
-                    border-right: #ccc 1px solid;
-                    opacity: 0.9;
-                    padding: 2em;
-                    transform: translateX(-40em);
-                    transition: transform 0.5s ease-in-out;
-
-                    .link {
-                        color: black;
-                        padding: 10px;
-                        border-bottom: #ccc solid 1px;
-                        font-size: 14px;
-                        margin-right: 1.5em;
-                    }
-
-                    .link:last-child {
-                        border-bottom: 0;
-                    }
-                }
-
-                .main-menu.active {
-                    transform: translateX(0em);
-                }
-
-                .right-menu {
-                    margin-top: 1em;
-                    font-size: 1.5em;
-                    
-                    span:first-child {
-                        margin-left: 0;
-                    }
-                }
-            }
+        .main-menu {
+            display: none;
         }
 
-        .after-border-section::after {
-            display: none;
+        .mobile-right-menu {
+            display: block;
+            font-size: 1.125em;
+            margin-top: 1em;
+            
+            span :first-child {
+                margin-left: 0;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header-section {
+        padding: $vertical-content-padding 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-section {
+        .header-logo {
+            p {
+                display: none;
+            }
         }
     }
 }

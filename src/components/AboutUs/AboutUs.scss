@@ -65,3 +65,25 @@
         padding: $vertical-content-padding 0;
     }
 }
+
+@media (max-width: 630px) {
+    .about-us-leadership {
+        .leadership-main {
+            flex-direction: column;
+
+            .personal-profile {
+                padding: 0 4em;
+            }
+
+            .personal-profile:not(:last-child) {
+                margin-bottom: $vertical-content-padding;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .about-us-leadership {
+        padding: $vertical-content-padding 0;
+    }
+}

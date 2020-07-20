@@ -41,3 +41,28 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .home-main {
+        .books-container-section {
+            padding: $vertical-content-padding 7rem;
+            .books {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(12em, 1fr));
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .home-main {
+        .books-container-section {
+            padding: $vertical-content-padding 0;
+            .books {
+                justify-content: center;
+                display: grid;
+                grid-template-columns: minmax(12em, 20em);
+            }
+        }
+    }
+}

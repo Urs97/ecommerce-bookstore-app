@@ -11,7 +11,7 @@ export const useToggleMenu = (initialState = false, onAfterClose = null) => {
 
   const handleClickOutside = useCallback(
     (event) => {
-      if (ref.current && ref.current.contains(event.target)) {
+      if (ref.current && (ref.current.contains(event.target) || event.target.className === 'menu-btn')) {
         return;
       };
       setIsOpen(false);

@@ -209,7 +209,11 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 580px) {
+    .mobile-main-menu {
+        width: 70%;
+    }
+
     .header-section {
         .header-logo {
             p {

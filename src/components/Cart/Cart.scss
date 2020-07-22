@@ -118,11 +118,17 @@
 
 @media (max-width: 800px) {
     .cart-container {
+        padding: $vertical-content-padding 3rem;
+        padding-bottom: 0;
+
         .cart-nav {
+            font-size: 1.25em;
             flex-direction: column;
             border-bottom: 3px solid $green;
+            margin-bottom: 0;
 
             .cart-nav-title {
+                flex-shrink: 1;
                 align-items: center;
             }
 
@@ -131,12 +137,30 @@
                 margin-bottom: 3em;
             }
         }
+
+        .product-container {
+            border-radius: 0;
+
+            .cart-item-header {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .cart-container {
+        padding:$vertical-content-padding 2rem;
+        padding-bottom: 0;
     }
 }
 
 @media (max-width: 580px) {
     .cart-container {
-        padding: $vertical-content-padding 2rem;
+        padding: $vertical-content-padding 3rem;
+        padding-bottom: 0;
+        background-color: #FFFFFF;
+
         .cart-nav {
             .cart-nav-btns {
                 display: flex;
@@ -148,13 +172,23 @@
                 }
             }
         }
+
+        .product-container {
+            box-shadow: none;
+        }
     }
 }
 
-// If above padding sides stays at 2rem delete this media query
+@media (max-width: 530px) {
+    .cart-container {
+        font-size: 0.9em;
+    }
+}
 
-// @media (max-width: 380px) {
-//     .cart-container {
-//         padding: $vertical-content-padding 2rem;
-//     }
-// }
+@media (max-width: 480px) {
+    .cart-container {
+        padding: $vertical-content-padding 2rem;
+        padding-bottom: 0;
+        font-size: 0.8em;
+    }
+}

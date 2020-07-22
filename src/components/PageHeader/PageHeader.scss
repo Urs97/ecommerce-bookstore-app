@@ -32,3 +32,13 @@
 .page-header-bg-yellow {
     background-color: $yellow;
 }
+
+// Mobile design
+
+@media (max-width: 400px) {
+    .page-header-category-title {
+        h1 {
+            font-size: 3em;
+        }
+    }
+}

@@ -17,3 +17,35 @@
         cursor: auto;
     }
 }
+
+@media (max-width: 1260px) {
+    .pagination {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 800px) {
+    .pagination {
+        font-size: 1.25em;
+        margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 580px) {
+    .pagination {
+        font-size: 1.25em;
+        margin-top: 1.25em;
+    }
+}
+
+@media (max-width: 500px) {
+    .pagination {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .pagination {
+        font-size: 1.75em;
+    }
+}

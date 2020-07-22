@@ -107,3 +107,18 @@
         padding-bottom: $vertical-content-padding;
     }
 }
+
+// Mobile design
+
+@media (max-width: 800px) {
+    .cart-checkout {
+        align-items: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .cart-checkout {
+        padding: 0 2em;
+        padding-bottom: $vertical-content-padding;
+    }
+}

@@ -66,6 +66,8 @@
     }
 }
 
+// Mobile design
+
 @media (max-width: 630px) {
     .about-us-leadership {
         .leadership-main {
@@ -79,11 +81,5 @@
                 margin-bottom: $vertical-content-padding;
             }
         }
-    }
-}
-
-@media (max-width: 900px) {
-    .about-us-leadership {
-        padding: $vertical-content-padding 0;
     }
 }

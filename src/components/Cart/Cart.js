@@ -28,11 +28,11 @@ const Cart = () => {
             <PageHeader title="Your Cart" color="green"/>
             <section className="cart-container">
                 <section className="cart-nav">
-                <section className="cart-nav-title">
-                    <h1 className="title">Shopping Cart</h1>
-                    <h4 className="title">${cartSubtotal}</h4>
-                    <h4 className="title">{cartQuantity} items</h4>
-                </section>
+                    <section className="cart-nav-title">
+                        <h1 className="title">Shopping Cart</h1>
+                        <h4 className="title">${cartSubtotal}</h4>
+                        <h4 className="title">{cartQuantity} items</h4>
+                    </section>
                     <section className="cart-nav-btns">
                         <a href="/store" className="button continue-btn">Continue Shopping</a>
                         {context.cart.length > 0 && 

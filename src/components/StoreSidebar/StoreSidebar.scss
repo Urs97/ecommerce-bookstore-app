@@ -23,3 +23,11 @@
 .store-sidebar > *:not(:last-child) {
     border-bottom: $divider;
 }
+
+// Mobile design 
+
+@media (max-width: 800px) {
+    .store-sidebar {
+        display: none;
+    }
+}

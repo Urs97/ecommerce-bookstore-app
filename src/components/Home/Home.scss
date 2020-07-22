@@ -42,6 +42,8 @@
     }
 }
 
+// Mobile design
+
 @media (max-width: 800px) {
     .home-main {
         .books-container-section {
@@ -54,15 +56,34 @@
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 560px) {
     .home-main {
         .books-container-section {
-            padding: $vertical-content-padding 0;
+            padding: $vertical-content-padding 3rem;
             .books {
-                justify-content: center;
-                display: grid;
-                grid-template-columns: minmax(12em, 20em);
+                gap: 2em;
             }
         }
     }
 }
+
+@media (max-width: 480px) {
+    .home-main {
+        .books-container-section {
+            font-size: 0.8em;
+            padding: $vertical-content-padding 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .home-main {
+        .books-container-section {
+            padding: $vertical-content-padding 1rem;
+            .books {
+                gap: 1.25em;
+            }
+        }
+    }
+}
+

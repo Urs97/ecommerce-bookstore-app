@@ -35,3 +35,35 @@
         margin-bottom: 0.5em;
     }
 }
+
+@media (max-width: 800px) {
+    .sidebar-book {
+        .sidebar-book-details {
+            flex-grow: 1;
+            display: grid;
+            grid-template-areas: 
+            "title"
+            "author"
+            "price";
+            grid-template-rows: 3fr 1fr 1fr;
+
+            .sidebar-book-title-container {
+                grid-area: title;
+                align-self: center;
+            }
+
+            p {
+                grid-area: author;
+                align-self: center;
+            }
+    
+            .sidebar-book-price-container {
+                grid-area: price;
+            }
+        }
+
+        .sidebar-book-details > * {
+            text-align: center;
+        }
+    }
+}

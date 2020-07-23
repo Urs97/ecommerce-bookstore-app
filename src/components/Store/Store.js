@@ -27,10 +27,8 @@ const Store = () => {
             <main>
                 <PageHeader title={context.data.name} color="blue" />
                 <section className="store-main-container" ref={storeMainRef}>
-                    <section className="books-container-pagination-wrapper">
                         <BooksContainer bookData={context.currentBooks} />
                         <Pagination />
-                    </section>
                     <StoreSidebar />
                 </section>
             </main>

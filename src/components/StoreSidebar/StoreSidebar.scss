@@ -6,9 +6,9 @@
     padding: 0 1.875em;
     border-radius: $border-radius;
 
-    & .book-genres {
+    .book-genres {
 
-        & ul {
+        ul {
             list-style-position: inside;
             line-height: 1.75;
             padding-top: 0.75em;
@@ -24,10 +24,9 @@
     border-bottom: $divider;
 }
 
-// Mobile design 
-
-@media (max-width: 800px) {
-    .store-sidebar {
-        display: none;
+@media (max-width: 580px) {
+    .store-sidebar > *:not(:last-child) {
+        padding-top: 2rem;
+        padding-bottom: 0;
     }
 }

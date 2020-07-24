@@ -1,18 +1,15 @@
-import React, { useContext } from 'react'
-import './StoreSidebar.scss';
+import React, { useContext } from 'react';
+import './MobileFilters.scss';
 
 import StoreContext from '../../context/StoreContext';
 import FilterByPrice from '../FilterByPrice/FilterByPrice';
-import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';
 
-const StoreSidebar = () => {
+const MobileFilters = () => {
     const context = useContext(StoreContext);
 
-    const topRatedBooks = context.data.works.slice(5, 8);
-    const recentBooks = context.data.works.slice(12, 15);
-
     return (
-        <section className="store-sidebar">
+        <section className="mobile-filter">
+            <button className="button mobile-filter-close">Close</button>
             <section className="book-genres">
                 <h4 className="sidebar-title">Book Genres</h4>
                 <ul>
@@ -31,10 +28,8 @@ const StoreSidebar = () => {
                 </ul>
             </section>
             <FilterByPrice />
-            <SidebarBookContainer bookData={topRatedBooks} title="Top Rated Books"/>
-            <SidebarBookContainer bookData={recentBooks} title="Recent Books"/>
         </section>
     )
-};
+}
 
-export default StoreSidebar;
+export default MobileFilters;

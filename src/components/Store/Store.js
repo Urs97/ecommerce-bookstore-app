@@ -6,6 +6,7 @@ import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
 import Pagination from '../Pagination/Pagination';
+import MobileFilters from '../MobileFilters/MobileFilters';
 
 const Store = () => {
     const context = useContext(StoreContext);
@@ -23,12 +24,20 @@ const Store = () => {
         </main>);
 
     if(!context.isLoading && context.data) {
+        const total_books = context.currentData;
+        const page_books = context.currentBooks;
+
         content = (
             <main>
                 <PageHeader title={context.data.name} color="blue" />
                 <section className="store-main-container" ref={storeMainRef}>
-                        <BooksContainer bookData={context.currentBooks} />
-                        <Pagination />
+                    <section className="mobile-functionality-section">
+                        <span>{total_books.length} products</span>
+                        <button className="button mobile-filter-open">Filter</button>
+                        <MobileFilters />
+                    </section>
+                    <BooksContainer bookData={page_books} />
+                    <Pagination />
                     <StoreSidebar />
                 </section>
             </main>

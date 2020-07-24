@@ -3,7 +3,7 @@ import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
 import Nouislider from "nouislider-react";
-import StoreContext from '../../../context/StoreContext';
+import StoreContext from '../../context/StoreContext';
 
 const FilterByPrice = () => {
 

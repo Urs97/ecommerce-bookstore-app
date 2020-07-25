@@ -9,10 +9,11 @@ const StoreState = props => {
     const initialState = {
         category: 'science_fiction',
         currentPage: 1,
-        filterSliderState: 0,
-        storeScrollState: 0,
+        filterSliderState: false,
+        storeScrollState: false,
         booksPerPage: 9,
         filteredData: null,
+        mobileFilterPopup: false
     };
 
     const [state, dispatch] = useReducer(storeReducer, initialState);
@@ -43,6 +44,10 @@ const StoreState = props => {
                 payload: { minPrice: minPrice, maxPrice: maxPrice, data: data }})
     }
 
+    const toggleMobileFilter = state => {
+        dispatch({ type: ACTIONS.TOGGLE_MOBILE_FILTER, payload: state })
+    }
+
     return (
         <StoreContext.Provider
             value={{
@@ -53,7 +58,8 @@ const StoreState = props => {
                 currentData: currentData,
                 changeCategory: changeCategory,
                 changeCurrentPage: changeCurrentPage,
-                submitFilterValue: submitFilterValue
+                submitFilterValue: submitFilterValue,
+                toggleMobileFilter: toggleMobileFilter
             }}
         >
           {props.children}

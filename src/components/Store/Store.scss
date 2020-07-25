@@ -9,29 +9,6 @@
     padding: $vertical-content-padding $horizontal-content-padding;
     background-color: $background-grey;
 
-    .mobile-functionality-section {
-        margin-bottom: 3em;
-        border-radius: $border-radius;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        display: none;
-
-        & .mobile-filter-open {
-            font-size: 1.25em;
-            background-color: $dark-blue;
-            margin-left: 2em;
-        }
-
-        & .mobile-.mobile-filter-open {
-            background-color: $yellow;
-        }
-
-        span {
-            font-size: 1.75em;
-        }
-    }
-
     & .books-container-section {
         padding: 0;
         grid-area: store;
@@ -45,6 +22,7 @@
 
     & .pagination {
         grid-area: pagination;
+        align-self: flex-end;
     }
 
     & .store-sidebar {
@@ -105,10 +83,6 @@
         display: block;
         padding: 3.5rem 6rem;
         position: relative;
-
-        .mobile-functionality-section {
-            display: flex;
-        }
 
         & .books-container-section {
             .books {
@@ -199,10 +173,6 @@
 @media (max-width: 450px) {
     .store-main-container {
         font-size: 0.75rem;
-
-        .mobile-functionality-section {
-            font-size: 1.25em;
-        }
     }
 }
 
@@ -227,11 +197,3 @@
         padding-bottom: 0;
     }
 }
-
-// .book-genres {
-//     position: absolute;
-//     display: block;
-//     top: 0;
-//     left: 0;
-//     height: 100vh;
-// }

@@ -6,36 +6,36 @@ import BooksContainer from '../BooksContainer/BooksContainer';
 import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
 import Pagination from '../Pagination/Pagination';
-import MobileFilters from '../MobileFilters/MobileFilters';
+import MobileStoreFunctionality from '../MobileStoreFunctionality/MobileStoreFunctionality';
 
 const Store = () => {
     const context = useContext(StoreContext);
     const storeMainRef = useRef(null);
+    const isLoading = context.isLoading;
+    const data = context.data;
+    const storeScrollState = context.state.storeScrollState;
 
     useEffect(() => {
-        (context.state.storeScrollState > 0 && 
-            window.scrollTo(0, storeMainRef.current.offsetTop));
-    }, [context.state.storeScrollState])
+        if (!isLoading && data) {
+            window.scrollTo(0, storeMainRef.current.offsetTop)};
+    // eslint-disable-next-line
+    }, [storeScrollState])
 
     let content = (
         <main>
             <PageHeader title="Loading Resources..." color="blue" />
             <section className="loader" />
-        </main>);
+        </main>
+    );
 
-    if(!context.isLoading && context.data) {
-        const total_books = context.currentData;
+    if(!isLoading && data) {
         const page_books = context.currentBooks;
 
         content = (
             <main>
-                <PageHeader title={context.data.name} color="blue" />
+                <PageHeader title={data.name} color="blue" />
                 <section className="store-main-container" ref={storeMainRef}>
-                    <section className="mobile-functionality-section">
-                        <span>{total_books.length} products</span>
-                        <button className="button mobile-filter-open">Filter</button>
-                        <MobileFilters />
-                    </section>
+                    <MobileStoreFunctionality />
                     <BooksContainer bookData={page_books} />
                     <Pagination />
                     <StoreSidebar />

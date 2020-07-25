@@ -8,5 +8,6 @@ export default React.createContext({
     currentData: [],
     changeCategory: (payload) => {},
     changeCurrentPage: (payload) => {},
-    submitFilterValue: (payload) => {}
+    submitFilterValue: (payload) => {},
+    toggleMobileFilter: (payload) => {}
 });

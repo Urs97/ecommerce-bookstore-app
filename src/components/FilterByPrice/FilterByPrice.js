@@ -15,7 +15,7 @@ const FilterByPrice = () => {
     const data = context.data;
 
     useEffect(() => {
-        if (minPrice !== 0 && maxPrice !== 100) {
+        if (minPrice !== 0 || maxPrice !== 100) {
             if (filterRef.current && filterRef.current.noUiSlider) {
                 filterRef.current.noUiSlider.reset();
             }

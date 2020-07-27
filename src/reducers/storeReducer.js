@@ -10,7 +10,8 @@ const changeCategory = (newCategory, prevState) => {
     return {...prevState, 
             category: newCategory,
             filterSliderState: newFilterSliderState,
-            filteredData: null
+            filteredData: null,
+            currentPage: 1
         };
 }
 
@@ -25,7 +26,8 @@ const changeCurrentPage = (newCurrentPage, prevState) => {
 const submitFilterValue = ({minPrice, maxPrice, data}, prevState) => {
     const newFilteredData = data.works.filter(book => book.price[0] >= minPrice && book.price[0] <= maxPrice);
     return {...prevState,
-            filteredData: newFilteredData
+            filteredData: newFilteredData,
+            currentPage: 1
     };
 }
 

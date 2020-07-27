@@ -6,8 +6,7 @@ const BooksContainer = ({ bookData }) => {
 
     const books = bookData.map(book => <Book key={book.key} book={book}/>);
 
-    // Improve this part
-    let content = <div>There are no books.</div>
+    let content = <section className="no-books">No books found.</section>
 
     if(books.length !== 0) {
         content = (

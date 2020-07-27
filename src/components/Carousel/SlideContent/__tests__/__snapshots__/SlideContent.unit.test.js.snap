@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideContent renders empty SlideContent 1`] = `
+<section
+  className="slide-content"
+>
+  <p />
+  <h1
+    className="title"
+  />
+  <Link
+    className="link-button"
+    to="/store"
+  >
+    See More
+  </Link>
+</section>
+`;

@@ -39,13 +39,26 @@ const AboutUs = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </section>
             <section className="about-us-leadership">
-            <h2 className="title leadership-title">Leadership</h2>
+                <h2 className="title leadership-title">Leadership</h2>
                 <section className="leadership-main">
-                    <PersonalProfile imgSrc={portrait_1} name={"Richard Jones"} title={"CEO & Co Founder"} text={dummyLorem}/>
-                    <PersonalProfile imgSrc={portrait_2} name={"Steve Mason"} title={"CTO & Co Founder"} text={dummyLorem}/>
+                    <PersonalProfile 
+                        imgSrc={portrait_1} 
+                        name={"Richard Jones"} 
+                        title={"CEO & Co Founder"} 
+                        text={dummyLorem} />
+                    <PersonalProfile 
+                        imgSrc={portrait_2} 
+                        name={"Steve Mason"} 
+                        title={"CTO & Co Founder"} 
+                        text={dummyLorem} />
                 </section>
             </section>
-            <BulletPointContainer mode={"expanded"} icons={icons} titles={titles} texts={texts} color={"yellow"}/>
+            <BulletPointContainer 
+                mode={"expanded"} 
+                icons={icons} 
+                titles={titles} 
+                texts={texts} 
+                color={"yellow"} />
         </main>
     )
 };

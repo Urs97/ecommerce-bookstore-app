@@ -1,11 +1,11 @@
 import React from 'react';
 import './CartCheckout.scss';
 
-const CartCheckout = ({ innerRef, quantity, subtotal }) => {
+const CartCheckout = ({ quantity, subtotal }) => {
     const order_total = (Number(subtotal) + Number(9.99)).toFixed(2);
 
     return (
-        <section className="cart-checkout" ref={innerRef}>
+        <section className="cart-checkout">
             <section className="cart-checkout-grid">
                 <h2 className="title">Summary</h2>
                 <h3 className="title">Cart Total</h3>

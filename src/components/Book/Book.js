@@ -26,7 +26,7 @@ const Book = ({ book }) => {
                 </div>
             )}
             <span className="book-title-container"><h4 className="title">{book.title}</h4></span>
-            <p>{book.authors[0].name}</p>
+            <p className="book-author">{book.authors[0].name}</p>
             <span className="book-price-container title">${price}</span>
             {context.cart.findIndex(product => product.key === book.key) >= 0 && 
                 <a href="/cart" className="button">View Cart ✔</a> }

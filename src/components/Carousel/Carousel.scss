@@ -101,3 +101,32 @@
     display: inline-block;
 }
 
+// Making image in carousel responsive
+@media (max-width: 1000px) {
+    .carousel-provider {
+        .slider {
+            .slide {
+                padding-bottom: 47em !important;
+            }
+        }
+    }
+}
+
+// Mobile design
+
+@media (max-width: 580px) {
+    .carousel-provider {
+        height: 100vh;
+
+        .carousel-btn {
+            display: none !important;
+        }
+
+        .slider {
+
+            .slide {
+                padding-bottom: 59em !important;
+            }
+        }
+    }
+}

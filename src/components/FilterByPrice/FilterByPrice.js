@@ -1,27 +1,32 @@
-import React, { useState, useRef } from 'react';
-import Nouislider from "nouislider-react";
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
-const FilterByPrice = ({ handleFilterByPrice }, ref) => {
+import Nouislider from "nouislider-react";
+import StoreContext from '../../context/StoreContext';
+
+const FilterByPrice = () => {
+
+    const context = useContext(StoreContext);
     
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(0);
     const filterRef = useRef(null);
+    const data = context.data;
+
+    useEffect(() => {
+        if (minPrice !== 0 || maxPrice !== 100) {
+            if (filterRef.current && filterRef.current.noUiSlider) {
+                filterRef.current.noUiSlider.reset();
+            }
+        }
+    // eslint-disable-next-line
+    }, [context.state.filterSliderState])
 
     const onChange = () => (render, handle, value, un, percent) => {
         setMinPrice(value[0]);
         setMaxPrice(value[1]);
     }
-    
-    React.useImperativeHandle(ref, () => ({
-        resetFilter() {
-            setMinPrice(0);
-            setMaxPrice(100);
-            if (filterRef.current && filterRef.current.noUiSlider) {
-                filterRef.current.noUiSlider.reset();
-            }
-    }}));
 
     return (
         <section className="filter-by-price">
@@ -35,13 +40,11 @@ const FilterByPrice = ({ handleFilterByPrice }, ref) => {
                 onUpdate={onChange()}/>
             <div className="filter-by-price-div">
                 <button className="button" 
-                        onClick={() => handleFilterByPrice(minPrice, maxPrice)}>Filter</button>
+                        onClick={() => context.submitFilterValue(minPrice, maxPrice, data)}>Filter</button>
                 <span>${minPrice} - ${maxPrice}</span>
             </div>
         </section>
     )
 };
 
-const forwardedFilterByPrice = React.forwardRef(FilterByPrice);
-
-export default forwardedFilterByPrice;
+export default FilterByPrice;

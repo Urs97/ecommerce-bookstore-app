@@ -6,3 +6,64 @@
     padding: $vertical-content-padding $horizontal-content-padding;
 }
 
+@media (max-width: 1100px) {
+    .bulletpoints {
+        padding: $vertical-content-padding $horizontal-content-padding-1100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .bulletpoints {
+        padding: $vertical-content-padding $horizontal-content-padding-950px;
+    }
+}
+
+@media (max-width: 865px) {
+    .bulletpoints {
+        padding: $vertical-content-padding $horizontal-content-padding-865px;
+    }
+}
+
+// Mobile design
+
+@media (max-width: 770px) {
+    .bulletpoints {
+        padding: $vertical-content-padding 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .bulletpoints.expanded {
+        display: flex;
+        flex-direction: column;
+        padding: $vertical-content-padding 10rem;
+
+        .bulletpoint:not(:last-child) {
+            margin-bottom: 4.5em;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .bulletpoints.expanded {
+        padding: $vertical-content-padding 5rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .bulletpoints {
+        display: flex;
+        flex-direction: column;
+        padding: $vertical-content-padding 8rem;
+
+        .bulletpoint:not(:last-child) {
+            margin-bottom: 4.5em;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .bulletpoints {
+        padding: $vertical-content-padding 5rem;
+    }
+}

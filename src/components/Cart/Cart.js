@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Cart.scss';
 
 import CartContext from '../../context/CartContext';
@@ -7,6 +7,7 @@ import CartItem from '../CartItem/CartItem';
 import CartCheckout from '../CartCheckout/CartCheckout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link as ScrollLink, Element as ScrollElement } from 'react-scroll';
 
 const Cart = () => {
     const context = useContext(CartContext);
@@ -18,29 +19,27 @@ const Cart = () => {
     const cartSubtotalFull = context.cart.reduce((count, item) => {
         return count + (Number(`${item.price[0]}.${item.price[1]}`) * item.quantity);   
       }, 0)
-
     const cartSubtotal = cartSubtotalFull.toFixed(2);
-
-    const CartCheckoutRef = useRef(null);
-
-    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop, 'smooth');
-    const executeScroll = () => scrollToRef(CartCheckoutRef);
 
     return (
         <main>
             <PageHeader title="Your Cart" color="green"/>
             <section className="cart-container">
                 <section className="cart-nav">
-                <section className="cart-nav-title">
-                    <h1 className="title">Shopping Cart</h1>
-                    <h4 className="title">${cartSubtotal}</h4>
-                    <h4 className="title">{cartQuantity} items</h4>
-                </section>
+                    <section className="cart-nav-title">
+                        <h1 className="title">Shopping Cart</h1>
+                        <h4 className="title">${cartSubtotal}</h4>
+                        <h4 className="title">{cartQuantity} items</h4>
+                    </section>
                     <section className="cart-nav-btns">
                         <a href="/store" className="button continue-btn">Continue Shopping</a>
                         {context.cart.length > 0 && 
-                            <button className="button checkout-btn"
-                                onClick={() => executeScroll()}>To Checkout</button>
+                            <ScrollLink 
+                                to="cart-checkout" 
+                                spy={true} 
+                                smooth={true}>
+                                    <button className="button checkout-btn">To Checkout</button>
+                            </ScrollLink>
                         }
                     </section>
                 </section>
@@ -65,10 +64,11 @@ const Cart = () => {
                 </section>
             </section>
             {context.cart.length > 0 && 
-                    <CartCheckout
-                        innerRef={CartCheckoutRef} 
-                        quantity={cartQuantity} 
-                        subtotal={cartSubtotal}/>
+                    <ScrollElement name="cart-checkout">
+                        <CartCheckout 
+                            quantity={cartQuantity} 
+                            subtotal={cartSubtotal}/>
+                    </ScrollElement>
             }
         </main>
     )

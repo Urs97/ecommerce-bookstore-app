@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLayout renders empty AppLayout 1`] = `
+<Fragment>
+  <Navigation />
+  <Footer />
+</Fragment>
+`;

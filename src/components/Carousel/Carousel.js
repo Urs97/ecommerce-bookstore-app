@@ -33,36 +33,49 @@ class Carousel extends React.Component {
                 totalSlides={3}
                 isPlaying={true}
                 infinite={true}
-                hasMasterSpinner={true}>
+                hasMasterSpinner={true}
+            >
                 <Slider className="slider">
-                    <Slide index={0} className="slide">
+                    <Slide 
+                        index={0} 
+                        className="slide"
+                    >
                         <SlideContent 
                             text={text_1}
                             title={title_1}
                         />
-                        <Image src={photo_1_sm}
+                        <Image 
+                            src={photo_1_sm}
                             srcSet={`${photo_1_sm} 640w,
                                     ${photo_1_md} 1024w,
                                     ${photo_1_lg} 2400w,`} 
                             alt="beautiful library interior"/>
                     </Slide>
-                    <Slide index={1} className="slide">
+                    <Slide 
+                        index={1} 
+                        className="slide"
+                    >
                         <SlideContent 
                             text={text_2}
                             title={title_2}
                         />
-                        <Image src={photo_2_sm}
+                        <Image
+                            src={photo_2_sm}
                             srcSet={`${photo_2_sm} 640w,
                                     ${photo_2_md} 1024w,
                                     ${photo_2_lg} 2400w,`} 
                             alt="beautiful library interior"/>
                     </Slide>
-                    <Slide index={2} className="slide">
+                    <Slide 
+                        index={2} 
+                        className="slide"
+                    >
                         <SlideContent 
                             text={text_3}
                             title={title_3}
                         />
-                        <Image src={photo_3_sm}
+                        <Image
+                            src={photo_3_sm}
                             srcSet={`${photo_3_sm} 640w,
                                     ${photo_3_md} 1024w,
                                     ${photo_3_lg} 2400w,`} 

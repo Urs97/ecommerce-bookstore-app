@@ -101,3 +101,96 @@
         border-bottom: 0.2em solid $green;
     }
 }
+
+@media (max-width: 1100px) {
+    .cart-container {
+        padding: $vertical-content-padding $horizontal-content-padding-1100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .cart-container {
+        padding: $vertical-content-padding $horizontal-content-padding-950px;
+    }
+}
+
+// Mobile design
+
+@media (max-width: 800px) {
+    .cart-container {
+        padding: $vertical-content-padding 3rem;
+        padding-bottom: 0;
+
+        .cart-nav {
+            font-size: 1.25em;
+            flex-direction: column;
+            border-bottom: 3px solid $green;
+            margin-bottom: 0;
+
+            .cart-nav-title {
+                flex-shrink: 1;
+                align-items: center;
+            }
+
+            .cart-nav-btns {
+                margin-top: 1em;
+                margin-bottom: 3em;
+            }
+        }
+
+        .product-container {
+            border-radius: 0;
+
+            .cart-item-header {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .cart-container {
+        padding:$vertical-content-padding 2rem;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .cart-container {
+        padding: $vertical-content-padding 3rem;
+        padding-bottom: 0;
+        background-color: #FFFFFF;
+
+        .cart-nav {
+            .cart-nav-btns {
+                display: flex;
+                flex-direction: column;
+                
+                .checkout-btn {
+                    margin-top: 1em;
+                    margin-left: 0;
+                    width: 100%;
+                    
+                }
+            }
+        }
+
+        .product-container {
+            box-shadow: none;
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .cart-container {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-container {
+        padding: $vertical-content-padding 2rem;
+        padding-bottom: 0;
+        font-size: 0.8em;
+    }
+}

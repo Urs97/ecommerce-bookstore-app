@@ -41,3 +41,45 @@
     text-align: center;
     color: $text-color;
 }
+
+@media (max-width: 1100px) {
+    .about-us-main {
+        padding: $vertical-content-padding $horizontal-content-padding-1100px;
+    }
+    .about-us-leadership {
+        padding: $vertical-content-padding $horizontal-content-padding-1100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .about-us-main {
+        padding: $vertical-content-padding $horizontal-content-padding-950px;
+    }
+    .about-us-leadership {
+        padding: $vertical-content-padding $horizontal-content-padding-950px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-us-leadership {
+        padding: $vertical-content-padding 0;
+    }
+}
+
+// Mobile design
+
+@media (max-width: 630px) {
+    .about-us-leadership {
+        .leadership-main {
+            flex-direction: column;
+
+            .personal-profile {
+                padding: 0 4em;
+            }
+
+            .personal-profile:not(:last-child) {
+                margin-bottom: $vertical-content-padding;
+            }
+        }
+    }
+}

@@ -16,6 +16,7 @@
 
     h1 {
         text-transform: capitalize;
+        text-align: center;
         font-size: 3.5em;
         color: #FFFFFF;
     }
@@ -31,4 +32,14 @@
 
 .page-header-bg-yellow {
     background-color: $yellow;
+}
+
+// Mobile design
+
+@media (max-width: 400px) {
+    .page-header-category-title {
+        h1 {
+            font-size: 3em;
+        }
+    }
 }

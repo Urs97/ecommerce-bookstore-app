@@ -1,0 +1,112 @@
+@import '../../styles/shared.scss';
+
+.mobile-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: min-content;
+    font-size: 1.5em;
+    padding: 2em 3em;
+    padding-bottom: 3em;
+    border-bottom: 0.25em solid $dark-blue;
+    display: grid;
+    grid-template-areas: 
+    "close-btn close-btn"
+    "book-genres filter-by-price";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
+
+    .mobile-filter-close {
+        background-color: $dark-blue;
+        margin-bottom: 1em;
+        grid-area: close-btn;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .mobile-filter-close:hover {
+        background-color: $yellow;
+    }
+
+    .book-genres {
+        width: 15em;
+        text-align: center;
+        grid-area: book-genres;
+        justify-self: flex-start;
+        margin-top: 2em;
+
+        h4 {
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    .filter-by-price {
+        width: 15em;
+        grid-area: filter-by-price;
+        justify-self: center;
+        padding: 0;
+        margin-top: 2em;
+        border-bottom: none;
+        
+        h4 {
+            text-align: center;
+        }
+    }
+
+    .noUi-horizontal {
+        margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 650px) {
+    .mobile-filter {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 500px) {
+    .mobile-filter {
+        padding: 2em;
+    }
+}
+
+@media (max-width: 460px) {
+    .mobile-filter {
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .book-genres {
+            padding-bottom: 1em;
+            border-bottom: 2px solid #F4F7F9;
+        }
+
+        .filter-by-price {
+            margin-top: 1em;
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .mobile-filter {
+        font-size: 1.35em;
+    }
+}
+@media (max-width: 340px) {
+    .mobile-filter {
+        font-size: 1.45em;
+    }
+}
+
+.mobile-filter-closed {
+    display: none;
+}

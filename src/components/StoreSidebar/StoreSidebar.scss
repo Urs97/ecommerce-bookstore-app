@@ -6,9 +6,8 @@
     padding: 0 1.875em;
     border-radius: $border-radius;
 
-    & .book-genres {
-
-        & ul {
+    .book-genres {
+        ul {
             list-style-position: inside;
             line-height: 1.75;
             padding-top: 0.75em;
@@ -22,4 +21,11 @@
 
 .store-sidebar > *:not(:last-child) {
     border-bottom: $divider;
+}
+
+@media (max-width: 580px) {
+    .store-sidebar > *:not(:last-child) {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
 }

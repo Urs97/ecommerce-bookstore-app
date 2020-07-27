@@ -3,7 +3,6 @@
 
 html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
   
 *, *:before, *:after {
@@ -100,4 +99,42 @@ input[type="number"] {
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
+}
+
+// General Media Queries
+
+// Larger Viewports
+
+@media (min-width: 1650px) {
+    html {
+        font-size: 18px;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 1950px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2200px) {
+    html {
+        font-size: 23px;
+        line-height: 1.5;
+    }
+}
+
+// Smaller Viewports
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1260px) {
+    html {
+        font-size: 12px;
+    }
 }

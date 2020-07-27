@@ -79,3 +79,107 @@
 .testimonial-provider:hover .testimonials-btn {
     display: inline-block;
 }
+
+@media (max-width: 1100px) {
+    .testimonial-provider {
+        .testimonial {
+            padding: 3em $horizontal-content-padding-1100px;
+        }
+        .testimonials-btn {
+            left: $horizontal-content-padding-1100px;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: $horizontal-content-padding-1100px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .testimonial-provider {
+        .testimonial {
+            padding: 3em $horizontal-content-padding-950px;
+        }
+        .testimonials-btn {
+            left: $horizontal-content-padding-950px;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: $horizontal-content-padding-950px;
+        }
+    }
+}
+
+// Mobile design
+
+@media (max-width: 800px) {
+    .testimonial-provider {
+        height: 18em;
+    }
+}
+
+@media (max-width: 710px) {
+    .testimonial-provider {
+        .testimonial {
+            padding: 3em 1em;
+
+            .testimonial-slide p {
+                padding: 0 7em;
+            }
+        }
+
+        .testimonials-btn {
+            left: 2em;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: 2em;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .testimonial-provider {
+        .testimonial {
+            .testimonial-slide p {
+                padding: 0 5em;
+            }
+        }
+        .testimonials-btn {
+            left: 1.5em;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: 1.5em;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .testimonial-provider {
+        .testimonial {
+            .testimonial-slide p {
+                padding: 0 3em;
+            }
+        }
+        .testimonials-btn {
+            left: 0.5em;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: 0.5em;
+        }
+    }
+}
+
+@media (max-width: 405px) {
+    .testimonial-provider {
+        height: 21em;
+        .testimonial {
+            .testimonial-slide p {
+                padding: 0 3em;
+            }
+        }
+        .testimonials-btn {
+            left: 0.5em;
+        }
+        .testimonials-btn.tstm-btn-next {
+            right: 0.5em;
+        }
+    }
+}

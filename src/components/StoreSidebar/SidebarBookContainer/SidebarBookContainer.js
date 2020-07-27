@@ -1,6 +1,6 @@
 import React from 'react';
 import './SidebarBookContainer.scss';
-import SidebarBook from './SidebarBook/SidebarBook';
+import SidebarBook from '../SidebarBook/SidebarBook';
 
 const SidebarBookContainer = ({ title, bookData }) => {
     return (

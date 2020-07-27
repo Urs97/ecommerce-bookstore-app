@@ -3,11 +3,11 @@ export const ACTIONS = {
   REMOVE_PRODUCT : 'REMOVE_PRODUCT',
   ADD_QUANTITY : 'ADD_QUANTITY',
   SUBTRACT_QUANTITY : 'SUBTRACT_QUANTITY',
-  CUSTOM_QUANTITY : 'CUSTOM'
+  CUSTOM_QUANTITY : 'CUSTOM_QUANTITY'
 }
 
-const addProductToCart = (product, state) => {
-  const updatedCart = [...state];
+const addProductToCart = (product, prevState) => {
+  const updatedCart = [...prevState];
   const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
 
   if (updatedItemIndex < 0) {

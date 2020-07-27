@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Cart.scss';
 
 import CartContext from '../../context/CartContext';
@@ -7,10 +7,10 @@ import CartItem from '../CartItem/CartItem';
 import CartCheckout from '../CartCheckout/CartCheckout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link as ScrollLink, Element as ScrollElement } from 'react-scroll';
 
 const Cart = () => {
     const context = useContext(CartContext);
-    const CartCheckoutRef = useRef(null);
 
     const cartQuantity = context.cart.reduce((count, currentItem) => {
         return count + currentItem.quantity;
@@ -20,8 +20,6 @@ const Cart = () => {
         return count + (Number(`${item.price[0]}.${item.price[1]}`) * item.quantity);   
       }, 0)
     const cartSubtotal = cartSubtotalFull.toFixed(2);
-
-    const scrollToRef = () => window.scrollTo(0, CartCheckoutRef.current.offsetTop, 'smooth');
 
     return (
         <main>
@@ -36,8 +34,12 @@ const Cart = () => {
                     <section className="cart-nav-btns">
                         <a href="/store" className="button continue-btn">Continue Shopping</a>
                         {context.cart.length > 0 && 
-                            <button className="button checkout-btn"
-                                onClick={() => scrollToRef()}>To Checkout</button>
+                            <ScrollLink 
+                                to="cart-checkout" 
+                                spy={true} 
+                                smooth={true}>
+                                    <button className="button checkout-btn">To Checkout</button>
+                            </ScrollLink>
                         }
                     </section>
                 </section>
@@ -62,10 +64,11 @@ const Cart = () => {
                 </section>
             </section>
             {context.cart.length > 0 && 
-                    <CartCheckout
-                        innerRef={CartCheckoutRef} 
-                        quantity={cartQuantity} 
-                        subtotal={cartSubtotal}/>
+                    <ScrollElement name="cart-checkout">
+                        <CartCheckout 
+                            quantity={cartQuantity} 
+                            subtotal={cartSubtotal}/>
+                    </ScrollElement>
             }
         </main>
     )

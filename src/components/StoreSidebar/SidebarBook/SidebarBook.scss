@@ -1,4 +1,4 @@
-@import '../../../../styles/shared.scss';
+@import '../../../styles/shared.scss';
 
 .sidebar-book {
     display: flex;
@@ -18,8 +18,11 @@
         flex-direction: column;
         justify-content: center;
 
-        .sidebar-book-title-container {
+        h4 {
             font-size: 0.95em;
+            overflow: hidden;
+            // Triple native line height of 1.15em
+            max-height: 3.45em;
         }
 
         p {
@@ -47,7 +50,7 @@
             "price";
             grid-template-rows: 3fr 1fr 1fr;
 
-            .sidebar-book-title-container {
+            h4 {
                 grid-area: title;
                 align-self: center;
             }

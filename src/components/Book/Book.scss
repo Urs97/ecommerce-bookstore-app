@@ -51,6 +51,9 @@
             font-size: 1em;
             text-transform: capitalize;
             text-align: center;
+            overflow: hidden;
+            // Triple native line height of 1.15em
+            max-height: 3.45em;
         }
     }
 

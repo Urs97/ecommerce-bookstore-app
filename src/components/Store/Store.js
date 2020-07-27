@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import './Store.scss';
 
 import StoreContext from '../../context/StoreContext';
@@ -7,19 +7,12 @@ import StoreSidebar from '../StoreSidebar/StoreSidebar';
 import PageHeader from '../PageHeader/PageHeader';
 import Pagination from '../Pagination/Pagination';
 import MobileStoreFunctionality from '../MobileStoreFunctionality/MobileStoreFunctionality';
+import { Element as ScrollElement } from 'react-scroll';
 
 const Store = () => {
     const context = useContext(StoreContext);
-    const storeMainRef = useRef(null);
     const isLoading = context.isLoading;
     const data = context.data;
-    const storeScrollState = context.state.storeScrollState;
-
-    useEffect(() => {
-        if (!isLoading && data) {
-            window.scrollTo(0, storeMainRef.current.offsetTop)};
-    // eslint-disable-next-line
-    }, [storeScrollState])
 
     let content = (
         <main>
@@ -34,12 +27,12 @@ const Store = () => {
         content = (
             <main>
                 <PageHeader title={data.name} color="blue" />
-                <section className="store-main-container" ref={storeMainRef}>
+                <ScrollElement className="store-main-container" name="store-main">
                     <MobileStoreFunctionality />
                     <BooksContainer bookData={page_books} />
                     <Pagination />
                     <StoreSidebar />
-                </section>
+                </ScrollElement>
             </main>
         )
         

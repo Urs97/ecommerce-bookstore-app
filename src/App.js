@@ -5,6 +5,7 @@ import './App.scss';
 import CartState from './context/CartState';
 import StoreState from './context/StoreState';
 import AppLayout from './components/AppLayout/AppLayout';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Home from './components/Home/Home';
 import Store from './components/Store/Store';
 import Cart from './components/Cart/Cart';
@@ -15,12 +16,14 @@ const App = () => {
     <CartState>
       <StoreState>
         <AppLayout>
-          <Switch>
-              <Route path="/store" component={Store} exact/>
-              <Route path="/cart" component={Cart} exact/>
-              <Route path="/about" component={AboutUs} exact/>
-              <Route path="/" component={Home} exact/>
-          </Switch>
+          <ScrollToTop />
+            <Switch>
+                <Route path="/store" component={Store} exact/>
+                <Route path="/cart" component={Cart} exact/>
+                <Route path="/about" component={AboutUs} exact/>
+                <Route path="/" component={Home} exact/>
+            </Switch>
+          <ScrollToTop />
         </AppLayout>
       </StoreState>
     </CartState>

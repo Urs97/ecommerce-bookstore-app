@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BooksContainer renders BooksContainer 1`] = `
+<section
+  className="books-container-section"
+>
+  <section
+    className="books"
+  >
+    <Book
+      book={
+        Object {
+          "authors": Array [
+            Object {
+              "key": "/authors/OL25342A",
+              "name": "Marry Shelley",
+            },
+          ],
+          "cover_edition_key": "OL6147070M",
+          "key": "/works/OL450125W",
+          "price": Array [
+            94,
+            99,
+          ],
+          "title": "Frankenstein",
+        }
+      }
+      key="/works/OL450125W"
+    />
+    <Book
+      book={
+        Object {
+          "authors": Array [
+            Object {
+              "key": "/authors/OL13066A",
+              "name": "H. G. Wells",
+            },
+          ],
+          "cover_edition_key": "OL8000344M",
+          "key": "/works/OL52267W",
+          "price": Array [
+            75,
+            65,
+          ],
+          "title": "The Time Machine",
+        }
+      }
+      key="/works/OL52267W"
+    />
+  </section>
+</section>
+`;
+
+exports[`BooksContainer renders empty BooksContainer 1`] = `
+<section
+  className="no-books"
+>
+  No books found.
+</section>
+`;

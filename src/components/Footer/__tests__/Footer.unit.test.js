@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Footer from '../Footer';
 
 describe('Footer', () => {
-    test('renders empty Footer', () => {
+    test('renders Footer', () => {
         const wrapper = shallow(
             <Footer />
         );

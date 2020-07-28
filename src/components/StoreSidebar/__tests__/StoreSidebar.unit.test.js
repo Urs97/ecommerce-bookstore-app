@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import StoreSidebar from '../StoreSidebar';
 
 describe('StoreSidebar', () => {
-    test('renders empty StoreSidebar', () => {
+    test('renders StoreSidebar', () => {
         const wrapper = shallow(
             <StoreSidebar />
         );

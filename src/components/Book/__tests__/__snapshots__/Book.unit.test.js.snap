@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book renders Book 1`] = `
+<div
+  className="book"
+>
+  <img
+    alt="Frankenstein book cover"
+    className="book-img"
+    onMouseEnter={[Function]}
+    src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+  />
+  <span
+    className="book-title-container"
+  >
+    <h4
+      className="title"
+    >
+      Frankenstein
+    </h4>
+  </span>
+  <p
+    className="book-author"
+  >
+    Marry Shelley
+  </p>
+  <span
+    className="book-price-container title"
+  >
+    $
+    94.99
+  </span>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Add to cart
+  </button>
+</div>
+`;

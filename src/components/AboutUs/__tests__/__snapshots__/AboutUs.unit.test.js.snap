@@ -1,5 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AboutUs renders AboutUs 1`] = `
+<main>
+  <PageHeader
+    color="yellow"
+    title="About Us"
+  />
+  <section
+    className="about-us-main"
+  >
+    <h1
+      className="title"
+    >
+      Our Mission
+    </h1>
+    <p>
+      <strong>
+        To provide the absolute best possible ecommerce bookstore experience.
+      </strong>
+    </p>
+    <h2
+      className="title"
+    >
+      About
+    </h2>
+    <p>
+      Welcome to Bookz! 
+      <strong>
+        We aim to offer our customers a variety of the digitally available books.
+      </strong>
+       We’ve come a long way, so we know exactly which direction to take when supplying you with high quality yet budget-friendly products. We offer all of this while providing excellent customer service and friendly support. We always keep an eye on the latest trends in ecommerce and put our customers’ wishes first. That is why we have satisfied customers all over the world, and are thrilled to be a part of the ecommerce industry. The interests of our customers are always top priority for us, so we hope you will enjoy our products as much as we enjoy making them available to you.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      <strong>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </strong>
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </p>
+  </section>
+  <section
+    className="about-us-leadership"
+  >
+    <h2
+      className="title leadership-title"
+    >
+      Leadership
+    </h2>
+    <section
+      className="leadership-main"
+    >
+      <PersonalProfile
+        imgSrc="testimonial-portrait-1.jpg"
+        name="Richard Jones"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        title="CEO & Co Founder"
+      />
+      <PersonalProfile
+        imgSrc="testimonial-portrait-3.jpg"
+        name="Steve Mason"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        title="CTO & Co Founder"
+      />
+    </section>
+  </section>
+  <BulletPointContainer
+    color="yellow"
+    icons={
+      Array [
+        Object {
+          "icon": Array [
+            576,
+            512,
+            Array [],
+            "f674",
+            "M160 448c-25.6 0-51.2-22.4-64-32-64-44.8-83.2-60.8-96-70.4V480c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V345.6c-12.8 9.6-32 25.6-96 70.4-12.8 9.6-38.4 32-64 32zm128-192H32c-17.67 0-32 14.33-32 32v16c25.6 19.2 22.4 19.2 115.2 86.4 9.6 6.4 28.8 25.6 44.8 25.6s35.2-19.2 44.8-22.4c92.8-67.2 89.6-67.2 115.2-86.4V288c0-17.67-14.33-32-32-32zm256-96H224c-17.67 0-32 14.33-32 32v32h96c33.21 0 60.59 25.42 63.71 57.82l.29-.22V416h192c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zm-32 128h-64v-64h64v64zm-352-96c0-35.29 28.71-64 64-64h224V32c0-17.67-14.33-32-32-32H96C78.33 0 64 14.33 64 32v192h96v-32z",
+          ],
+          "iconName": "mail-bulk",
+          "prefix": "fas",
+        },
+        Object {
+          "icon": Array [
+            512,
+            512,
+            Array [],
+            "f095",
+            "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z",
+          ],
+          "iconName": "phone",
+          "prefix": "fas",
+        },
+        Object {
+          "icon": Array [
+            384,
+            512,
+            Array [],
+            "f3c5",
+            "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z",
+          ],
+          "iconName": "map-marker-alt",
+          "prefix": "fas",
+        },
+      ]
+    }
+    mode="expanded"
+    texts={
+      Array [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      ]
+    }
+    titles={
+      Array [
+        "Email & Website",
+        "Phone Numbers",
+        "Location & Adress",
+      ]
+    }
+  />
+</main>
+`;
+
 exports[`AboutUs renders empty AboutUs 1`] = `
 <main>
   <PageHeader

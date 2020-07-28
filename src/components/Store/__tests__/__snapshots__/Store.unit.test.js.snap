@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Store renders Store 1`] = `
+<main>
+  <PageHeader
+    color="blue"
+    title="Loading Resources..."
+  />
+  <section
+    className="loader"
+  />
+</main>
+`;
+
 exports[`Store renders empty Store 1`] = `
 <main>
   <PageHeader

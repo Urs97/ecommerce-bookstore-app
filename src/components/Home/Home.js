@@ -45,7 +45,7 @@ const Home = () => {
     return (   
         <main className="home-main">
             <Carousel />
-            <BulletPointContainer mode={"regular"} icons={iconsRegular} texts={textsRegular} color={"blue"}/>
+            <BulletPointContainer mode={"normal"} icons={iconsRegular} texts={textsRegular} color={"blue"}/>
             {(!isLoading && data) ?
                 <> 
                     <h1 className="title home-title">Bookz Bestsellers</h1>

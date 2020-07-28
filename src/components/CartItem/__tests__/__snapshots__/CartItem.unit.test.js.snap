@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem renders empty CartItem 1`] = `
+<section
+  className="cart-item"
+>
+  <span
+    className="remove-item-container"
+  >
+    <button
+      className="remove-item"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </span>
+  <span
+    className="item-img"
+  >
+    <img
+      alt="Frankenstein book cover"
+      src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    />
+  </span>
+  <span
+    className="item-title"
+  >
+    <h4>
+      Frankenstein
+    </h4>
+    <p>
+      Marry Shelley
+    </p>
+  </span>
+  <span
+    className="item-price"
+  >
+    $
+    94.99
+  </span>
+  <form
+    className="item-quantity"
+    onSubmit={[Function]}
+  >
+    <label
+      className="screen-reader-only"
+      htmlFor="quantity"
+    >
+      item-title quantity
+    </label>
+    <input
+      id="quantity"
+      max="99"
+      min="1"
+      name="quantity"
+      onChange={[Function]}
+      step="1"
+      type="number"
+      value={1}
+    />
+    <section
+      className="item-quantity-btns"
+    >
+      <button
+        className="up-arrow"
+        onClick={[Function]}
+      >
+        ▲
+      </button>
+      <button
+        className="down-arrow"
+        onClick={[Function]}
+      >
+        ▼
+      </button>
+    </section>
+  </form>
+  <span
+    className="item-subtotal"
+  >
+    $
+    94.99
+  </span>
+</section>
+`;

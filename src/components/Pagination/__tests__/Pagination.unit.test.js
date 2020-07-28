@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Pagination from '../Pagination';
 
 describe('Pagination', () => {
-    test('renders empty Pagination', () => {
+    test('renders Pagination', () => {
         const wrapper = shallow(
             <Pagination />
         );

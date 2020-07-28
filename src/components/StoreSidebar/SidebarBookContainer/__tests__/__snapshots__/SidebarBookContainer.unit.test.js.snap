@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarBookContainer renders SidebarBookContainer 1`] = `
+<section
+  className="sidebar-book-container"
+>
+  <h4
+    className="sidebar-title"
+  >
+    Top Rated Books
+  </h4>
+  <SidebarBook
+    book={
+      Object {
+        "authors": Array [
+          Object {
+            "key": "/authors/OL25342A",
+            "name": "Marry Shelley",
+          },
+        ],
+        "cover_edition_key": "OL6147070M",
+        "key": "/works/OL450125W",
+        "price": Array [
+          94,
+          99,
+        ],
+        "title": "Frankenstein",
+      }
+    }
+  />
+  <SidebarBook
+    book={
+      Object {
+        "authors": Array [
+          Object {
+            "key": "/authors/OL13066A",
+            "name": "H. G. Wells",
+          },
+        ],
+        "cover_edition_key": "OL8000344M",
+        "key": "/works/OL52267W",
+        "price": Array [
+          75,
+          65,
+        ],
+        "title": "The Time Machine",
+      }
+    }
+  />
+  <SidebarBook
+    book={
+      Object {
+        "authors": Array [
+          Object {
+            "key": "/authors/OL113611A",
+            "name": "Jules Verne",
+          },
+        ],
+        "cover_edition_key": "OL7027686M",
+        "key": "/works/OL1099513W",
+        "price": Array [
+          54,
+          38,
+        ],
+        "title": "Journey to the Center of the Earth",
+      }
+    }
+  />
+</section>
+`;

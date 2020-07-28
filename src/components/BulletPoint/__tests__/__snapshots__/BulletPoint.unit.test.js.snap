@@ -1,3 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`BulletPoint renders BulletPoint in expanded mode 1`] = `
+<div
+  className="bulletpoint bulletpoint-expanded"
+>
+  <span
+    className="yellow"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="mockIcon.svg"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </span>
+  <h4
+    className="title"
+  >
+    BulletPoint title
+  </h4>
+  <p>
+    This is BulletPoint text
+  </p>
+</div>
+`;
+
+exports[`BulletPoint renders BulletPoint in normal mode 1`] = `
+<div
+  className="bulletpoint"
+>
+  <span
+    className="yellow"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="mockIcon.svg"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </span>
+  <p>
+    This is BulletPoint text
+  </p>
+</div>
+`;
+
+exports[`BulletPoint renders BulletPoint in unrecognizable mode 1`] = `
+<div>
+  BulletPoint error
+</div>
+`;
+
 exports[`BulletPoint renders empty BulletPoint 1`] = `""`;

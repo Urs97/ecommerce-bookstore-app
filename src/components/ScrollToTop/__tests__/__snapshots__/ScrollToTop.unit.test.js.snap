@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollToTop renders ScrollToTop 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`ScrollToTop renders empty ScrollToTop 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

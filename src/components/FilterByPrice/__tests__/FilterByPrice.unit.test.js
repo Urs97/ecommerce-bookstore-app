@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import FilterByPrice from '../FilterByPrice';
 
 describe('FilterByPrice', () => {
-    test('renders empty FilterByPrice', () => {
+    test('renders FilterByPrice', () => {
         const wrapper = shallow(
             <FilterByPrice />
         );

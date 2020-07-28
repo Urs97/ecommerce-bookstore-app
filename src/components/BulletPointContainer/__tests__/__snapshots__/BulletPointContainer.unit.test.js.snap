@@ -1,3 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`BulletPointContainer renders BulletPointContainer in expanded mode 1`] = `
+<section
+  className="bulletpoints expanded"
+>
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon1.svg"
+    mode="expanded"
+    text="This is text number 1"
+    title="Title 1, Title 2, Title 3"
+  />
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon2.svg"
+    mode="expanded"
+    text="This is text number 2"
+  />
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon3.svg"
+    mode="expanded"
+    text="This is text number 3"
+  />
+</section>
+`;
+
+exports[`BulletPointContainer renders BulletPointContainer in normal mode 1`] = `
+<section
+  className="bulletpoints"
+>
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon1.svg"
+    mode="normal"
+    text="This is text number 1"
+  />
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon2.svg"
+    mode="normal"
+    text="This is text number 2"
+  />
+  <BulletPoint
+    color="yellow"
+    icon="mockIcon3.svg"
+    mode="normal"
+    text="This is text number 3"
+  />
+</section>
+`;
+
+exports[`BulletPointContainer renders BulletPointContainer in unrecognizable mode 1`] = `
+<div>
+  BulletPoint error
+</div>
+`;
+
 exports[`BulletPointContainer renders empty BulletPointContainer 1`] = `""`;

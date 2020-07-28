@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Carousel from '../Carousel';
 
 describe('Carousel', () => {
-    test('renders empty Carousel', () => {
+    test('renders Carousel', () => {
         const wrapper = shallow(
             <Carousel />
         );

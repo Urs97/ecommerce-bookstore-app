@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Cart from '../Cart';
 
 describe('Cart', () => {
-    test('renders empty Cart', () => {
+    test('renders Cart', () => {
         const wrapper = shallow(
             <Cart />
         );

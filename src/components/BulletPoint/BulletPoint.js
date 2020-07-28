@@ -14,7 +14,7 @@ const BulletPoint = ({mode, icon, title, text, color}) => {
             )
     }
     
-    else if(mode === "regular") {
+    if(mode === "normal") {
         return (
             <div className="bulletpoint">
                 <span className={color}><FontAwesomeIcon icon={icon} /></span>
@@ -22,6 +22,8 @@ const BulletPoint = ({mode, icon, title, text, color}) => {
             </div>
             )
     }
+
+    return <div>BulletPoint error</div>;
 };
 
 export default BulletPoint;

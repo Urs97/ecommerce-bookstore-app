@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Store from '../Store';
 
 describe('Store', () => {
-    test('renders empty Store', () => {
+    test('renders Store', () => {
         const wrapper = shallow(
             <Store />
         );

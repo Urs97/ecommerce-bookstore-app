@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FilterByPrice renders FilterByPrice 1`] = `
+<section
+  className="filter-by-price"
+>
+  <h4
+    className="sidebar-title"
+  >
+    Filter By Price
+  </h4>
+  <Memo(Nouislider)
+    connect={true}
+    instanceRef={[Function]}
+    onUpdate={[Function]}
+    range={
+      Object {
+        "max": 100,
+        "min": 0,
+      }
+    }
+    start={
+      Array [
+        0,
+        100,
+      ]
+    }
+    step={10}
+  />
+  <div
+    className="filter-by-price-div"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Filter
+    </button>
+    <span>
+      $
+      0
+       - $
+      0
+    </span>
+  </div>
+</section>
+`;
+
 exports[`FilterByPrice renders empty FilterByPrice 1`] = `
 <section
   className="filter-by-price"

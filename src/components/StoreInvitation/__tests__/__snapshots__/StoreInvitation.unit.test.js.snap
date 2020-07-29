@@ -24,28 +24,3 @@ exports[`StoreInvitation renders StoreInvitation 1`] = `
   </Link>
 </section>
 `;
-
-exports[`StoreInvitation renders empty StoreInvitation 1`] = `
-<section
-  className="store-invitation"
->
-  <img
-    alt="Beautiful library interior by Benjamin Ashton on Unsplash"
-    src="store-invitation-photo-sm.jpg"
-    srcSet="store-invitation-photo-sm.jpg 640w,
-                        store-invitation-photo-md.jpg 1024w,
-                        store-invitation-photo-lg.jpg 2400w,"
-  />
-  <h1
-    className="title"
-  >
-    Browse Through Our Complete Library
-  </h1>
-  <Link
-    className="button"
-    to="/store"
-  >
-    View More
-  </Link>
-</section>
-`;

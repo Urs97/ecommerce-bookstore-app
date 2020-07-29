@@ -76,5 +76,3 @@ exports[`BulletPoint renders BulletPoint in unrecognizable mode 1`] = `
   BulletPoint error
 </div>
 `;
-
-exports[`BulletPoint renders empty BulletPoint 1`] = `""`;

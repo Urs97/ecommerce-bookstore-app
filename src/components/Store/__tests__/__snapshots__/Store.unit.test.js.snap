@@ -11,15 +11,3 @@ exports[`Store renders Store 1`] = `
   />
 </main>
 `;
-
-exports[`Store renders empty Store 1`] = `
-<main>
-  <PageHeader
-    color="blue"
-    title="Loading Resources..."
-  />
-  <section
-    className="loader"
-  />
-</main>
-`;

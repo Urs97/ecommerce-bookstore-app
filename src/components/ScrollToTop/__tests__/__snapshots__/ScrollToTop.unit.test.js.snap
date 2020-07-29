@@ -5,9 +5,3 @@ exports[`ScrollToTop renders ScrollToTop 1`] = `
   <Component />
 </ContextConsumer>
 `;
-
-exports[`ScrollToTop renders empty ScrollToTop 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;

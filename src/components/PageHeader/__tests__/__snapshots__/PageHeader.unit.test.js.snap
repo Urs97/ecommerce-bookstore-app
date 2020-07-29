@@ -17,18 +17,3 @@ exports[`PageHeader renders PageHeader 1`] = `
   </Element>
 </Fragment>
 `;
-
-exports[`PageHeader renders empty PageHeader 1`] = `
-<Fragment>
-  <section
-    className="page-header-nav-container"
-  />
-  <section
-    className="page-header-category-title page-header-bg-undefined"
-  >
-    <h1
-      className="title"
-    />
-  </section>
-</Fragment>
-`;

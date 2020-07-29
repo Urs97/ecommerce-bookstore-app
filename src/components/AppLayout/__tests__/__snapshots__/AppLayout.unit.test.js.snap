@@ -13,10 +13,3 @@ exports[`AppLayout renders empty AppLayout 1`] = `
   <Footer />
 </Fragment>
 `;
-
-exports[`AppLayout renders empty AppLayout 2`] = `
-<Fragment>
-  <Navigation />
-  <Footer />
-</Fragment>
-`;

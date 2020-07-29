@@ -5,9 +5,3 @@ exports[`Pagination renders Pagination 1`] = `
   className="pagination"
 />
 `;
-
-exports[`Pagination renders empty Pagination 1`] = `
-<section
-  className="pagination"
-/>
-`;

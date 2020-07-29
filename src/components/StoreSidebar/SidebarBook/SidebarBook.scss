@@ -39,6 +39,14 @@
     }
 }
 
+    .sidebar-book:focus {
+        outline: 0.2em solid black;
+    }
+
+    .sidebar-book:not(.focus-visible) {
+        outline: none;
+    }
+
 @media (max-width: 800px) {
     .sidebar-book {
         .sidebar-book-details {

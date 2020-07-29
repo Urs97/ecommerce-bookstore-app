@@ -56,5 +56,3 @@ exports[`BulletPointContainer renders BulletPointContainer in unrecognizable mod
   BulletPoint error
 </div>
 `;
-
-exports[`BulletPointContainer renders empty BulletPointContainer 1`] = `""`;

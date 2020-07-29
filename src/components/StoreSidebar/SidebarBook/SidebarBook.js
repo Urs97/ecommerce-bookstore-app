@@ -10,7 +10,7 @@ const SidebarBook = ({ book }) => {
     // To add link functionality to book
 
     return (
-        <section className="sidebar-book">
+        <section className="sidebar-book" tabIndex="0">
             <img src={img_url} alt={img_alt} className="sidebar-book-img"/>
             <section className="sidebar-book-details">
                 <h4 className="title">{book.title}</h4>

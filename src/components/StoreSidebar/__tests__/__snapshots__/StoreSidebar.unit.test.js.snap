@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoreSidebar renders StoreSidebar 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "changeCategory": [Function],
+      "changeCurrentPage": [Function],
+      "currentBooks": Array [],
+      "currentData": Array [],
+      "data": null,
+      "isLoading": false,
+      "state": Object {
+        "booksPerPage": 9,
+        "category": "science_fiction",
+        "currentPage": 1,
+        "filterSliderState": false,
+        "filteredData": null,
+        "mobileFilterPopup": false,
+        "storeScrollState": false,
+      },
+      "submitFilterValue": [Function],
+      "toggleMobileFilter": [Function],
+    }
+  }
+>
+  <StoreSidebar />
+</ContextProvider>
+`;

@@ -2,6 +2,7 @@ import React from 'react';
 import { CarouselProvider, Slider, Slide, Image, DotGroup, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './Carousel.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -34,6 +35,7 @@ class Carousel extends React.Component {
                 isPlaying={true}
                 infinite={true}
                 hasMasterSpinner={true}
+                lockOnWindowScroll={true}
             >
                 <Slider className="slider">
                     <Slide 
@@ -92,7 +94,7 @@ class Carousel extends React.Component {
                         <FontAwesomeIcon icon={faAngleRight} />
                     </span>
                 </ButtonNext>
-                <DotGroup className="dot-grp"/>
+                <DotGroup className="dot-grp" tabIndex="-1" disableActiveDots={false}/>
             </CarouselProvider>
         )
     };

@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PersonalProfile renders PersonalProfile 1`] = `
-<section
-  className="personal-profile"
->
-  <img
-    alt="portrait"
-    src="testimonial-portrait-1.jpg"
-  />
-  <h3
-    className="title"
-  >
-    Larry Jones
-  </h3>
-  <h4
-    className="title"
-  >
-    CEO & Founder
-  </h4>
-  <p>
-    Larry Jones is company's founder and longest serving employee
-  </p>
-</section>
-`;
-
 exports[`PersonalProfile renders PersonalProfile with props 1`] = `
 <section
   className="personal-profile"

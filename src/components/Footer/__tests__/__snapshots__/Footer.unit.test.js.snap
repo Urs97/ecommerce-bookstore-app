@@ -33,37 +33,3 @@ exports[`Footer renders Footer 1`] = `
   </p>
 </footer>
 `;
-
-exports[`Footer renders empty Footer 1`] = `
-<footer
-  className="footer"
->
-  <section
-    className="footer-nav"
-  >
-    <Link
-      to="/"
-    >
-      Home
-    </Link>
-    <Link
-      to="/store"
-    >
-      Store
-    </Link>
-    <Link
-      to="/cart"
-    >
-      Cart
-    </Link>
-    <Link
-      to="/about"
-    >
-      About Us
-    </Link>
-  </section>
-  <p>
-    Bookz © 2020 All rights reserved
-  </p>
-</footer>
-`;

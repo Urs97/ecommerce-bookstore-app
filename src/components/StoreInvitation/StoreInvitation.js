@@ -1,8 +1,8 @@
 import React from 'react';
 import './StoreInvitation.scss';
-import photo_sm from '../../assets/images/store-invitation-photo-sm.jpg';
-import photo_md from '../../assets/images/store-invitation-photo-md.jpg';
-import photo_lg from '../../assets/images/store-invitation-photo-lg.jpg';
+import photo_sm from '../../assets/images/store-invitation-photo-sm.webp';
+import photo_md from '../../assets/images/store-invitation-photo-md.webp';
+import photo_lg from '../../assets/images/store-invitation-photo-lg.webp';
 import { Link } from 'react-router-dom';
 
 const StoreInvitation = () => {

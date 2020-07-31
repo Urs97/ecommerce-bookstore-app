@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import PersonalProfile from '../PersonalProfile';
-import portraitImg from '../../../../assets/images/testimonial-portrait-1.jpg';
+import portraitImg from '../../../../assets/images/testimonial-portrait-1.webp';
 
 describe('PersonalProfile', () => {
     test('renders empty PersonalProfile', () => {

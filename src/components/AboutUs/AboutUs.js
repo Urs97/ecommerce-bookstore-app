@@ -6,8 +6,8 @@ import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import PersonalProfile from './PersonalProfile/PersonalProfile';
-import portrait_1 from '../../assets/images/testimonial-portrait-1.jpg';
-import portrait_2 from '../../assets/images/testimonial-portrait-3.jpg';
+import portrait_1 from '../../assets/images/testimonial-portrait-1.webp';
+import portrait_2 from '../../assets/images/testimonial-portrait-3.webp';
 
 const AboutUs = () => {
 

@@ -3,13 +3,13 @@ import React, { useEffect, useReducer } from 'react';
 import CartContext from '../context/CartContext';
 import { ACTIONS, cartReducer } from '../reducers/cartReducer';
 
-const initialState = JSON.parse(sessionStorage.getItem("cart")) || [];
+const initialState = JSON.parse(localStorage.getItem("cart")) || [];
 
 const CartState = props => {
   const [cartState, dispatch] = useReducer(cartReducer, initialState);
 
   useEffect(() => {
-    initialState !== cartState && sessionStorage.setItem("cart", JSON.stringify(cartState));
+    initialState !== cartState && localStorage.setItem("cart", JSON.stringify(cartState));
   }, [cartState]);
 
   const addProductToCart = product => {

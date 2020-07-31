@@ -5,9 +5,9 @@ import './Testimonials.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import portrait_1 from '../../assets/images/testimonial-portrait-1.jpg';
-import portrait_2 from '../../assets/images/testimonial-portrait-2.jpg';
-import portrait_3 from '../../assets/images/testimonial-portrait-3.jpg';
+import portrait_1 from '../../assets/images/testimonial-portrait-1.webp';
+import portrait_2 from '../../assets/images/testimonial-portrait-2.webp';
+import portrait_3 from '../../assets/images/testimonial-portrait-3.webp';
 
 class Testimonials extends React.Component {
     render() {

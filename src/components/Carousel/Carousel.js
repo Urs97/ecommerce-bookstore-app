@@ -7,15 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import SlideContent from './SlideContent/SlideContent';
-import photo_1_sm from '../../assets/images/lib-photo-1-sm.jpg';
-import photo_1_md from '../../assets/images/lib-photo-1-md.jpg';
-import photo_1_lg from '../../assets/images/lib-photo-1-lg.jpg';
-import photo_2_sm from '../../assets/images/lib-photo-2-sm.jpg';
-import photo_2_md from '../../assets/images/lib-photo-2-md.jpg';
-import photo_2_lg from '../../assets/images/lib-photo-2-lg.jpg';
-import photo_3_sm from '../../assets/images/lib-photo-3-sm.jpg';
-import photo_3_md from '../../assets/images/lib-photo-3-md.jpg';
-import photo_3_lg from '../../assets/images/lib-photo-3-lg.jpg';
+import photo_1_sm from '../../assets/images/lib-photo-1-sm.webp';
+import photo_1_md from '../../assets/images/lib-photo-1-md.webp';
+import photo_1_lg from '../../assets/images/lib-photo-1-lg.webp';
+import photo_2_sm from '../../assets/images/lib-photo-2-sm.webp';
+import photo_2_md from '../../assets/images/lib-photo-2-md.webp';
+import photo_2_lg from '../../assets/images/lib-photo-2-lg.webp';
+import photo_3_sm from '../../assets/images/lib-photo-3-sm.webp';
+import photo_3_md from '../../assets/images/lib-photo-3-md.webp';
+import photo_3_lg from '../../assets/images/lib-photo-3-lg.webp';
 
 class Carousel extends React.Component {
     render() {
@@ -49,9 +49,9 @@ class Carousel extends React.Component {
                         <Image 
                             src={photo_1_sm}
                             srcSet={`${photo_1_sm} 640w,
-                                    ${photo_1_md} 1024w,
+                                    ${photo_1_md} 1920w,
                                     ${photo_1_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                            alt="Wooden and cozy library interior by Anna Hunko on Unsplash"/>
                     </Slide>
                     <Slide 
                         index={1} 
@@ -66,7 +66,7 @@ class Carousel extends React.Component {
                             srcSet={`${photo_2_sm} 640w,
                                     ${photo_2_md} 1024w,
                                     ${photo_2_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                            alt="Beautiful bookshelf by Nick Fewings on Unsplash"/>
                     </Slide>
                     <Slide 
                         index={2} 
@@ -81,7 +81,7 @@ class Carousel extends React.Component {
                             srcSet={`${photo_3_sm} 640w,
                                     ${photo_3_md} 1024w,
                                     ${photo_3_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                            alt="modern library interior by Amelie and Niklas Ohlrogge on Unsplash"/>
                     </Slide>
                 </Slider>
                 <ButtonBack className="carousel-btn">

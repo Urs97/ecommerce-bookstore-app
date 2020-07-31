@@ -5,7 +5,7 @@ export const useHttp = (url, storageItemKey, dependencies) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    let cachedData = sessionStorage.getItem(storageItemKey);
+    let cachedData = localStorage.getItem(storageItemKey);
     if(cachedData) {
       setData(JSON.parse(cachedData));
     } else {
@@ -26,7 +26,7 @@ export const useHttp = (url, storageItemKey, dependencies) => {
               book["price"] = randomTwoDigitNum;
             }));
           setData(fetchedData);
-          sessionStorage.setItem(storageItemKey, JSON.stringify(fetchedData));
+          localStorage.setItem(storageItemKey, JSON.stringify(fetchedData));
           setIsLoading(false);
         })
         .catch(err => {

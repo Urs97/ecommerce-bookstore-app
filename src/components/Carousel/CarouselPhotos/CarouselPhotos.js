@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CarouselPhotos/CarouselPhotos.scss';
 
 import photo_1_1920_jpg from '../../../assets/images/lib-photo-1-1920.jpg';
 import photo_1_1600_jpg from '../../../assets/images/lib-photo-1-1600.jpg';
@@ -42,7 +43,7 @@ import photo_3_768_portrait_jpg from '../../../assets/images/lib-photo-3-768-por
 
 export const CarouselPhoto1 = () => {
     return (
-        <picture>
+        <picture className="carousel-photo">
             <source 
                 media="(orientation: portrait)"
                 type="image/webp"
@@ -77,7 +78,7 @@ export const CarouselPhoto1 = () => {
 
 export const CarouselPhoto2 = () => {
     return (
-        <picture>
+        <picture className="carousel-photo">
             <source 
                 media="(orientation: portrait)"
                 type="image/webp"
@@ -112,7 +113,7 @@ export const CarouselPhoto2 = () => {
 
 export const CarouselPhoto3 = () => {
     return (
-        <picture>
+        <picture className="carousel-photo">
             <source 
                 media="(orientation: portrait)"
                 type="image/webp"

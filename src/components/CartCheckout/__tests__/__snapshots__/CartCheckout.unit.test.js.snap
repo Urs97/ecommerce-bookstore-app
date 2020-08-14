@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CartCheckout renders empty CartCheckout 1`] = `
+exports[`CartCheckout renders CartCheckout 1`] = `
 <section
   className="cart-checkout"
 >
@@ -28,6 +28,7 @@ exports[`CartCheckout renders empty CartCheckout 1`] = `
     <span
       className="quantity-number"
     >
+      3
        items
     </span>
     <span
@@ -39,6 +40,7 @@ exports[`CartCheckout renders empty CartCheckout 1`] = `
       className="subtotal-price"
     >
       $
+      193.97
     </span>
     <span
       className="shipping"
@@ -59,7 +61,7 @@ exports[`CartCheckout renders empty CartCheckout 1`] = `
       className="total-price"
     >
       $
-      NaN
+      203.96
     </span>
     <span
       className="divider-2"

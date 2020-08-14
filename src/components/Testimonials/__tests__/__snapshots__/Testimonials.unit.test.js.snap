@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testimonials renders empty Testimonials 1`] = `
+exports[`Testimonials renders Testimonials 1`] = `
 <n
   className="testimonial-provider"
   currentSlide={0}

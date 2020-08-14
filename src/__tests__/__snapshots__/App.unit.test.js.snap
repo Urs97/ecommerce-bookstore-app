@@ -4,6 +4,7 @@ exports[`App renders App 1`] = `
 <CartState>
   <StoreState>
     <AppLayout>
+      <withRouter(ScrollToTop) />
       <Switch>
         <Route
           component={[Function]}
@@ -26,6 +27,7 @@ exports[`App renders App 1`] = `
           path="/"
         />
       </Switch>
+      <withRouter(ScrollToTop) />
     </AppLayout>
   </StoreState>
 </CartState>

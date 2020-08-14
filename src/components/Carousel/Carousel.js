@@ -1,20 +1,13 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, Image, DotGroup, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, DotGroup, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './Carousel.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import SlideContent from './SlideContent/SlideContent';
-import photo_1_sm from '../../assets/images/lib-photo-1-sm.jpg';
-import photo_1_md from '../../assets/images/lib-photo-1-md.jpg';
-import photo_1_lg from '../../assets/images/lib-photo-1-lg.jpg';
-import photo_2_sm from '../../assets/images/lib-photo-2-sm.jpg';
-import photo_2_md from '../../assets/images/lib-photo-2-md.jpg';
-import photo_2_lg from '../../assets/images/lib-photo-2-lg.jpg';
-import photo_3_sm from '../../assets/images/lib-photo-3-sm.jpg';
-import photo_3_md from '../../assets/images/lib-photo-3-md.jpg';
-import photo_3_lg from '../../assets/images/lib-photo-3-lg.jpg';
+import { CarouselPhoto1, CarouselPhoto2, CarouselPhoto3 } from './CarouselPhotos/CarouselPhotos';
 
 class Carousel extends React.Component {
     render() {
@@ -33,7 +26,7 @@ class Carousel extends React.Component {
                 totalSlides={3}
                 isPlaying={true}
                 infinite={true}
-                hasMasterSpinner={true}
+                lockOnWindowScroll={true}
             >
                 <Slider className="slider">
                     <Slide 
@@ -44,12 +37,7 @@ class Carousel extends React.Component {
                             text={text_1}
                             title={title_1}
                         />
-                        <Image 
-                            src={photo_1_sm}
-                            srcSet={`${photo_1_sm} 640w,
-                                    ${photo_1_md} 1024w,
-                                    ${photo_1_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                        <CarouselPhoto1 />
                     </Slide>
                     <Slide 
                         index={1} 
@@ -59,12 +47,7 @@ class Carousel extends React.Component {
                             text={text_2}
                             title={title_2}
                         />
-                        <Image
-                            src={photo_2_sm}
-                            srcSet={`${photo_2_sm} 640w,
-                                    ${photo_2_md} 1024w,
-                                    ${photo_2_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                        <CarouselPhoto2 />
                     </Slide>
                     <Slide 
                         index={2} 
@@ -74,12 +57,7 @@ class Carousel extends React.Component {
                             text={text_3}
                             title={title_3}
                         />
-                        <Image
-                            src={photo_3_sm}
-                            srcSet={`${photo_3_sm} 640w,
-                                    ${photo_3_md} 1024w,
-                                    ${photo_3_lg} 2400w,`} 
-                            alt="beautiful library interior"/>
+                        <CarouselPhoto3 />
                     </Slide>
                 </Slider>
                 <ButtonBack className="carousel-btn">
@@ -92,7 +70,7 @@ class Carousel extends React.Component {
                         <FontAwesomeIcon icon={faAngleRight} />
                     </span>
                 </ButtonNext>
-                <DotGroup className="dot-grp"/>
+                <DotGroup className="dot-grp" tabIndex="-1" disableActiveDots={false}/>
             </CarouselProvider>
         )
     };

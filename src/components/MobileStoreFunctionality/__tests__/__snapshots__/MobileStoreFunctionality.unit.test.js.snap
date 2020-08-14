@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileStoreFunctionality renders MobileStoreFunctionality 1`] = `
+<section
+  className="mobile-store-functionality"
+>
+  <span>
+    0
+     products
+  </span>
+  <button
+    className="button mobile-filter-open"
+    onClick={[Function]}
+  >
+    Filter
+  </button>
+  <MobileFilter />
+</section>
+`;

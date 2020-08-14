@@ -82,6 +82,14 @@
     }
 }
 
+.book:focus {
+    outline: 0.2em solid black;
+}
+
+.book:not(.focus-visible) {
+    outline: none;
+}
+
 @media (max-width: 800px) {
     .book {
         .book-title-container {

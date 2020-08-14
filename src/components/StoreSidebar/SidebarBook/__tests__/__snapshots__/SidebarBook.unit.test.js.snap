@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarBook renders SidebarBook 1`] = `
+<section
+  className="sidebar-book"
+>
+  <img
+    alt="Frankenstein book cover"
+    className="sidebar-book-img"
+    src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+  />
+  <section
+    className="sidebar-book-details"
+  >
+    <h4
+      className="title"
+    >
+      Frankenstein
+    </h4>
+    <p>
+      Marry Shelley
+    </p>
+    <span
+      className="sidebar-book-price-container"
+    >
+      $
+      94
+      .
+      99
+    </span>
+  </section>
+</section>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cart renders empty Cart 1`] = `
+exports[`Cart renders Cart 1`] = `
 <main>
   <PageHeader
     color="green"

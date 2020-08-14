@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination renders empty Pagination 1`] = `
+exports[`Pagination renders Pagination 1`] = `
 <section
   className="pagination"
 />

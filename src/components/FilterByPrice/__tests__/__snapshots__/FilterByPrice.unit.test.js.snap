@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilterByPrice renders empty FilterByPrice 1`] = `
+exports[`FilterByPrice renders FilterByPrice 1`] = `
 <section
   className="filter-by-price"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StoreInvitation renders empty StoreInvitation 1`] = `
+exports[`StoreInvitation renders StoreInvitation 1`] = `
 <section
   className="store-invitation"
 >

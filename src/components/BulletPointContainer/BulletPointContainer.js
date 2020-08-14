@@ -4,7 +4,7 @@ import BulletPoint from '../BulletPoint/BulletPoint';
 
 const BulletPointContainer = ({ mode, icons, titles, texts, color }) => {
 
-    if(mode === "regular") {
+    if(mode === "normal") {
         return (
             <section className="bulletpoints">
                 <BulletPoint mode ={mode} icon={icons[0]} text={texts[0]} color={color}/>
@@ -14,7 +14,7 @@ const BulletPointContainer = ({ mode, icons, titles, texts, color }) => {
         )
     } 
     
-    else if (mode === "expanded") {
+    if (mode === "expanded") {
         return (
             <section className="bulletpoints expanded">
                 <BulletPoint mode={mode} icon={icons[0]} title={titles[0]} text={texts[0]} color={color}/>
@@ -23,7 +23,8 @@ const BulletPointContainer = ({ mode, icons, titles, texts, color }) => {
             </section>
         )
     }
-    
+
+    return <div>BulletPoint error</div>;  
 };
 
 export default BulletPointContainer;

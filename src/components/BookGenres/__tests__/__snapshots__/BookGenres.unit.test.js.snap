@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookGenres renders BookGenres 1`] = `
+<section
+  className="book-genres"
+>
+  <h4
+    className="sidebar-title"
+  >
+    Book Genres
+  </h4>
+  <ul>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          Science Fiction
+        </button>
+      </Link>
+    </li>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          History
+        </button>
+      </Link>
+    </li>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          Short Stories
+        </button>
+      </Link>
+    </li>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          Fantasy
+        </button>
+      </Link>
+    </li>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          Biography
+        </button>
+      </Link>
+    </li>
+    <li>
+      <Link
+        offset={0}
+        smooth={true}
+        spy={true}
+        to="page-header"
+      >
+        <button
+          className="btn-to-link"
+          onClick={[Function]}
+        >
+          Programming
+        </button>
+      </Link>
+    </li>
+  </ul>
+</section>
+`;

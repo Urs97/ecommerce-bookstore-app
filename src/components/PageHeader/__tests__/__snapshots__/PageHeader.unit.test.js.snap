@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageHeader renders empty PageHeader 1`] = `
+exports[`PageHeader renders PageHeader 1`] = `
 <Fragment>
   <section
     className="page-header-nav-container"
   />
-  <section
-    className="page-header-category-title page-header-bg-undefined"
+  <Element
+    className="page-header-category-title page-header-bg-green"
+    name="page-header"
   >
     <h1
       className="title"
-    />
-  </section>
+    >
+      Your Cart
+    </h1>
+  </Element>
 </Fragment>
 `;

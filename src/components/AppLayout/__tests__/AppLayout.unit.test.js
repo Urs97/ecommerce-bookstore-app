@@ -9,4 +9,11 @@ describe('AppLayout', () => {
         );
         expect(wrapper).toMatchSnapshot();
     });
+
+    test('renders AppLayout with props', () => {
+        const wrapper = shallow(
+            <AppLayout props={<div className="main"></div>}/>
+        );
+        expect(wrapper).toMatchSnapshot();
+    });
 });

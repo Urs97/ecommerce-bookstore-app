@@ -46,7 +46,8 @@ const Navigation = () => {
                     <span role="img" aria-label="shopping cart icon">
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </span>
-                    <span className="cart-items-num">({cartQuantity})</span>
+                    <span aria-label="shopping cart items number" 
+                        className="cart-items-num">({cartQuantity})</span>
                 </section>
             </header>
         </>

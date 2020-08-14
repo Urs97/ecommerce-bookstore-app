@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AboutUs renders empty AboutUs 1`] = `
+exports[`AboutUs renders AboutUs 1`] = `
 <main>
   <PageHeader
     color="yellow"

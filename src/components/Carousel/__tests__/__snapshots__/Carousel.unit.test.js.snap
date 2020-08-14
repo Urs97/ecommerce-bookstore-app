@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Carousel renders empty Carousel 1`] = `
+exports[`Carousel renders Carousel 1`] = `
 <n
   className="carousel-provider"
   currentSlide={0}

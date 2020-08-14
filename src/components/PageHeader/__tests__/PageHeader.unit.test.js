@@ -3,9 +3,13 @@ import {shallow} from 'enzyme';
 import PageHeader from '../PageHeader';
 
 describe('PageHeader', () => {
-    test('renders empty PageHeader', () => {
+    test('renders PageHeader', () => {
+        const mockColor = "green";
+        const mockTitle = "Your Cart";
         const wrapper = shallow(
-            <PageHeader />
+            <PageHeader 
+                title={mockTitle} 
+                color={mockColor}/>
         );
         expect(wrapper).toMatchSnapshot();
     });

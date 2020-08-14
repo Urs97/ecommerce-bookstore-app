@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileFilter renders MobileFilter 1`] = `
+<section
+  className="mobile-filter mobile-filter-closed"
+>
+  <button
+    className="button mobile-filter-close"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+  <BookGenres />
+  <FilterByPrice />
+</section>
+`;

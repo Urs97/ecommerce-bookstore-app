@@ -26,7 +26,9 @@ const CartItem = ({ book }) => {
     return (
         <section className="cart-item">
             <span className="remove-item-container">
-                <button className="remove-item" onClick={() => context.removeProductFromCart(book)}>X</button>
+                <button className="remove-item" 
+                        onClick={() => context.removeProductFromCart(book)}
+                        aria-label="Remove item">X</button>
             </span>
             <span className="item-img"><img src={img_url} alt={img_alt}/></span>
             <span className="item-title">
@@ -36,11 +38,15 @@ const CartItem = ({ book }) => {
             <span className="item-price">${price}</span>
             <form className="item-quantity" onSubmit={handleOnSubmit}>
                 <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
-                <input type="number" id="quantity" name="quantity" 
+                <input type="number" id="quantity" name="quantity"
                     step="1" min="1" max="99" value={book.quantity} onChange={handleOnChangeInput}/>
                 <section className="item-quantity-btns">
-                    <button onClick={() => context.addQuantityToItem(book)} className="up-arrow">▲</button>
-                    <button onClick={() => context.subtractQuantityFromItem(book)} className="down-arrow">▼</button>
+                    <button onClick={() => context.addQuantityToItem(book)} 
+                            className="up-arrow"
+                            aria-label="Add 1 item unit">▲</button>
+                    <button onClick={() => context.subtractQuantityFromItem(book)} 
+                            className="down-arrow"
+                            aria-label="subtract 1 item unit">▼</button>
                 </section>
             </form>
             <span className="item-subtotal">${subtotal_price}</span>

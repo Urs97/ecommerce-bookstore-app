@@ -24,7 +24,10 @@ const Pagination = () => {
                     <button  
                         disabled={currentPage === number ? true : false}
                         className={`${currentPage === number ? `button active-page` : `button`}`}
-                        onClick={() => {context.changeCurrentPage(number)}}>{number}
+                        onClick={() => {context.changeCurrentPage(number)}}
+                        aria-label={`Page ${number}`}
+                    >
+                        {number}
                     </button>
                 </ScrollLink>
             ))}

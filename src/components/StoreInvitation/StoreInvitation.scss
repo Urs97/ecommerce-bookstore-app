@@ -15,12 +15,13 @@
         margin-bottom: 1em;
     }
 
-    & img {
+    & picture {
         position: absolute;
         object-fit: cover;
         width: 100%;
         height: 25em;
         z-index: -2;
+        overflow: hidden;
     }
 
     & .button:focus {

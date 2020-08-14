@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import Navigation from '../Navigation';
 
 describe('Navigation', () => {
-    test('renders empty Navigation', () => {
+    test('renders Navigation', () => {
         const wrapper = shallow(
             <Navigation />
         );

@@ -4,13 +4,38 @@ exports[`StoreInvitation renders StoreInvitation 1`] = `
 <section
   className="store-invitation"
 >
-  <img
-    alt="Beautiful library interior by Benjamin Ashton on Unsplash"
-    src="store-invitation-photo-sm.jpg"
-    srcSet="store-invitation-photo-sm.jpg 640w,
-                        store-invitation-photo-md.jpg 1024w,
-                        store-invitation-photo-lg.jpg 2400w,"
-  />
+  <picture>
+    <source
+      media="(orientation: portrait)"
+      srcSet="store-invitation-photo-768-portrait.webp 320w"
+      type="image/webp"
+    />
+    <source
+      media="(orientation: portrait)"
+      srcSet="store-invitation-photo-768-portrait.jpg 320w"
+      type="image/jpg"
+    />
+    <source
+      srcSet="store-invitation-photo-768.webp 320w,
+                        store-invitation-photo-1024.webp 1024w,
+                        store-invitation-photo-1366.webp 1366w,
+                        store-invitation-photo-1600.webp 1600w,
+                        store-invitation-photo-1920.webp 1920w"
+      type="image/webp"
+    />
+    <source
+      srcSet="store-invitation-photo-768.jpg 320w,
+                        store-invitation-photo-1024.jpg 1024w,
+                        store-invitation-photo-1366.jpg 1366w,
+                        store-invitation-photo-1600.jpg 1600w,
+                        store-invitation-photo-1920.jpg 1920w"
+      type="image/jpg"
+    />
+    <img
+      alt="Beautiful library interior by Benjamin Ashton/Stephanie Leblanc on Unsplash"
+      src="store-invitation-photo-1920.jpg"
+    />
+  </picture>
   <h1
     className="title"
   >

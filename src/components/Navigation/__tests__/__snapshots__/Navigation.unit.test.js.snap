@@ -193,6 +193,7 @@ exports[`Navigation renders Navigation 1`] = `
         />
       </span>
       <span
+        aria-label="shopping cart items number"
         className="cart-items-num"
       >
         (

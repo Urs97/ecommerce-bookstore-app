@@ -3,6 +3,7 @@
 exports[`SidebarBook renders SidebarBook 1`] = `
 <section
   className="sidebar-book"
+  tabIndex="0"
 >
   <img
     alt="Frankenstein book cover"

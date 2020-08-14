@@ -51,13 +51,13 @@ exports[`AboutUs renders AboutUs 1`] = `
       className="leadership-main"
     >
       <PersonalProfile
-        imgSrc="testimonial-portrait-1.jpg"
+        imgSrc="testimonial-portrait-1.webp"
         name="Richard Jones"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         title="CEO & Co Founder"
       />
       <PersonalProfile
-        imgSrc="testimonial-portrait-3.jpg"
+        imgSrc="testimonial-portrait-3.webp"
         name="Steve Mason"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         title="CTO & Co Founder"

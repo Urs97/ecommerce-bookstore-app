@@ -8,6 +8,7 @@ exports[`CartItem renders empty CartItem 1`] = `
     className="remove-item-container"
   >
     <button
+      aria-label="Remove item"
       className="remove-item"
       onClick={[Function]}
     >
@@ -62,12 +63,14 @@ exports[`CartItem renders empty CartItem 1`] = `
       className="item-quantity-btns"
     >
       <button
+        aria-label="Add 1 item unit"
         className="up-arrow"
         onClick={[Function]}
       >
         ▲
       </button>
       <button
+        aria-label="subtract 1 item unit"
         className="down-arrow"
         onClick={[Function]}
       >

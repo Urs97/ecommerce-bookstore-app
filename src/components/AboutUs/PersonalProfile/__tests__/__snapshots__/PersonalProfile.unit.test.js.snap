@@ -5,8 +5,8 @@ exports[`PersonalProfile renders PersonalProfile with props 1`] = `
   className="personal-profile"
 >
   <img
-    alt="portrait"
-    src="testimonial-portrait-1.jpg"
+    alt="Larry Jones portrait"
+    src="testimonial-portrait-1.webp"
   />
   <h3
     className="title"
@@ -29,7 +29,7 @@ exports[`PersonalProfile renders empty PersonalProfile 1`] = `
   className="personal-profile"
 >
   <img
-    alt="portrait"
+    alt="undefined portrait"
   />
   <h3
     className="title"

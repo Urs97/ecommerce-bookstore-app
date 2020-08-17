@@ -14,13 +14,21 @@ const Book = ({ book }) => {
     const price = Number(`${book.price[0]}.${book.price[1]}`);
 
     return (
-        <div className="book" tabIndex="0" onFocus={() => setIsHovered(true)}>
+        <div className="book" >
             {!isHovered && (
-                <img src={img_url} alt={img_alt} className="book-img"
-                onMouseEnter={() => setIsHovered(true)}/>
+            <img src={img_url} 
+                alt={img_alt} 
+                className="book-img"
+                onMouseEnter={() => setIsHovered(true)}
+                tabIndex="0" 
+                onFocus={() => setIsHovered(true)}
+            />
             )}
             {isHovered && (
-                <div className="book-img hovered-book-img" onMouseLeave={() => setIsHovered(false)}>
+                <div className="book-img hovered-book-img" 
+                    onMouseLeave={() => setIsHovered(false)}
+                    onBlur={() => setIsHovered(false)}
+                >
                     <span>Details</span>
                     <button className="button">View More</button>
                 </div>
@@ -32,15 +40,15 @@ const Book = ({ book }) => {
                 <a 
                     href="/cart" 
                     className="button" 
-                    onBlur={() => setIsHovered(false)}
-                >View Cart ✔</a> 
+                >
+                View Cart ✔</a> 
             }
             {context.cart.findIndex(product => product.key === book.key) === -1 &&
                 <button 
                     className="button" 
                     onClick={() => context.addProductToCart(book)}
-                    onBlur={() => setIsHovered(false)}
-                >Add to cart</button> 
+                >
+                Add to cart</button> 
             }
         </div>
     );

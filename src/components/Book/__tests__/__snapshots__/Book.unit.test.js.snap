@@ -3,14 +3,14 @@
 exports[`Book renders Book 1`] = `
 <div
   className="book"
-  onFocus={[Function]}
-  tabIndex="0"
 >
   <img
     alt="Frankenstein book cover"
     className="book-img"
+    onFocus={[Function]}
     onMouseEnter={[Function]}
-    src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    src="https://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    tabIndex="0"
   />
   <span
     className="book-title-container"
@@ -34,7 +34,6 @@ exports[`Book renders Book 1`] = `
   </span>
   <button
     className="button"
-    onBlur={[Function]}
     onClick={[Function]}
   >
     Add to cart

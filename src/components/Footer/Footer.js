@@ -12,7 +12,7 @@ const Footer = () => {
                 <Link to="/cart">Cart</Link>
                 <Link to="/about">About Us</Link>
             </section>
-            <p>Bookz © 2020 All rights reserved</p>
+            <p>Bookz © <span>{new Date().getFullYear()}</span> All rights reserved</p>
         </footer>
     )
 }

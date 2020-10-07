@@ -7,24 +7,28 @@ exports[`Navigation renders Navigation 1`] = `
   >
     <Link
       className="link js-focus-visible"
+      onClick={[Function]}
       to="/"
     >
       Home
     </Link>
     <Link
       className="link"
+      onClick={[Function]}
       to="/store"
     >
       Bookstore
     </Link>
     <Link
       className="link"
+      onClick={[Function]}
       to="/cart"
     >
       Cart
     </Link>
     <Link
       className="link"
+      onClick={[Function]}
       to="/about"
     >
       About Us
@@ -193,6 +197,7 @@ exports[`Navigation renders Navigation 1`] = `
         />
       </span>
       <span
+        aria-label="shopping cart items number"
         className="cart-items-num"
       >
         (

@@ -42,3 +42,11 @@
         font-size: 1.2em;
     }
 }
+
+@media (hover: none) {
+    .footer {
+       & a:hover {
+           color: #FFFFFF;
+       }
+    }
+}

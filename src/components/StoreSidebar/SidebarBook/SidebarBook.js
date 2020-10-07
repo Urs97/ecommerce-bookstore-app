@@ -4,7 +4,7 @@ import './SidebarBook.scss';
 const SidebarBook = ({ book }) => {
 
     // L is large, M is medium and S is small image format
-    const img_url = `http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
+    const img_url = `https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
     const img_alt = `${book.title} book cover`;
 
     // To add link functionality to book

@@ -134,6 +134,7 @@
 @media (max-width: 800px) {
     .cart-item {
         display: grid;
+        position: relative;
         grid-template-columns: 0.5fr 1fr 0.5fr;
         grid-template-rows: 10em;
         padding: 2em 0;
@@ -143,7 +144,10 @@
         "image price quantity";
 
         .remove-item {
-            display: none;
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            
         }
 
         .item-img {

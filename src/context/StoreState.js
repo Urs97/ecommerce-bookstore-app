@@ -17,7 +17,7 @@ const StoreState = props => {
     };
 
     const [state, dispatch] = useReducer(storeReducer, initialState);
-    const url = `http://openlibrary.org/subjects/${state.category}.json?limit=27&offset=0`;
+    const url = `https://openlibrary.org/subjects/${state.category}.json?limit=27&offset=0`;
     const [isLoading, data] = useHttp(url, `store_${state.category}_data`, [state.category]);
 
     // Pagination functionality

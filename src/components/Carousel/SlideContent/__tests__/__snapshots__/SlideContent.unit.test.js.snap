@@ -16,7 +16,7 @@ exports[`SlideContent renders SlideContent with props 1`] = `
     className="link-button"
     to="/store"
   >
-    See More
+    Go To Store
   </Link>
 </section>
 `;
@@ -33,7 +33,7 @@ exports[`SlideContent renders empty SlideContent 1`] = `
     className="link-button"
     to="/store"
   >
-    See More
+    Go To Store
   </Link>
 </section>
 `;

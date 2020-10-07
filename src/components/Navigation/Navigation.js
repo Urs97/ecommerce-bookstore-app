@@ -19,10 +19,26 @@ const Navigation = () => {
     return (
         <>
             <nav className={`mobile-main-menu ${isOpen ? `active` : ``}`} ref={menuRef}>
-                <Link to="/" className="link js-focus-visible">Home</Link>
-                <Link to="/store" className="link">Bookstore</Link>
-                <Link to="/cart" className="link">Cart</Link>
-                <Link to="/about" className="link">About Us</Link>
+                <Link to="/" 
+                    className="link js-focus-visible"
+                    onClick={() => setIsOpen(isOpen => !isOpen)}
+                    >Home
+                </Link>
+                <Link to="/store"
+                     className="link"
+                     onClick={() => setIsOpen(isOpen => !isOpen)}
+                     >Bookstore
+                </Link>
+                <Link to="/cart" 
+                    className="link"
+                    onClick={() => setIsOpen(isOpen => !isOpen)}
+                    >Cart
+                </Link>
+                <Link to="/about" 
+                    className="link"
+                    onClick={() => setIsOpen(isOpen => !isOpen)}
+                    >About Us
+                </Link>
             </nav>
             <header className="header-section">
                 <button className="menu-btn" onClick={() => setIsOpen(isOpen => !isOpen)}>
@@ -33,7 +49,8 @@ const Navigation = () => {
                     <p>Webstore for book lovers</p>
                 </a>
                 <nav className="main-menu">
-                    <Link to="/" className="link js-focus-visible">Home</Link>
+                    <Link to="/" 
+                        className="link js-focus-visible">Home</Link>
                     <Link to="/store" className="link">Bookstore</Link>
                     <Link to="/cart" className="link">Cart</Link>
                     <Link to="/about" className="link">About Us</Link>

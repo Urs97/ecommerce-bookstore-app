@@ -4,10 +4,6 @@ exports[`PersonalProfile renders PersonalProfile with props 1`] = `
 <section
   className="personal-profile"
 >
-  <img
-    alt="portrait"
-    src="testimonial-portrait-1.jpg"
-  />
   <h3
     className="title"
   >
@@ -28,9 +24,6 @@ exports[`PersonalProfile renders empty PersonalProfile 1`] = `
 <section
   className="personal-profile"
 >
-  <img
-    alt="portrait"
-  />
   <h3
     className="title"
   />

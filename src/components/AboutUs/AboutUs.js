@@ -6,8 +6,7 @@ import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import PersonalProfile from './PersonalProfile/PersonalProfile';
-import portrait_1 from '../../assets/images/testimonial-portrait-1.webp';
-import portrait_2 from '../../assets/images/testimonial-portrait-3.webp';
+import { AboutUsPhoto1, AboutUsPhoto2 } from './AboutUsPhotos/AboutUsPhotos';
 
 const AboutUs = () => {
 
@@ -41,13 +40,13 @@ const AboutUs = () => {
             <section className="about-us-leadership">
                 <h2 className="title leadership-title">Leadership</h2>
                 <section className="leadership-main">
-                    <PersonalProfile 
-                        imgSrc={portrait_1} 
+                    <PersonalProfile
+                        aboutUsPhoto={ <AboutUsPhoto1 /> } 
                         name={"Richard Jones"} 
                         title={"CEO & Co Founder"} 
                         text={dummyLorem} />
                     <PersonalProfile 
-                        imgSrc={portrait_2} 
+                        aboutUsPhoto={ <AboutUsPhoto2 /> }
                         name={"Steve Mason"} 
                         title={"CTO & Co Founder"} 
                         text={dummyLorem} />

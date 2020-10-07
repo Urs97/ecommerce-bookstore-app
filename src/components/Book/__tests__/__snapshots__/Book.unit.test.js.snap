@@ -7,8 +7,10 @@ exports[`Book renders Book 1`] = `
   <img
     alt="Frankenstein book cover"
     className="book-img"
+    onFocus={[Function]}
     onMouseEnter={[Function]}
-    src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    src="https://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    tabIndex="0"
   />
   <span
     className="book-title-container"

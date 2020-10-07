@@ -14,7 +14,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
-    const url = `http://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
+    const url = `https://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
     const [isLoading, data] = useHttp(url, 'homeApiData', []);
 
     const icon_1 = faAddressCard;

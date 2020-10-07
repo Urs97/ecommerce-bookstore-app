@@ -8,7 +8,7 @@ exports[`Testimonials renders Testimonials 1`] = `
   disableKeyboard={false}
   dragEnabled={true}
   dragStep={1}
-  hasMasterSpinner={true}
+  hasMasterSpinner={false}
   infinite={true}
   interval={5000}
   isIntrinsicHeight={false}
@@ -34,10 +34,20 @@ exports[`Testimonials renders Testimonials 1`] = `
       <div
         className="wrapper"
       >
-        <n
-          alt="Portrait photo by Štefan Štefančík on Unsplash"
-          src="testimonial-portrait-1.jpg"
-        />
+        <picture>
+          <source
+            srcSet="testimonial-portrait-1.webp 768w"
+            type="image/webp"
+          />
+          <source
+            srcSet="testimonial-portrait-1.jpg 768w"
+            type="image/jpg"
+          />
+          <img
+            alt="Facial portrait by Štefan Štefančík on Unsplash"
+            src="testimonial-portrait-1.jpg"
+          />
+        </picture>
         <p>
           I like Bookz more and more each day because it makes my life a lot easier. I'd really be lost without Bookz.
         </p>
@@ -52,10 +62,20 @@ exports[`Testimonials renders Testimonials 1`] = `
       <div
         className="wrapper"
       >
-        <n
-          alt="Portrait photo by Robert Godwin on Unsplash"
-          src="testimonial-portrait-2.jpg"
-        />
+        <picture>
+          <source
+            srcSet="testimonial-portrait-2.webp 768w"
+            type="image/webp"
+          />
+          <source
+            srcSet="testimonial-portrait-2.jpg 768w"
+            type="image/jpg"
+          />
+          <img
+            alt="Facial portrait by Robert Godwin on Unsplash"
+            src="testimonial-portrait-2.jpg"
+          />
+        </picture>
         <p>
           I found what I needed and books arrived in a timely manner. The prices are super low, keep up the good work!
         </p>
@@ -70,10 +90,20 @@ exports[`Testimonials renders Testimonials 1`] = `
       <div
         className="wrapper"
       >
-        <n
-          alt="Portrait photo by Mahesh Krishnamurthy on Unsplash"
-          src="testimonial-portrait-3.jpg"
-        />
+        <picture>
+          <source
+            srcSet="testimonial-portrait-3.webp 768w"
+            type="image/webp"
+          />
+          <source
+            srcSet="testimonial-portrait-3.jpg 768w"
+            type="image/jpg"
+          />
+          <img
+            alt="Facial portrait by Mahesh Krishnamurthy on Unsplash"
+            src="testimonial-portrait-3.jpg"
+          />
+        </picture>
         <p>
           It really saves me time and effort. Accesible book reading is exactly what I feel has been lacking so far and I have nothing but praise for the way Bookz goes about it!
         </p>

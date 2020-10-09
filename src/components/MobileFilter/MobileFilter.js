@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './MobileFilter.scss';
 
 import StoreContext from '../../context/StoreContext';
+
 import BookGenres from '../BookGenres/BookGenres';
 import FilterByPrice from '../FilterByPrice/FilterByPrice';
 
@@ -14,7 +15,9 @@ const MobileFilter = () => {
             <button 
                 className="button mobile-filter-close" 
                 onClick={() => context.toggleMobileFilter('close')}
-            >Close</button>
+            >
+                Close
+            </button>
             <BookGenres />
             <FilterByPrice />
         </section>

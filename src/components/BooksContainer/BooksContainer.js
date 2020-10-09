@@ -4,7 +4,12 @@ import Book from '../Book/Book';
 
 const BooksContainer = ({ bookData }) => {
 
-    const books = bookData.map(book => <Book key={book.key} book={book}/>);
+    const books = bookData.map(book => 
+        <Book 
+            key={book.key} 
+            book={book}
+        />
+    );
 
     let content = <section className="no-books">No books found.</section>
 
@@ -17,7 +22,7 @@ const BooksContainer = ({ bookData }) => {
             </section>
         );
     };
-
+    
     return content;
 };
 

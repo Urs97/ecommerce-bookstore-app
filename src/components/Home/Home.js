@@ -1,10 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Carousel from '../Carousel/Carousel';
-import BulletPointContainer from '../BulletPointContainer/BulletPointContainer';
-import Testimonials from '../Testimonials/Testimonials';
-import BooksContainer from '../BooksContainer/BooksContainer';
-import StoreInvitation from '../StoreInvitation/StoreInvitation';
+
 import { useHttp } from '../../hooks/useHttp';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
@@ -13,8 +9,15 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
+import Carousel from '../Carousel/Carousel';
+import BulletPointContainer from '../BulletPointContainer/BulletPointContainer';
+import Testimonials from '../Testimonials/Testimonials';
+import BooksContainer from '../BooksContainer/BooksContainer';
+import StoreInvitation from '../StoreInvitation/StoreInvitation';
+
 const Home = () => {
-    const url = `https://openlibrary.org/subjects/fiction.json?limit=8&offset=4`;
+    const bestsellers = 'fiction';
+    const url = `https://openlibrary.org/subjects/${bestsellers}.json?limit=8&offset=4`;
     const [isLoading, data] = useHttp(url, 'homeApiData', []);
 
     const icon_1 = faAddressCard;
@@ -45,16 +48,30 @@ const Home = () => {
     return (   
         <main className="home-main">
             <Carousel />
-            <BulletPointContainer mode={"normal"} icons={iconsRegular} texts={textsRegular} color={"blue"}/>
-            {(!isLoading && data) ?
-                <> 
-                    <h1 className="title home-title">Bookz Bestsellers</h1>
-                    <BooksContainer bookData={data.works}/>
-                </> 
-            : null}
+            <BulletPointContainer 
+                mode={"default"} 
+                icons={iconsRegular} 
+                texts={textsRegular} 
+                color={"blue"}
+            />
+            {
+                (!isLoading && data) ?
+                    <> 
+                        <h1 className="title home-title">
+                            Bookz Bestsellers
+                        </h1>
+                        <BooksContainer bookData={data.works}/>
+                    </> 
+                : null
+            }
             <StoreInvitation />
-            <BulletPointContainer mode={"expanded"} icons={iconsExpanded} titles={titlesExpanded} 
-                                texts={textsExpanded} color={"green"}/>
+            <BulletPointContainer 
+                mode={"expanded"} 
+                icons={iconsExpanded} 
+                titles={titlesExpanded} 
+                texts={textsExpanded} 
+                color={"green"}
+            />
             <Testimonials />
         </main>
     )

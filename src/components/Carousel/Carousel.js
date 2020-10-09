@@ -6,8 +6,9 @@ import './Carousel.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import SlideContent from './SlideContent/SlideContent';
+
 import { CarouselPhoto1, CarouselPhoto2, CarouselPhoto3 } from './CarouselPhotos/CarouselPhotos';
+import SlideContent from './SlideContent/SlideContent';
 
 class Carousel extends React.Component {
     render() {

@@ -20,12 +20,16 @@ const Pagination = () => {
         <section className="pagination">     
             {pageNumbers.map(number => ( 
                 <ScrollLink 
-                    to="store-main" spy={true} smooth={true} key={number}>
+                    to="store-main" 
+                    spy={true} 
+                    smooth={true} 
+                    key={number}
+                >
                     <button  
                         disabled={currentPage === number ? true : false}
                         className={`${currentPage === number ? `button active-page` : `button`}`}
                         onClick={() => {context.changeCurrentPage(number)}}
-                        aria-label={`Page ${number}`}
+                        aria-label={`page ${number}`}
                     >
                         {number}
                     </button>

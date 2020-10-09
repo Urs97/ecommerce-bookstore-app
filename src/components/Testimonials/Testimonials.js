@@ -2,9 +2,11 @@ import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import './Testimonials.scss';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import portrait_1_webp from '../../assets/images/testimonial-portrait-1.webp';
 import portrait_2_webp from '../../assets/images/testimonial-portrait-2.webp';
 import portrait_3_webp from '../../assets/images/testimonial-portrait-3.webp';
@@ -86,12 +88,18 @@ class Testimonials extends React.Component {
                     </Slide>
                 </Slider>
                 <ButtonBack className="testimonials-btn">
-                    <span role="img" aria-label="left arrow icon">
+                    <span 
+                        role="img" 
+                        aria-label="left arrow icon"
+                    >
                         <FontAwesomeIcon icon={faAngleLeft} />
                     </span>
                 </ButtonBack>
                 <ButtonNext className="testimonials-btn tstm-btn-next">
-                    <span role="img" aria-label="right arrow icon">
+                    <span 
+                        role="img" 
+                        aria-label="right arrow icon"
+                    >
                         <FontAwesomeIcon icon={faAngleRight} />
                     </span>
                 </ButtonNext>

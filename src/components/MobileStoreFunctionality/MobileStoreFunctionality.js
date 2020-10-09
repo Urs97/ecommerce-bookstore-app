@@ -14,7 +14,9 @@ const MobileStoreFunctionality = () => {
             <button 
                 className="button mobile-filter-open" 
                 onClick={() => context.toggleMobileFilter('open')}
-            >Filter</button>
+            >
+                Filter
+            </button>
             <MobileFilter />
         </section>
     )

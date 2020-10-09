@@ -11,7 +11,8 @@ const SlideContent = ({text, title}) => {
                 to='/store' 
                 className="link-button"
             >
-                Go To Store</Link>
+                Go To Store
+            </Link>
         </section>
     )
 };

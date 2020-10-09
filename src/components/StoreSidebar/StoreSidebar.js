@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './StoreSidebar.scss';
 
 import StoreContext from '../../context/StoreContext';
+
 import BookGenres from '../BookGenres/BookGenres';
 import FilterByPrice from '../FilterByPrice/FilterByPrice';
 import SidebarBookContainer from './SidebarBookContainer/SidebarBookContainer';

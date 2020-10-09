@@ -1,9 +1,9 @@
 import { useCallback, useState, useRef } from 'react';
 import { useAddListeners } from './useAddListeners';
 
-//  Functions which performs a click outside event listener
-//  initialState initialState of the menu
-//  onAfterClose some extra function call to do after closing menu
+//  Function which performs a click outside event listener
+//  initialState - initialState of the menu
+//  onAfterClose - some extra function call to do after closing menu
 
 export const useToggleMenu = (initialState = false, onAfterClose = null) => {
     const ref = useRef(null);

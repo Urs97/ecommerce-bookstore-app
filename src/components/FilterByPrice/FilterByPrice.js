@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import "nouislider/distribute/nouislider.css";
 import './FilterByPrice.scss';
 
-import Nouislider from "nouislider-react";
 import StoreContext from '../../context/StoreContext';
+import Nouislider from "nouislider-react";
 
 const FilterByPrice = () => {
 
@@ -39,8 +39,12 @@ const FilterByPrice = () => {
                 connect 
                 onUpdate={onChange()}/>
             <div className="filter-by-price-div">
-                <button className="button" 
-                        onClick={() => context.submitFilterValue(minPrice, maxPrice, data)}>Filter</button>
+                <button 
+                    className="button" 
+                    onClick={() => context.submitFilterValue(minPrice, maxPrice, data)}
+                >
+                    Filter
+                </button>
                 <span>${minPrice} - ${maxPrice}</span>
             </div>
         </section>

@@ -8,7 +8,8 @@ export const useHttp = (url, storageItemKey, dependencies) => {
     let cachedData = localStorage.getItem(storageItemKey);
     if(cachedData) {
       setData(JSON.parse(cachedData));
-    } else {
+    } 
+    else {
       setIsLoading(true);
       fetch(url)
         .then(response => {
@@ -34,6 +35,7 @@ export const useHttp = (url, storageItemKey, dependencies) => {
           setIsLoading(false);
         });
     }
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 

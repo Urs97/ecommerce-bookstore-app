@@ -51,8 +51,15 @@ const StoreInvitation = () => {
                 <img src={photo_1920_jpg} 
                     alt="Beautiful library interior by Benjamin Ashton/Stephanie Leblanc on Unsplash"/>
             </picture>
-            <h1 className="title">Browse Through Our Complete Library</h1>
-            <Link to="/store" className="button">View More</Link>
+            <h1 className="title">
+                Browse Through Our Complete Library
+            </h1>
+            <Link 
+                to="/store" 
+                className="button"
+            >
+                View More
+            </Link>
         </section>
     )
 };

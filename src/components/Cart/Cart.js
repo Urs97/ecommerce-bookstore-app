@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import './Cart.scss';
 
 import CartContext from '../../context/CartContext';
+import { Link as ScrollLink, Element as ScrollElement } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 import PageHeader from '../PageHeader/PageHeader';
 import CartItem from '../CartItem/CartItem';
 import CartCheckout from '../CartCheckout/CartCheckout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { Link as ScrollLink, Element as ScrollElement } from 'react-scroll';
 
 const Cart = () => {
     const context = useContext(CartContext);
@@ -23,7 +24,10 @@ const Cart = () => {
 
     return (
         <main>
-            <PageHeader title="Your Cart" color="green"/>
+            <PageHeader 
+                title="Your Cart" 
+                color={"green"}
+            />
             <section className="cart-container">
                 <section className="cart-nav">
                     <section className="cart-nav-title">

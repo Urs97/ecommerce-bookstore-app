@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import './CartItem.scss';
+
 import CartContext from '../../context/CartContext';
 
 const CartItem = ({ book }) => {
@@ -36,17 +37,30 @@ const CartItem = ({ book }) => {
                 <p>{book.authors[0].name}</p>
             </span>
             <span className="item-price">${price}</span>
-            <form className="item-quantity" onSubmit={handleOnSubmit}>
+            <form 
+                className="item-quantity" 
+                onSubmit={handleOnSubmit}
+            >
                 <label htmlFor="quantity" className="screen-reader-only">item-title quantity</label>
-                <input type="number" id="quantity" name="quantity"
-                    step="1" min="1" max="99" value={book.quantity} onChange={handleOnChangeInput}/>
+                <input 
+                    type="number" 
+                    id="quantity" 
+                    name="quantity"
+                    step="1" 
+                    min="1" 
+                    max="99" 
+                    value={book.quantity} 
+                    onChange={handleOnChangeInput}
+                />
                 <section className="item-quantity-btns">
                     <button onClick={() => context.addQuantityToItem(book)} 
                             className="up-arrow"
-                            aria-label="Add 1 item unit">▲</button>
+                            aria-label="Add 1 item unit"
+                    >▲</button>
                     <button onClick={() => context.subtractQuantityFromItem(book)} 
                             className="down-arrow"
-                            aria-label="subtract 1 item unit">▼</button>
+                            aria-label="subtract 1 item unit"
+                    >▼</button>
                 </section>
             </form>
             <span className="item-subtotal">${subtotal_price}</span>

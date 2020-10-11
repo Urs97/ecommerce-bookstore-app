@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './Book.scss';
 
 import CartContext from '../../context/CartContext';
@@ -45,12 +46,12 @@ const Book = ({ book }) => {
                 {price}
             </span>
             {context.cart.findIndex(product => product.key === book.key) >= 0 && 
-                <a 
-                    href="/cart" 
+                <Link 
+                    to="/cart" 
                     className="button" 
                 >
                     View Cart ✔
-                </a> 
+                </Link> 
             }
             {context.cart.findIndex(product => product.key === book.key) === -1 &&
                 <button 

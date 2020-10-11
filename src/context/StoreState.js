@@ -10,7 +10,6 @@ const StoreState = props => {
         category: 'science_fiction',
         currentPage: 1,
         filterSliderState: false,
-        storeScrollState: false,
         booksPerPage: 9,
         filteredData: null,
         mobileFilterPopup: false

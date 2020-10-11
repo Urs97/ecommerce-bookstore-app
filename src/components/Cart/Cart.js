@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.scss';
 
 import CartContext from '../../context/CartContext';
@@ -36,7 +37,7 @@ const Cart = () => {
                         <h4 className="title">{cartQuantity} items</h4>
                     </section>
                     <section className="cart-nav-btns">
-                        <a href="/store" className="button continue-btn">Continue Shopping</a>
+                        <Link to="/store" className="button continue-btn">Continue Shopping</Link>
                         {context.cart.length > 0 && 
                             <ScrollLink 
                                 to="cart-checkout" 

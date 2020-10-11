@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.scss';
 
-import { Link } from 'react-router-dom';
-import CartContext from '../../context/CartContext';
-import { useToggleMenu } from '../../hooks/useToggleMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import CartContext from '../../context/CartContext';
+import { useToggleMenu } from '../../hooks/useToggleMenu';
 
 const Navigation = () => {
     const context = useContext(CartContext);
@@ -44,13 +44,12 @@ const Navigation = () => {
                 <button className="menu-btn" onClick={() => setIsOpen(isOpen => !isOpen)}>
                     <FontAwesomeIcon icon={faBars} />
                 </button>
-                <a href="/" className="header-logo">
+                <Link to="/" className="header-logo">
                     <h1 className="title">Bookz</h1>
                     <p>Webstore for book lovers</p>
-                </a>
+                </Link>
                 <nav className="main-menu">
-                    <Link to="/" 
-                        className="link js-focus-visible">Home</Link>
+                    <Link to="/" className="link">Home</Link>
                     <Link to="/store" className="link">Bookstore</Link>
                     <Link to="/cart" className="link">Cart</Link>
                     <Link to="/about" className="link">About Us</Link>
@@ -63,8 +62,12 @@ const Navigation = () => {
                     <span role="img" aria-label="shopping cart icon">
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </span>
-                    <span aria-label="shopping cart items number" 
-                        className="cart-items-num">({cartQuantity})</span>
+                    <span 
+                        aria-label="shopping cart items number" 
+                        className="cart-items-num"
+                    >
+                        ({cartQuantity})
+                    </span>
                 </section>
             </header>
         </>

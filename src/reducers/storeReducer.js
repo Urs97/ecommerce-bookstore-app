@@ -12,14 +12,12 @@ const changeCategory = (newCategory, prevState) => {
             filterSliderState: newFilterSliderState,
             filteredData: null,
             currentPage: 1
-        };
+    };
 }
 
 const changeCurrentPage = (newCurrentPage, prevState) => {
-    const newStoreScrollState = !prevState.storeScrollState;
     return {...prevState, 
-            currentPage: newCurrentPage,
-            storeScrollState: newStoreScrollState
+            currentPage: newCurrentPage
     };
 }
 

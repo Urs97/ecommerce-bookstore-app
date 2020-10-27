@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export default React.createContext({
   cart: [],
-  addProductToCart: payload => {},
-  removeProductFromCart: payload => {},
-  addQuantityToItem: payload => {},
-  subtractQuantityFromItem: payload => {},
-  setCustomItemQuantity: payload => {}
+  addProductToCart: (payload) => {},
+  removeProductFromCart: (payload) => {},
+  addQuantityToItem: (payload) => {},
+  subtractQuantityFromItem: (payload) => {},
+  setCustomItemQuantity: (payload) => {},
 });

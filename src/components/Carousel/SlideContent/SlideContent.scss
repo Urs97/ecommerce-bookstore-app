@@ -1,131 +1,131 @@
-@import '../../../styles/shared.scss';
+@import "../../../styles/shared.scss";
 
 .slide-content {
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: $horizontal-content-padding;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: $horizontal-content-padding;
+  color: #ffffff;
+  margin-bottom: 10em;
+  font-size: 2.5rem;
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  & .link-button {
+    outline: none;
+    text-decoration: none;
     color: #ffffff;
-    margin-bottom: 10em;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.4em 0.6em;
+    margin-top: 10em;
+    border-radius: 1em;
+  }
 
-    p {
-        font-size: 1.5rem;
-    }
+  & .link-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+  }
 
-    h1 {
-        margin-bottom: 0.5em;
-    }
+  & .link-button:focus {
+    outline: 0.2em solid #ffffff;
+  }
 
-    & .link-button {
-        outline: none;
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 0.4em 0.6em;
-        margin-top: 10em;
-        border-radius: 1em;
-    }
-    
-    & .link-button:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: #000000;
-    }
-
-    & .link-button:focus {
-        outline: 0.2em solid #FFFFFF;
-    }
-
-    & .link-button:not(.focus-visible) {
-        outline: none;
-    }
-};
+  & .link-button:not(.focus-visible) {
+    outline: none;
+  }
+}
 
 @media (max-width: 2300px) {
-    .slide-content {
-        left: $horizontal-content-padding-1100px;
-        margin-bottom: 8em;
-    }
+  .slide-content {
+    left: $horizontal-content-padding-1100px;
+    margin-bottom: 8em;
+  }
 }
 
 @media (max-width: 1100px) {
-    .slide-content {
-        left: $horizontal-content-padding-1100px;
-        margin-bottom: 6em;
-    }
+  .slide-content {
+    left: $horizontal-content-padding-1100px;
+    margin-bottom: 6em;
+  }
 }
 
 @media (max-width: 950px) {
-    .slide-content {
-        left: $horizontal-content-padding-950px;
-        margin-bottom: 6em;
+  .slide-content {
+    left: $horizontal-content-padding-950px;
+    margin-bottom: 6em;
 
-        h1 {
-            font-size: 1.5em;
-        }
+    h1 {
+      font-size: 1.5em;
     }
+  }
 }
 
 @media (max-width: 850px) {
-    .slide-content {
-        left: $horizontal-content-padding-950px;
-        margin-bottom: 5em;
-    }
+  .slide-content {
+    left: $horizontal-content-padding-950px;
+    margin-bottom: 5em;
+  }
 }
 
 // Mobile design
 
 @media (max-width: 800px) {
-    .slide-content {
-        font-size: 2.2em;
-        margin-bottom: 8em;
-    }
+  .slide-content {
+    font-size: 2.2em;
+    margin-bottom: 8em;
+  }
 }
 
 @media (max-width: 700px) {
-    .slide-content {
-        margin-bottom: 9em;
-        font-size: 2rem;
-    }
+  .slide-content {
+    margin-bottom: 9em;
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 580px) {
-    .slide-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        left: 0;
-        right: 0;
-        margin-left: auto; 
-        margin-right: auto; 
-        width: 15em;
-        margin-bottom: 12em;
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em;
+    margin-bottom: 12em;
 
-        & .link-button {
-            margin-top: 0;
-            align-self: center;
-            border: 0.1em solid #FFFFFF;
-            border-radius: 0;
-            background-color: transparent;
-        }
+    & .link-button {
+      margin-top: 0;
+      align-self: center;
+      border: 0.1em solid #ffffff;
+      border-radius: 0;
+      background-color: transparent;
     }
+  }
 }
 
 @media (max-width: 500px) {
-    .slide-content {
-        padding: 0 2em;
-        text-align: center;
+  .slide-content {
+    padding: 0 2em;
+    text-align: center;
 
-        p {
-            display: none;
-        }
+    p {
+      display: none;
     }
+  }
 }
 
 @media (max-width: 370px) {
-    .slide-content {
-        font-size: 1.65rem;
-        margin-bottom: 16em;
-    }
+  .slide-content {
+    font-size: 1.65rem;
+    margin-bottom: 16em;
+  }
 }

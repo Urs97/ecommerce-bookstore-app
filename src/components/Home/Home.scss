@@ -1,89 +1,87 @@
-@import '../../styles/shared.scss';
+@import "../../styles/shared.scss";
 
 .home-main {
-
-    .home-title {
-        text-align: center;
-        text-transform: capitalize;
-        font-size: 2.8em;
-        color: $text-color;
-        background-color: $background-grey;
-        padding-top: $vertical-content-padding;
-    }
+  .home-title {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2.8em;
+    color: $text-color;
+    background-color: $background-grey;
+    padding-top: $vertical-content-padding;
+  }
 }
 
 @media (min-width: 1600px) {
-    .home-main {
-        .books-container-section {
-            .books {
-                display: grid;
-                grid-template-columns: repeat(4, minmax(12em, 1fr));
-            }
-        }
+  .home-main {
+    .books-container-section {
+      .books {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(12em, 1fr));
+      }
     }
+  }
 }
 
 @media (max-width: 1440px) {
-    .home-main {
-        .books-container-section {
-            .books {
-                display: grid;
-                grid-template-columns: repeat(4, minmax(12em, 1fr));
-            }
-        }
+  .home-main {
+    .books-container-section {
+      .books {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(12em, 1fr));
+      }
     }
+  }
 }
 
 @media (max-width: 865px) {
-    .home-main {
-        .books-container-section {
-            padding: $vertical-content-padding 2.5rem;
-        }
+  .home-main {
+    .books-container-section {
+      padding: $vertical-content-padding 2.5rem;
     }
+  }
 }
 
 // Mobile design
 
 @media (max-width: 800px) {
-    .home-main {
-        .books-container-section {
-            padding: $vertical-content-padding 7rem;
-            .books {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(12em, 1fr));
-            }
-        }
+  .home-main {
+    .books-container-section {
+      padding: $vertical-content-padding 7rem;
+      .books {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(12em, 1fr));
+      }
     }
+  }
 }
 
 @media (max-width: 560px) {
-    .home-main {
-        .books-container-section {
-            padding: $vertical-content-padding 3rem;
-            .books {
-                gap: 2em;
-            }
-        }
+  .home-main {
+    .books-container-section {
+      padding: $vertical-content-padding 3rem;
+      .books {
+        gap: 2em;
+      }
     }
+  }
 }
 
 @media (max-width: 480px) {
-    .home-main {
-        .books-container-section {
-            font-size: 0.8em;
-            padding: $vertical-content-padding 1.5rem;
-        }
+  .home-main {
+    .books-container-section {
+      font-size: 0.8em;
+      padding: $vertical-content-padding 1.5rem;
     }
+  }
 }
 
 @media (max-width: 350px) {
-    .home-main {
-        .books-container-section {
-            padding: $vertical-content-padding 1rem;
-            .books {
-                gap: 1.25em;
-            }
-        }
+  .home-main {
+    .books-container-section {
+      padding: $vertical-content-padding 1rem;
+      .books {
+        gap: 1.25em;
+      }
     }
+  }
 }
-

@@ -1,52 +1,52 @@
-@import '../../styles/shared.scss';
+@import "../../styles/shared.scss";
 
 .footer {
-    color: #FFFFFF;
-    background-color: $grey;
-    padding: 5em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    & a {
-        text-decoration: none;
-        color: #FFFFFF;
-        padding-bottom: 0.2em;
-        outline: none;
-    }
+  color: #ffffff;
+  background-color: $grey;
+  padding: 5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    & a:hover {
-        color: #000000;
-    }
+  & a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 0.2em;
+    outline: none;
+  }
 
-    & a:focus {
-        outline: 0.2em solid #FFFFFF;
-    }
+  & a:hover {
+    color: #000000;
+  }
 
-    & a:not(.focus-visible) {
-        outline: none;
-    }
+  & a:focus {
+    outline: 0.2em solid #ffffff;
+  }
 
-    & a:not(:first-child) {
-        margin-left: 1.5em;
-    }
+  & a:not(.focus-visible) {
+    outline: none;
+  }
 
-    p {
-        margin-top: 1.5em;
-    }
+  & a:not(:first-child) {
+    margin-left: 1.5em;
+  }
+
+  p {
+    margin-top: 1.5em;
+  }
 }
 
 @media (max-width: 1260px) {
-    .footer {
-        font-size: 1.2em;
-    }
+  .footer {
+    font-size: 1.2em;
+  }
 }
 
 @media (hover: none) {
-    .footer {
-       & a:hover {
-           color: #FFFFFF;
-       }
+  .footer {
+    & a:hover {
+      color: #ffffff;
     }
+  }
 }

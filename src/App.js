@@ -1,15 +1,15 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import './App.scss';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import "./App.scss";
 
-import CartState from './context/CartState';
-import StoreState from './context/StoreState';
-import AppLayout from './components/AppLayout/AppLayout';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import Home from './components/Home/Home';
-import Store from './components/Store/Store';
-import Cart from './components/Cart/Cart';
-import AboutUs from './components/AboutUs/AboutUs';
+import CartState from "./context/CartState";
+import StoreState from "./context/StoreState";
+import AppLayout from "./components/AppLayout/AppLayout";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Home from "./components/Home/Home";
+import Store from "./components/Store/Store";
+import Cart from "./components/Cart/Cart";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App = () => {
   return (
@@ -17,12 +17,12 @@ const App = () => {
       <StoreState>
         <AppLayout>
           <ScrollToTop />
-            <Switch>
-                <Route path="/store" component={Store} exact/>
-                <Route path="/cart" component={Cart} exact/>
-                <Route path="/about" component={AboutUs} exact/>
-                <Route path="/" component={Home} exact/>
-            </Switch>
+          <Switch>
+            <Route path="/store" component={Store} exact />
+            <Route path="/cart" component={Cart} exact />
+            <Route path="/about" component={AboutUs} exact />
+            <Route path="/" component={Home} exact />
+          </Switch>
           <ScrollToTop />
         </AppLayout>
       </StoreState>

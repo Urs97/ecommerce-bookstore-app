@@ -1,85 +1,86 @@
-@import '../../styles/shared.scss';
+@import "../../styles/shared.scss";
 
 .about-us-main {
-    padding: $vertical-content-padding $horizontal-content-padding;
+  padding: $vertical-content-padding $horizontal-content-padding;
 
-    h1 {
-        font-size: 3em;
-        margin: 0;
-        margin-bottom: 1em;
-    }
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 1em;
+  }
 
-    h2 {
-        font-size: 2.5em;
-        margin-top: 0.75em;
-        margin-bottom: 1.25em;
-    }
+  h2 {
+    font-size: 2.5em;
+    margin-top: 0.75em;
+    margin-bottom: 1.25em;
+  }
 
-    p {
-        font-size: 1.25em;
-        padding-bottom: 2em;
-    }
+  p {
+    font-size: 1.25em;
+    padding-bottom: 2em;
+  }
 }
 
 .about-us-leadership {
-    padding: $vertical-content-padding $horizontal-content-padding;
-    background-color: #F4F7F9;
+  padding: $vertical-content-padding $horizontal-content-padding;
+  background-color: #f4f7f9;
 
-    .leadership-title {
-        font-size: 2.5em;
-        padding-bottom: 1.25em;
-    }
+  .leadership-title {
+    font-size: 2.5em;
+    padding-bottom: 1.25em;
+  }
 
-    .leadership-main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .leadership-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.about-us-main, .about-us-leadership > * {
-    text-align: center;
-    color: $text-color;
+.about-us-main,
+.about-us-leadership > * {
+  text-align: center;
+  color: $text-color;
 }
 
 @media (max-width: 1100px) {
-    .about-us-main {
-        padding: $vertical-content-padding $horizontal-content-padding-1100px;
-    }
-    .about-us-leadership {
-        padding: $vertical-content-padding $horizontal-content-padding-1100px;
-    }
+  .about-us-main {
+    padding: $vertical-content-padding $horizontal-content-padding-1100px;
+  }
+  .about-us-leadership {
+    padding: $vertical-content-padding $horizontal-content-padding-1100px;
+  }
 }
 
 @media (max-width: 950px) {
-    .about-us-main {
-        padding: $vertical-content-padding $horizontal-content-padding-950px;
-    }
-    .about-us-leadership {
-        padding: $vertical-content-padding $horizontal-content-padding-950px;
-    }
+  .about-us-main {
+    padding: $vertical-content-padding $horizontal-content-padding-950px;
+  }
+  .about-us-leadership {
+    padding: $vertical-content-padding $horizontal-content-padding-950px;
+  }
 }
 
 @media (max-width: 900px) {
-    .about-us-leadership {
-        padding: $vertical-content-padding 0;
-    }
+  .about-us-leadership {
+    padding: $vertical-content-padding 0;
+  }
 }
 
 // Mobile design
 
 @media (max-width: 630px) {
-    .about-us-leadership {
-        .leadership-main {
-            flex-direction: column;
+  .about-us-leadership {
+    .leadership-main {
+      flex-direction: column;
 
-            .personal-profile {
-                padding: 0 4em;
-            }
+      .personal-profile {
+        padding: 0 4em;
+      }
 
-            .personal-profile:not(:last-child) {
-                margin-bottom: $vertical-content-padding;
-            }
-        }
+      .personal-profile:not(:last-child) {
+        margin-bottom: $vertical-content-padding;
+      }
     }
+  }
 }

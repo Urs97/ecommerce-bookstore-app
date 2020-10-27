@@ -1,81 +1,81 @@
-@import '../../../styles/shared.scss';
+@import "../../../styles/shared.scss";
 
 .sidebar-book {
+  display: flex;
+  color: $text-color;
+  cursor: pointer;
+
+  .sidebar-book-img {
+    width: 5em;
+    height: 7em;
+    background-color: $blue;
+    border-radius: $border-radius;
+  }
+
+  .sidebar-book-details {
+    padding: 0.5em 1em;
     display: flex;
-    color: $text-color;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
 
-    .sidebar-book-img {
-        width: 5em;
-        height: 7em;
-        background-color: $blue;
-        border-radius: $border-radius;
+    h4 {
+      font-size: 0.95em;
+      overflow: hidden;
+      // Triple native line height of 1.15em
+      max-height: 3.45em;
     }
 
-    .sidebar-book-details { 
-        padding: 0.5em 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        h4 {
-            font-size: 0.95em;
-            overflow: hidden;
-            // Triple native line height of 1.15em
-            max-height: 3.45em;
-        }
-
-        p {
-            font-size: 0.8em;
-        }
-
-        .sidebar-book-price-container {
-            font-size: 0.95em;
-        }
+    p {
+      font-size: 0.8em;
     }
 
-    .sidebar-book-details > *:not(:last-child) {
-        margin-bottom: 0.5em;
+    .sidebar-book-price-container {
+      font-size: 0.95em;
     }
+  }
+
+  .sidebar-book-details > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
 }
 
-    .sidebar-book:focus {
-        outline: 0.2em solid black;
-    }
+.sidebar-book:focus {
+  outline: 0.2em solid black;
+}
 
-    .sidebar-book:not(.focus-visible) {
-        outline: none;
-    }
+.sidebar-book:not(.focus-visible) {
+  outline: none;
+}
 
 @media (max-width: 800px) {
-    .sidebar-book {
-        .sidebar-book-details {
-            flex-grow: 1;
-            display: grid;
-            grid-template-areas: 
-            "title"
-            "author"
-            "price";
-            grid-template-rows: 3fr 1fr 1fr;
+  .sidebar-book {
+    .sidebar-book-details {
+      flex-grow: 1;
+      display: grid;
+      grid-template-areas:
+        "title"
+        "author"
+        "price";
+      grid-template-rows: 3fr 1fr 1fr;
 
-            h4 {
-                grid-area: title;
-                align-self: center;
-                margin-bottom: 0.35em !important;
-            }
+      h4 {
+        grid-area: title;
+        align-self: center;
+        margin-bottom: 0.35em !important;
+      }
 
-            p {
-                grid-area: author;
-                align-self: center;
-            }
-    
-            .sidebar-book-price-container {
-                grid-area: price;
-            }
-        }
+      p {
+        grid-area: author;
+        align-self: center;
+      }
 
-        .sidebar-book-details > * {
-            text-align: center;
-        }
+      .sidebar-book-price-container {
+        grid-area: price;
+      }
     }
+
+    .sidebar-book-details > * {
+      text-align: center;
+    }
+  }
 }

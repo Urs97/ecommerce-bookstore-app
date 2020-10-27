@@ -1,36 +1,36 @@
-@import '../../styles/shared.scss';
+@import "../../styles/shared.scss";
 
 .mobile-store-functionality {
-    margin-bottom: 3em;
-    border-radius: $border-radius;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
+  margin-bottom: 3em;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
 
-    & .mobile-filter-open {
-        font-size: 1.25em;
-        background-color: $dark-blue;
-        margin-left: 2em;
-    }
+  & .mobile-filter-open {
+    font-size: 1.25em;
+    background-color: $dark-blue;
+    margin-left: 2em;
+  }
 
-    & .mobile-.mobile-filter-open {
-        background-color: $yellow;
-    }
+  & .mobile-.mobile-filter-open {
+    background-color: $yellow;
+  }
 
-    span {
-        font-size: 1.75em;
-    }
+  span {
+    font-size: 1.75em;
+  }
 }
 
 @media (max-width: 800px) {
-    .mobile-store-functionality {
-        display: flex;
-    }
+  .mobile-store-functionality {
+    display: flex;
+  }
 }
 
 @media (max-width: 450px) {
-    .mobile-store-functionality {
-        font-size: 1.25em;
-    }
+  .mobile-store-functionality {
+    font-size: 1.25em;
+  }
 }

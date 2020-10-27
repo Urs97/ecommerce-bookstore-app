@@ -1,19 +1,21 @@
 export const ACTIONS = {
-  ADD_PRODUCT : 'ADD_PRODUCT',
-  REMOVE_PRODUCT : 'REMOVE_PRODUCT',
-  ADD_QUANTITY : 'ADD_QUANTITY',
-  SUBTRACT_QUANTITY : 'SUBTRACT_QUANTITY',
-  CUSTOM_QUANTITY : 'CUSTOM_QUANTITY'
-}
+  ADD_PRODUCT: "ADD_PRODUCT",
+  REMOVE_PRODUCT: "REMOVE_PRODUCT",
+  ADD_QUANTITY: "ADD_QUANTITY",
+  SUBTRACT_QUANTITY: "SUBTRACT_QUANTITY",
+  CUSTOM_QUANTITY: "CUSTOM_QUANTITY",
+};
 
 const addProductToCart = (product, prevState) => {
   const updatedCart = [...prevState];
-  const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
+  const updatedItemIndex = updatedCart.findIndex(
+    (item) => item.key === product.key
+  );
 
   if (updatedItemIndex < 0) {
     updatedCart.push({ ...product, quantity: 1 });
   } else {
-    const updatedItem = {...updatedCart[updatedItemIndex]};
+    const updatedItem = { ...updatedCart[updatedItemIndex] };
     updatedItem.quantity++;
     updatedCart[updatedItemIndex] = updatedItem;
   }
@@ -22,8 +24,10 @@ const addProductToCart = (product, prevState) => {
 
 const removeProductFromCart = (product, prevState) => {
   const updatedCart = [...prevState];
-  const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
-  const updatedItem = {...updatedCart[updatedItemIndex]};
+  const updatedItemIndex = updatedCart.findIndex(
+    (item) => item.key === product.key
+  );
+  const updatedItem = { ...updatedCart[updatedItemIndex] };
   updatedItem.quantity--;
 
   if (updatedItem.quantity <= 0) {
@@ -36,8 +40,10 @@ const removeProductFromCart = (product, prevState) => {
 
 const addQuantityToItem = (product, prevState) => {
   const updatedCart = [...prevState];
-  const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
-  const updatedItem = {...updatedCart[updatedItemIndex]};
+  const updatedItemIndex = updatedCart.findIndex(
+    (item) => item.key === product.key
+  );
+  const updatedItem = { ...updatedCart[updatedItemIndex] };
   updatedItem.quantity < 99 && updatedItem.quantity++;
   updatedCart[updatedItemIndex] = updatedItem;
   return updatedCart;
@@ -45,17 +51,21 @@ const addQuantityToItem = (product, prevState) => {
 
 const subtractQuantityFromItem = (product, prevState) => {
   const updatedCart = [...prevState];
-  const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
-  const updatedItem = {...updatedCart[updatedItemIndex]};
+  const updatedItemIndex = updatedCart.findIndex(
+    (item) => item.key === product.key
+  );
+  const updatedItem = { ...updatedCart[updatedItemIndex] };
   updatedItem.quantity > 1 && updatedItem.quantity--;
   updatedCart[updatedItemIndex] = updatedItem;
   return updatedCart;
 };
 
-const setCustomItemQuantity = ({product, value}, prevState) => {
+const setCustomItemQuantity = ({ product, value }, prevState) => {
   const updatedCart = [...prevState];
-  const updatedItemIndex = updatedCart.findIndex(item => item.key === product.key);
-  const updatedItem = {...updatedCart[updatedItemIndex]};
+  const updatedItemIndex = updatedCart.findIndex(
+    (item) => item.key === product.key
+  );
+  const updatedItem = { ...updatedCart[updatedItemIndex] };
   updatedItem.quantity = value;
   updatedCart[updatedItemIndex] = updatedItem;
   return updatedCart;

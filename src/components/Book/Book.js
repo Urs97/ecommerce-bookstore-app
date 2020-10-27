@@ -1,68 +1,61 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import './Book.scss';
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import "./Book.scss";
 
-import CartContext from '../../context/CartContext';
+import CartContext from "../../context/CartContext";
 
 const Book = ({ book }) => {
-    const context = useContext(CartContext);
+  const context = useContext(CartContext);
 
-    const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-    // L is large, M is medium and S is small image format
-    const img_url = `https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
-    const img_alt = `${book.title} book cover`;
-    const price = Number(`${book.price[0]}.${book.price[1]}`);
+  // L is large, M is medium and S is small image format
+  const img_url = `https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`;
+  const img_alt = `${book.title} book cover`;
+  const price = Number(`${book.price[0]}.${book.price[1]}`);
 
-    return (
-        <div className="book">
-            {!isHovered && (
-            <img src={img_url} 
-                alt={img_alt} 
-                className="book-img"
-                onMouseEnter={() => setIsHovered(true)}
-                tabIndex="0" 
-                onFocus={() => setIsHovered(true)}
-            />
-            )}
-            {isHovered && (
-                <div className="book-img hovered-book-img" 
-                    onMouseLeave={() => setIsHovered(false)}
-                    onBlur={() => setIsHovered(false)}
-                >
-                    <span>Details</span>
-                    <button className="button">View More</button>
-                </div>
-            )}
-            <span className="book-title-container">
-                <h4 className="title">
-                    {book.title}
-                </h4>
-            </span>
-            <p className="book-author">
-                {book.authors[0].name}
-            </p>
-            <span className="book-price-container title">
-                {price}
-            </span>
-            {context.cart.findIndex(product => product.key === book.key) >= 0 && 
-                <Link 
-                    to="/cart" 
-                    className="button" 
-                >
-                    View Cart ✔
-                </Link> 
-            }
-            {context.cart.findIndex(product => product.key === book.key) === -1 &&
-                <button 
-                    className="button" 
-                    onClick={() => context.addProductToCart(book)}
-                >
-                    Add to cart
-                </button> 
-            }
+  return (
+    <div className="book">
+      {!isHovered && (
+        <img
+          src={img_url}
+          alt={img_alt}
+          className="book-img"
+          onMouseEnter={() => setIsHovered(true)}
+          tabIndex="0"
+          onFocus={() => setIsHovered(true)}
+        />
+      )}
+      {isHovered && (
+        <div
+          className="book-img hovered-book-img"
+          onMouseLeave={() => setIsHovered(false)}
+          onBlur={() => setIsHovered(false)}
+        >
+          <span>Details</span>
+          <button className="button">View More</button>
         </div>
-    );
+      )}
+      <span className="book-title-container">
+        <h4 className="title">{book.title}</h4>
+      </span>
+      <p className="book-author">{book.authors[0].name}</p>
+      <span className="book-price-container title">{price}</span>
+      {context.cart.findIndex((product) => product.key === book.key) >= 0 && (
+        <Link to="/cart" className="button">
+          View Cart ✔
+        </Link>
+      )}
+      {context.cart.findIndex((product) => product.key === book.key) === -1 && (
+        <button
+          className="button"
+          onClick={() => context.addProductToCart(book)}
+        >
+          Add to cart
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default Book;

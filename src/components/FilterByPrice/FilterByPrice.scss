@@ -1,71 +1,72 @@
-@import '../../styles/shared.scss';
+@import "../../styles/shared.scss";
 
 .filter-by-price {
-    padding: $vertical-sidebar-padding 0;
-    border-bottom: $divider;
+  padding: $vertical-sidebar-padding 0;
+  border-bottom: $divider;
 
-    & input {
-        display: block;
-        width: 100%;
+  & input {
+    display: block;
+    width: 100%;
+  }
+
+  & .filter-by-price-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+
+    & button {
+      border: none;
+      padding: 0.6em 1em;
     }
 
-    & .filter-by-price-div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-bottom: 0.5em;
-
-        & button {
-            border: none;
-            padding: 0.6em 1em;
-        }
-
-        & span {
-            color: $text-color;
-            font-size: 1.25em;
-        }
+    & span {
+      color: $text-color;
+      font-size: 1.25em;
     }
+  }
 }
 
 .filter-by-price > *:not(:last-child) {
-    margin-bottom: $vertical-sidebar-padding;
+  margin-bottom: $vertical-sidebar-padding;
 }
 
 // NoUiSlider styling
 
 .noUi-target {
-    background-color: #CCCCCC;
-    border: 1px solid #CCCCCC;
-    border-radius: 1em;
-    box-shadow: inset 0 1px 1px #CCCCCC, 0 3px 6px -5px #CCCCCC;
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 1em;
+  box-shadow: inset 0 1px 1px #cccccc, 0 3px 6px -5px #cccccc;
 }
 
 .noUi-horizontal {
-    height: 0.75em;
+  height: 0.75em;
 }
 
 .noUi-horizontal .noUi-handle {
-    width: 1.5em;
-    height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .noUi-handle {
-    background-color: $dark-blue;
-    border-radius: 1em;
-    border: 1px solid $dark-blue;
-    box-shadow: none;
+  background-color: $dark-blue;
+  border-radius: 1em;
+  border: 1px solid $dark-blue;
+  box-shadow: none;
 }
 
-.noUi-handle:before, .noUi-handle:after {
-    background: none;
+.noUi-handle:before,
+.noUi-handle:after {
+  background: none;
 }
 
 .noUi-touch-area {
-    background-color: $dark-blue;
-    border-radius: 1em;
-    border-color: $dark-blue;
+  background-color: $dark-blue;
+  border-radius: 1em;
+  border-color: $dark-blue;
 }
 
 .noUi-connect {
-    background-color: $dark-blue;
+  background-color: $dark-blue;
 }

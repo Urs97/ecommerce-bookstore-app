@@ -1,104 +1,106 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
-@import './styles/shared.scss';
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap");
+@import "./styles/shared.scss";
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-  
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    // font-family: 'Open Sans', sans-serif; SEMI BOLD 600 FONT WEIGHT;
+  font-family: "Roboto", sans-serif;
+  // font-family: 'Open Sans', sans-serif; SEMI BOLD 600 FONT WEIGHT;
 }
 
 // Utility Classes
 
 .button {
-    cursor: pointer;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: $green;
+  padding: 0.7em 2.5em;
+  box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+
+  &:hover {
+    background-color: $yellow;
+  }
+
+  &:focus {
+    outline: 0.2em solid black;
+  }
+
+  &:not(.focus-visible) {
     outline: none;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: $green;
-    padding: 0.7em 2.5em;
-    box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    
-    &:hover {
-        background-color: $yellow;
-    }
-
-    &:focus {
-        outline: 0.2em solid black;
-    }
-
-    &:not(.focus-visible) {
-        outline: none;
-      } 
+  }
 }
 
 .btn-to-link {
-    color: $green;
+  color: $green;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:focus {
+    outline: 0.2em solid black;
+  }
+
+  &:not(.focus-visible) {
     outline: none;
-    cursor: pointer;
-    border: none;
-    background-color: inherit;
-
-    &:hover {
-        color: $yellow;
-    }
-
-    &:focus {
-        outline: 0.2em solid black;
-    }
-
-    &:not(.focus-visible) {
-        outline: none;
-      }
+  }
 }
 
 .title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin: 0;
 }
 
 .sidebar-title {
-    font-family: 'Open Sans', sans-serif;
-    color: $text-color;
-    font-size: 1.5em;
-    font-weight: normal;
-    margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: $text-color;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
 }
 
 // Screen reader only best practice for visually hiding content
 .screen-reader-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0); 
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap; 
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 // Hiding non-styleable native arrows
 input[type="number"] {
-    -webkit-appearance: textfield;
-       -moz-appearance: textfield;
-            appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 // General Media Queries
@@ -106,35 +108,35 @@ input[type=number]::-webkit-outer-spin-button {
 // Larger Viewports
 
 @media (min-width: 1650px) {
-    html {
-        font-size: 18px;
-        line-height: 1.25;
-    }
+  html {
+    font-size: 18px;
+    line-height: 1.25;
+  }
 }
 
 @media (min-width: 1950px) {
-    html {
-        font-size: 20px;
-    }
+  html {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 2200px) {
-    html {
-        font-size: 23px;
-        line-height: 1.5;
-    }
+  html {
+    font-size: 23px;
+    line-height: 1.5;
+  }
 }
 
 // Smaller Viewports
 
 @media (max-width: 1440px) {
-    html {
-        font-size: 14px;
-    }
+  html {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1260px) {
-    html {
-        font-size: 12px;
-    }
+  html {
+    font-size: 12px;
+  }
 }

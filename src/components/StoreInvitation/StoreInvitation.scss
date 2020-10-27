@@ -1,45 +1,45 @@
 .store-invitation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 25em;
+  padding: 0 5em;
+  text-align: center;
+
+  & h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 1em;
+  }
+
+  & picture {
+    position: absolute;
+    object-fit: cover;
     width: 100%;
     height: 25em;
-    padding: 0 5em;
-    text-align: center;
+    z-index: -2;
+    overflow: hidden;
+  }
 
-    & h1 {
-        font-size: 2.5em;
-        color: #FFFFFF;
-        margin-bottom: 1em;
-    }
+  & .button:focus {
+    outline: 0.2em solid #ffffff;
+  }
 
-    & picture {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 25em;
-        z-index: -2;
-        overflow: hidden;
-    }
-
-    & .button:focus {
-        outline: 0.2em solid #FFFFFF;
-    }
-
-    & .button:not(.focus-visible) {
-        outline: none;
-      }
+  & .button:not(.focus-visible) {
+    outline: none;
+  }
 }
 
 .store-invitation::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
 }

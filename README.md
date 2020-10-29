@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-commerce Bookstore App
 
-## Available Scripts
+E-commerce Bookstore App bootstrapped with <a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener noreferrer">Create React App</a>, using <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a> for styling purposes and <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener noreferrer">Open Library API</a> as a backend for data consumption.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+<a href="https://ecommerce-app-urs.netlify.app/" target="_blank" rel="noopener noreferrer">Ecommerce Bookstore App</a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+An E-commerce Bookstore Application project meant to showcase the use of <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> frontend javascript framework, <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a> CSS preprocessor and <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener noreferrer">Open Library API</a> as a backend for data consumption. Project is focused on frontend web development featuring the use of latest industry standards and best practices. Application includes responsive web design, web accessibility and performance optimizations as well as showcasing the usage of <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npm</a>'s rich ecosystem.
 
-### `npm test`
+Functionality includes custom homepage carousel, custom double slider, the ability to fetch data from Openlibrary database based on chosen book genre as well as to filter the supplied data by price. Books available in the store are able to be added to the cart, from which they can be increased or decreased in quantity, aswell as removed from the cart completely. State management is implemented with react's native redux-like Context API, async-await is used for asynchronous data fetching and the whole project is based on functional programming paradigm using functional components. Testing is handled by using snapshot tests with Jest/Enzyme. Icons are courtesy of <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank" rel="noopener noreferrer">Font Awesome</a> icon toolkit.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies used 
 
-### `npm run build`
+### Core Technologies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- <a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener noreferrer">Create React App</a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-  <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener noreferrer">Open Library API</a>
 
-### `npm run eject`
+-  <a href="https://reactjs.org/docs/context.html" target="_blank" rel="noopener noreferrer">Context API</a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-  <a href="https://github.com/facebook/jest" target="_blank" rel="noopener noreferrer">Jest</a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  <a href="https://github.com/enzymejs/enzyme" target="_blank" rel="noopener noreferrer">Enzyme</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Special Thanks to
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-  <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank" rel="noopener noreferrer">Font Awesome</a>
 
-## Learn More
+-  <a href="https://github.com/express-labs/pure-react-carousel" target="_blank" rel="noopener noreferrer">Pure React Carousel</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-  <a href="https://github.com/fisshy/react-scroll" target="_blank" rel="noopener noreferrer">React Scroll</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-  <a href="https://www.npmjs.com/package/nouislider-react" target="_blank" rel="noopener noreferrer">nouislider-react</a>
 
-### Code Splitting
+-  <a href="https://github.com/WICG/focus-visible" target="_blank" rel="noopener noreferrer">focus-visible</a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+-  <a href="https://github.com/necolas/normalize.css/" target="_blank" rel="noopener noreferrer">normalize.css</a>
 
-### Analyzing the Bundle Size
+-  <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank" rel="noopener noreferrer">Font Awesome</a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## License
 
-### Making a Progressive Web App
+Distributed under the <a href="https://github.com/Urs97/ecommerce-bookstore-app/blob/master/LICENSE.txt" target="_blank" rel="noopener noreferrer">MIT License</a>. See LICENSE for more information.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Contact 
 
-### Advanced Configuration
+Email - <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener noreferrer">Email</a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Github - <a href="https://github.com/Urs97/" target="_blank" rel="noopener noreferrer">https://github.com/Urs97</a>
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

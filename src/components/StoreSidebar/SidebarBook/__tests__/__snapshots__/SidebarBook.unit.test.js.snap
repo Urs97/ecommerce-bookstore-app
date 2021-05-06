@@ -8,7 +8,7 @@ exports[`SidebarBook renders SidebarBook 1`] = `
   <img
     alt="Frankenstein book cover"
     className="sidebar-book-img"
-    src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+    src="https://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
   />
   <section
     className="sidebar-book-details"

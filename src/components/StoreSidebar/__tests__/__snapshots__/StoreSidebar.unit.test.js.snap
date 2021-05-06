@@ -17,7 +17,6 @@ exports[`StoreSidebar renders StoreSidebar 1`] = `
         "filterSliderState": false,
         "filteredData": null,
         "mobileFilterPopup": false,
-        "storeScrollState": false,
       },
       "submitFilterValue": [Function],
       "toggleMobileFilter": [Function],

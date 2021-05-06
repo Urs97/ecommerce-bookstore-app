@@ -27,32 +27,13 @@ exports[`BulletPointContainer renders BulletPointContainer in expanded mode 1`] 
 `;
 
 exports[`BulletPointContainer renders BulletPointContainer in normal mode 1`] = `
-<section
-  className="bulletpoints"
->
-  <BulletPoint
-    color="yellow"
-    icon="mockIcon1.svg"
-    mode="normal"
-    text="This is text number 1"
-  />
-  <BulletPoint
-    color="yellow"
-    icon="mockIcon2.svg"
-    mode="normal"
-    text="This is text number 2"
-  />
-  <BulletPoint
-    color="yellow"
-    icon="mockIcon3.svg"
-    mode="normal"
-    text="This is text number 3"
-  />
-</section>
+<div>
+  Bulletpoint error - invalid mode prop
+</div>
 `;
 
 exports[`BulletPointContainer renders BulletPointContainer in unrecognizable mode 1`] = `
 <div>
-  BulletPoint error
+  Bulletpoint error - invalid mode prop
 </div>
 `;

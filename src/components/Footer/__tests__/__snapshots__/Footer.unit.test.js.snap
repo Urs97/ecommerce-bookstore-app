@@ -29,7 +29,11 @@ exports[`Footer renders Footer 1`] = `
     </Link>
   </section>
   <p>
-    Bookz © 2020 All rights reserved
+    Bookz © 
+    <span>
+      2021
+    </span>
+     All rights reserved
   </p>
 </footer>
 `;

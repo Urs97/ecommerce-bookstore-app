@@ -44,7 +44,7 @@ exports[`Home renders Home 1`] = `
         },
       ]
     }
-    mode="normal"
+    mode="default"
     texts={
       Array [
         "We stock over 200 thousand books for immediate delivery",

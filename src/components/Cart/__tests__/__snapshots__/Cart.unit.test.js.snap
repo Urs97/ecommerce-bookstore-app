@@ -36,12 +36,12 @@ exports[`Cart renders Cart 1`] = `
       <section
         className="cart-nav-btns"
       >
-        <a
+        <Link
           className="button continue-btn"
-          href="/store"
+          to="/store"
         >
           Continue Shopping
-        </a>
+        </Link>
       </section>
     </section>
     <section

@@ -39,40 +39,13 @@ exports[`BulletPoint renders BulletPoint in expanded mode 1`] = `
 `;
 
 exports[`BulletPoint renders BulletPoint in normal mode 1`] = `
-<div
-  className="bulletpoint"
->
-  <span
-    className="yellow"
-  >
-    <FontAwesomeIcon
-      border={false}
-      className=""
-      fixedWidth={false}
-      flip={null}
-      icon="mockIcon.svg"
-      inverse={false}
-      listItem={false}
-      mask={null}
-      pull={null}
-      pulse={false}
-      rotation={null}
-      size={null}
-      spin={false}
-      swapOpacity={false}
-      symbol={false}
-      title=""
-      transform={null}
-    />
-  </span>
-  <p>
-    This is BulletPoint text
-  </p>
+<div>
+  Bulletpoint error - invalid mode prop
 </div>
 `;
 
 exports[`BulletPoint renders BulletPoint in unrecognizable mode 1`] = `
 <div>
-  BulletPoint error
+  Bulletpoint error - invalid mode prop
 </div>
 `;

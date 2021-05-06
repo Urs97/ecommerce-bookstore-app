@@ -20,7 +20,7 @@ exports[`CartItem renders empty CartItem 1`] = `
   >
     <img
       alt="Frankenstein book cover"
-      src="http://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
+      src="https://covers.openlibrary.org/b/olid/OL6147070M-L.jpg"
     />
   </span>
   <span

@@ -73,9 +73,9 @@ exports[`Navigation renders Navigation 1`] = `
         transform={null}
       />
     </button>
-    <a
+    <Link
       className="header-logo"
-      href="/"
+      to="/"
     >
       <h1
         className="title"
@@ -85,12 +85,12 @@ exports[`Navigation renders Navigation 1`] = `
       <p>
         Webstore for book lovers
       </p>
-    </a>
+    </Link>
     <nav
       className="main-menu"
     >
       <Link
-        className="link js-focus-visible"
+        className="link"
         to="/"
       >
         Home

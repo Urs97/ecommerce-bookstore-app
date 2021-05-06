@@ -29,7 +29,6 @@ exports[`Book renders Book 1`] = `
   <span
     className="book-price-container title"
   >
-    $
     94.99
   </span>
   <button
